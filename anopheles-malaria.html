@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Changing Dynamics of Anopheles Species | Humaida Danjuma Khalid</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f8faf8;
+      color: #29382f;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.8;
+    }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid #dce7df;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .logo {
+      color: #176b4d;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #40564b;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .article-header {
+      background: #173d2e;
+      color: white;
+      padding: 85px 7%;
+    }
+
+    .article-header-inner {
+      max-width: 950px;
+      margin: auto;
+    }
+
+    .category {
+      color: #b9dfc9;
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 6vw, 64px);
+      line-height: 1.12;
+      margin: 0 0 25px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: #dce9e1;
+      max-width: 850px;
+    }
+
+    .author {
+      margin-top: 30px;
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      color: #dce9e1;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 25px;
+    }
+
+    .abstract {
+      background: white;
+      border-left: 5px solid #176b4d;
+      padding: 30px;
+      margin-bottom: 55px;
+      box-shadow: 0 8px 25px rgba(30, 70, 50, 0.05);
+    }
+
+    .abstract h2 {
+      margin-top: 0;
+    }
+
+    .keywords {
+      margin-top: 20px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .keywords strong {
+      color: #176b4d;
+    }
+
+    h2 {
+      color: #173d2e;
+      font-size: 31px;
+      margin-top: 55px;
+      margin-bottom: 18px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      color: #176b4d;
+      font-size: 23px;
+      margin-top: 35px;
+      line-height: 1.4;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    ol, ul {
+      padding-left: 30px;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    .framework {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    .framework div {
+      background: #eef5f0;
+      border: 1px solid #dce7df;
+      padding: 20px;
+      text-align: center;
+      border-radius: 7px;
+    }
+
+    .framework strong {
+      display: block;
+      color: #176b4d;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      margin-bottom: 7px;
+    }
+
+    .references {
+      border-top: 1px solid #dce7df;
+      margin-top: 70px;
+      padding-top: 20px;
+    }
+
+    .references p {
+      font-size: 15px;
+      margin-bottom: 14px;
+      overflow-wrap: anywhere;
+    }
+
+    .back {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .button {
+      display: inline-block;
+      background: #176b4d;
+      color: white;
+      text-decoration: none;
+      padding: 13px 25px;
+      border-radius: 6px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #0f513a;
+    }
+
+    footer {
+      background: #10291f;
+      color: #b9c9c0;
+      text-align: center;
+      padding: 25px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+      .article-header {
+        padding: 60px 6%;
+      }
+
+      main {
+        padding: 0 18px;
+        margin-top: 40px;
+      }
+
+      .framework {
+        grid-template-columns: 1fr;
+      }
+
+      h2 {
+        font-size: 27px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">HUMAIDA</div>
+  <a href="index.html">← Back to Portfolio</a>
+</nav>
+
+<header class="article-header">
+  <div class="article-header-inner">
+
+    <div class="category">Research & Public Health</div>
+
+    <h1>
+      The Changing Dynamics of <i>Anopheles</i> Species
+    </h1>
+
+    <div class="subtitle">
+      Impact of Person, Place and Time on the Epidemiology of Malaria in Africa
+    </div>
+
+    <div class="author">
+      Written by <strong>Humaida Danjuma Khalid</strong>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+  <section class="abstract">
+
+    <h2>Abstract</h2>
+
+    <p>
+      In the last two decades, efforts to control malaria by focusing on
+      environmental and socioeconomic factors enhancing mosquito transmission
+      have made significant progress but have not yet succeeded in stopping
+      malaria in Africa. Malaria is a parasitic disease caused by
+      <i>Plasmodium</i> protozoa and transmitted through the bites of infected
+      <i>Anopheles</i> mosquitoes.
+    </p>
+
+    <p>
+      This paper examines the interaction of person, place and time factors
+      that influence malaria transmission, with emphasis on how changes in
+      vector distribution, behaviour and insecticide resistance interact with
+      human and environmental variables in producing changes in transmission
+      across diverse African ecological zones.
+    </p>
+
+    <p>
+      For the efficient development of malaria elimination programmes under
+      rapidly changing epidemiological conditions, it is essential to
+      understand the complex relationships between human behaviour,
+      environmental factors and temporal patterns.
+    </p>
+
+    <p>
+      The findings highlight that vector–human interaction is dynamic and
+      context-specific and calls for adaptation of strategies to reflect the
+      changing nature of these interactions across Africa.
+    </p>
+
+    <div class="keywords">
+      <strong>Keywords:</strong>
+      <i>Anopheles</i>, insecticide resistance, malaria, temporal patterns,
+      vector dynamics
+    </div>
+
+  </section>
+
+
+  <h2>1. Introduction</h2>
+
+  <p>
+    Malaria, caused by <i>Plasmodium</i> parasites, causes acute
+    life-threatening infections and has a global public health impact.
+    <i>P. falciparum</i> is widely distributed in Africa, while
+    <i>P. vivax</i>, <i>P. ovale</i> and <i>P. malariae</i> have more
+    limited geographical distributions.
+  </p>
+
+  <p>
+    The parasites are predominantly transmitted through the bites of infected
+    <i>Anopheles</i> mosquitoes. Important malaria vectors in Africa include
+    species within the <i>Anopheles gambiae</i> complex and
+    <i>Anopheles funestus</i> group.
+  </p>
+
+  <p>
+    Malaria epidemiology varies geographically depending on local transmission
+    intensity and endemicity. It is fundamentally shaped by interactions
+    between <i>Plasmodium</i> parasites, human hosts, mosquito vectors and
+    environmental factors.
+  </p>
+
+  <p>
+    Vector distribution, behaviour and characteristics can change in response
+    to environmental variables such as temperature, rainfall and humidity,
+    as well as anthropogenic factors including land-use transformation,
+    urbanisation and vector-control interventions.
+  </p>
+
+  <p>
+    Understanding the changing relationships between person, place and time is
+    therefore important for developing malaria surveillance and control
+    strategies that can respond to evolving transmission patterns.
+  </p>
+
+
+  <h2>2. Objectives</h2>
+
+  <ol>
+    <li>
+      To analyse the intersection of person, place and time factors in malaria
+      transmission dynamics.
+    </li>
+
+    <li>
+      To determine surveillance systems capable of detecting and responding to
+      changes in vector species composition, behaviour and insecticide
+      resistance.
+    </li>
+
+    <li>
+      To evaluate adaptive intervention strategies that address the changing
+      dynamics of <i>Anopheles</i> mosquitoes.
+    </li>
+  </ol>
+
+
+  <h2>3. Methods</h2>
+
+  <p>
+    This report presents findings from peer-reviewed literature published
+    between 2018 and 2024. Literature was obtained from academic databases
+    and search platforms including PubMed, African Journals Online and
+    Google Scholar.
+  </p>
+
+  <p>
+    Keywords included <i>Anopheles</i>, malaria, Africa, vector dynamics,
+    insecticide resistance, behaviour, climate change, urbanisation,
+    vector-control interventions, human hosts and epidemiology.
+  </p>
+
+  <p>
+    Additional references were identified from relevant publications and
+    reports from organisations including the World Health Organization,
+    the Pan African Mosquito Control Association and National Malaria Control
+    Programmes.
+  </p>
+
+  <p>
+    The dynamic relationship between vectors and malaria transmission was
+    analysed using person, place and time factors. Person factors included
+    demographics, behaviour and immunity. Place factors included geographical
+    distribution and ecological conditions, while time factors included
+    seasonal patterns and long-term trends.
+  </p>
+
+
+  <h2>4. Results</h2>
+
+  <h3>4.1 Person Factors</h3>
+
+  <p>
+    Person factors include genetic characteristics, acquired immunity,
+    behaviour, demographics, culture and socioeconomic conditions. These
+    characteristics can influence individual vulnerability and patterns of
+    human–vector contact.
+  </p>
+
+  <h3>4.1.1 Human Demographics and Behaviours</h3>
+
+  <p>
+    Population growth, urbanisation and human mobility have shifted patterns
+    of vector–human contact across Africa. Human mobility can contribute to
+    malaria importation and connect areas with different transmission levels.
+  </p>
+
+  <p>
+    Migration resulting from environmental degradation, economic pressures,
+    conflict and natural disasters may increase vulnerability in populations
+    already living in high-risk settings. Cross-border mobility can also
+    facilitate the movement of parasites and vectors with different
+    resistance or behavioural characteristics.
+  </p>
+
+  <h3>4.1.2 Immune Patterns</h3>
+
+  <p>
+    Repeated exposure to malaria can lead to the development of partial
+    clinical immunity, although this does not necessarily prevent
+    reinfection. Asymptomatic infections may therefore remain an important
+    component of transmission.
+  </p>
+
+  <p>
+    Children under five years of age have limited acquired immunity and remain
+    particularly vulnerable. Pregnant women are also at increased risk because
+    of biological and immunological factors associated with pregnancy.
+  </p>
+
+  <p>
+    Changes in population immunity can have important implications for malaria
+    epidemiology, particularly in settings where successful control measures
+    have reduced transmission.
+  </p>
+
+
+  <h3>4.1.3 Sleeping Habits and Outdoor Activities</h3>
+
+  <p>
+    Sleeping patterns and outdoor activities influence human–vector contact.
+    When human activities overlap with periods of peak mosquito biting,
+    exposure may occur before individuals are protected by insecticide-treated
+    nets.
+  </p>
+
+  <p>
+    Outdoor evening activities may include household chores, security work,
+    fishing and social or cultural activities. Seasonal changes in sleeping
+    arrangements and outdoor behaviour can further produce different exposure
+    profiles among population groups.
+  </p>
+
+
+  <h3>4.2 Place Factors</h3>
+
+  <p>
+    Place factors include natural environmental characteristics such as
+    temperature, humidity, rainfall, soil quality, elevation and slope, as
+    well as human-made changes including land-use transformation,
+    deforestation, urbanisation, irrigation and infrastructure development.
+  </p>
+
+
+  <h3>4.2.1 Geographic Shifts in Vector Distribution</h3>
+
+  <p>
+    Environmental, climatic, seasonal and ecological factors influence the
+    occurrence, transmission intensity and geographical distribution of
+    malaria.
+  </p>
+
+  <p>
+    Temperature and precipitation influence mosquito survival, reproduction,
+    biting activity and the development of malaria parasites within vectors.
+    Changes in rainfall patterns can also alter the availability of suitable
+    breeding habitats.
+  </p>
+
+  <p>
+    Human-made environmental changes can further modify transmission.
+    Development projects, roads, dams, irrigation systems and agricultural
+    practices may create or modify mosquito breeding habitats and alter human
+    movement.
+  </p>
+
+  <p>
+    Urbanisation is particularly important because some malaria vectors can
+    adapt to artificial environments and exploit breeding sites within
+    densely populated areas.
+  </p>
+
+
+  <h3>4.2.2 Altitude</h3>
+
+  <p>
+    Altitude influences malaria transmission largely through its relationship
+    with temperature and environmental conditions. Climate change may alter
+    the suitability of higher-altitude environments for malaria vectors and
+    parasites.
+  </p>
+
+  <p>
+    Such changes may expose populations with limited immunity to increased
+    malaria risk and place additional pressure on health systems.
+  </p>
+
+
+  <h3>4.3 Time Factors</h3>
+
+  <h3>4.3.1 Seasonal Variations</h3>
+
+  <p>
+    Malaria transmission is strongly influenced by climatic conditions and
+    has traditionally been associated with rainy seasons and warmer
+    environments.
+  </p>
+
+  <p>
+    Changes in temperature and rainfall can alter mosquito development,
+    parasite development and breeding-site availability. Unpredictable
+    rainfall may result in unpredictable transmission patterns, while dry
+    periods followed by heavy rainfall can create temporary breeding habitats
+    and rapid increases in mosquito populations.
+  </p>
+
+
+  <h3>4.3.2 Long-Term Climate Trends</h3>
+
+  <p>
+    Climate change may influence malaria transmission through changes in
+    mosquito development, reproduction, survival and geographical range.
+  </p>
+
+  <p>
+    Changing precipitation patterns can modify breeding habitats, while
+    temperature changes may influence parasite development within mosquito
+    vectors. These climate-related changes interact with human activities and
+    environmental conditions to produce complex temporal patterns.
+  </p>
+
+
+  <h3>4.3.3 Vector Behaviour</h3>
+
+  <p>
+    Vector behaviour is an important consideration in malaria control.
+    Insecticide-treated nets and indoor residual spraying primarily protect
+    against mosquitoes that bite or rest in locations where they encounter
+    these interventions.
+  </p>
+
+  <p>
+    When mosquitoes increasingly bite outdoors, bite earlier in the evening,
+    or rest in locations where conventional interventions have limited
+    effect, residual transmission may persist.
+  </p>
+
+
+  <h3>4.4 Intersection of Person, Place and Time</h3>
+
+  <p>
+    Malaria transmission is a dynamic process influenced by human behaviour,
+    environmental conditions and mosquito biting patterns.
+  </p>
+
+  <div class="framework">
+
+    <div>
+      <strong>PERSON</strong>
+      Human behaviour, immunity, demographics and mobility.
+    </div>
+
+    <div>
+      <strong>PLACE</strong>
+      Environment, geography, urbanisation and breeding habitats.
+    </div>
+
+    <div>
+      <strong>TIME</strong>
+      Seasons, climate trends and vector activity.
+    </div>
+
+  </div>
+
+  <p>
+    The interaction between these factors creates transmission landscapes
+    that can differ substantially between communities and ecological zones.
+  </p>
+
+
+  <h3>Residual Transmission</h3>
+
+  <p>
+    Residual transmission refers to malaria transmission that continues
+    despite implementation of standard vector-control interventions.
+    Differences between mosquito biting behaviour and human protection can
+    create opportunities for continued transmission.
+  </p>
+
+
+  <h3>Urban Malaria Transformation</h3>
+
+  <p>
+    Rapid urbanisation has created new person–place–time interactions.
+    Human mobility can connect urban and rural transmission settings, while
+    artificial breeding habitats may provide suitable environments for
+    malaria vectors.
+  </p>
+
+
+  <h3>Highland Expansion</h3>
+
+  <p>
+    Changes in temperature, rainfall and land use may alter the suitability
+    of highland environments for malaria transmission. Populations with
+    limited previous exposure may be particularly vulnerable when transmission
+    is introduced into these areas.
+  </p>
+
+
+  <h3>Insecticide Resistance Management Challenges</h3>
+
+  <p>
+    The widespread use of insecticide-based interventions has contributed to
+    selection pressure for insecticide resistance in mosquito populations.
+    Continued monitoring of resistance patterns is therefore important for
+    maintaining the effectiveness of vector-control programmes.
+  </p>
+
+
+  <h2>5. Discussion</h2>
+
+  <h3>5.1 Implications for Surveillance</h3>
+
+  <p>
+    Effective malaria elimination requires surveillance systems capable of
+    detecting changes in transmission, including changes that occur as the
+    overall malaria burden declines.
+  </p>
+
+  <p>
+    Integrated surveillance combining entomological, parasitological,
+    environmental and intervention-coverage data can provide a clearer picture
+    of changing transmission dynamics.
+  </p>
+
+  <p>Such systems should include:</p>
+
+  <ol>
+    <li>
+      Regular identification of important vector species, including molecular
+      approaches where necessary.
+    </li>
+
+    <li>
+      Monitoring of mosquito biting and resting behaviour.
+    </li>
+
+    <li>
+      Standardised approaches for detecting emerging insecticide-resistance
+      mechanisms.
+    </li>
+
+    <li>
+      Monitoring of climate and environmental variables that may influence
+      vector populations.
+    </li>
+
+    <li>
+      Better understanding of human behaviour and mobility patterns that
+      influence exposure.
+    </li>
+  </ol>
+
+
+  <h3>5.2 Implications for Intervention Strategies</h3>
+
+  <p>
+    Malaria control strategies have traditionally focused on reducing mosquito
+    populations, preventing parasite transmission and increasing access to
+    diagnosis and treatment.
+  </p>
+
+  <p>
+    However, changing vector populations and behaviours require increasingly
+    adaptive approaches.
+  </p>
+
+  <ol>
+
+    <li>
+      <strong>Insecticide-resistance management:</strong>
+      Resistance monitoring and appropriate management strategies are needed
+      to maintain the effectiveness of insecticide-based interventions.
+    </li>
+
+    <li>
+      <strong>Human-centred intervention design:</strong>
+      Prevention strategies should reflect how people live, work, sleep and
+      move within their communities.
+    </li>
+
+    <li>
+      <strong>Climate-adaptive planning:</strong>
+      Climate information can support planning around seasonal fluctuations
+      and longer-term changes in malaria transmission.
+    </li>
+
+    <li>
+      <strong>Cross-border and regional coordination:</strong>
+      Collaboration across borders is important because human mobility and
+      parasite transmission are not restricted by political boundaries.
+    </li>
+
+  </ol>
+
+
+  <h3>5.3 Research Gaps</h3>
+
+  <ol>
+
+    <li>
+      Better characterisation of outdoor resting habitats and factors
+      influencing outdoor biting behaviour.
+    </li>
+
+    <li>
+      Improved understanding of insecticide-resistance mechanisms and their
+      consequences for intervention effectiveness.
+    </li>
+
+    <li>
+      Improved methods for measuring and modelling residual malaria
+      transmission.
+    </li>
+
+    <li>
+      Greater understanding of interactions between parasite and vector
+      populations.
+    </li>
+
+    <li>
+      Development and testing of new vector-control approaches for
+      outdoor-biting and insecticide-resistant populations.
+    </li>
+
+    <li>
+      Continued molecular research into malaria parasite biology, genetic
+      diversity, treatment resistance and parasite–host interactions.
+    </li>
+
+  </ol>
+
+
+  <h2>6. Conclusion</h2>
+
+  <p>
+    The changing dynamics of <i>Anopheles</i> species represent a significant
+    challenge for malaria control in Africa.
+  </p>
+
+  <p>
+    Malaria transmission results from an intricate interaction between
+    <strong>person, place and time</strong>. Human behaviour, environmental
+    conditions, vector distribution, mosquito behaviour and insecticide
+    resistance can all influence transmission patterns.
+  </p>
+
+  <p>
+    The person–place–time framework therefore provides a useful approach for
+    understanding changing malaria transmission landscapes and designing
+    responsive control strategies.
+  </p>
+
+  <p>
+    Future malaria-control efforts should move beyond one-size-fits-all
+    approaches and consider local vector behaviour, environmental conditions,
+    human mobility and patterns of exposure.
+  </p>
+
+  <p>
+    Integrating molecular technologies, climate information, entomological
+    surveillance and human behavioural data may strengthen the ability of
+    malaria programmes to identify emerging risks and respond appropriately.
+  </p>
+
+  <p>
+    Maintaining robust surveillance and adaptive intervention strategies will
+    remain important even in settings where transmission has substantially
+    declined, as changing epidemiological conditions may create opportunities
+    for resurgence.
+  </p>
+
+
+  <section class="references">
+
+    <h2>References</h2>
+
+    <p>
+      Adegbite, G., Edeki, S., Isewon, I., Emmanuel, J., Dokunmu, T.,
+      Solomon Rotimi, S., Oyelade, J., &amp; Ezekiel Adebiyi, E. (2023).
+      Mathematical modeling of malaria transmission dynamics in humans with
+      mobility and control states. <i>Infectious Disease Modelling, 8</i>(4),
+      1015–1031.
+    </p>
+
+    <p>
+      Akhtar, R. (2020). Introduction: Extreme weather events and human health:
+      A global perspective. In <i>Extreme Weather Events and Human Health</i>.
+      Springer.
+    </p>
+
+    <p>
+      Bansal, G. P., &amp; Kumar, N. (2024). Immune mechanisms targeting
+      malaria transmission: opportunities for vaccine development.
+      <i>Expert Review of Vaccines, 23</i>(1), 645–654.
+    </p>
+
+    <p>
+      Diouf, I., Fonseca, B. R., Caminade, C., Thiaw, W. M., Deme, A.,
+      Morse, A. P., Ndione, J. A., Gaye, A. T., Diaw, A., &amp; Ndiaye, M. K.
+      (2020). Climate variability and malaria over West Africa.
+      <i>American Journal of Tropical Medicine and Hygiene, 102</i>(5), 1037.
+    </p>
+
+    <p>
+      Guerra, C. A., et al. (2019). Human mobility patterns and malaria
+      importation on Bioko Island. <i>Nature Communications, 10</i>.
+    </p>
+
+    <p>
+      Kibret, S., Wilson, G. G., Ryder, D., Tekie, H., &amp; Petros, B. (2019).
+      Environmental and meteorological factors linked to malaria transmission
+      around large dams at three ecological settings in Ethiopia.
+      <i>Malaria Journal, 18</i>, 54.
+    </p>
+
+    <p>
+      Macdonald, M., &amp; Putzer, T. (2019). Human-Centered Design and
+      Sustainable Malaria Interventions. <i>Global Health Science and Practice,
+      7</i>(2), 148–149.
+    </p>
+
+    <p>
+      Monroe, A., Moore, S., Lynch, M., &amp; Ricotta, E. (2019). Measuring
+      and characterizing nighttime human behavior as it relates to residual
+      malaria transmission in sub-Saharan Africa. <i>Malaria Journal, 18</i>, 6.
+    </p>
+
+    <p>
+      Nissan, V. H., Ukawuba, I., &amp; Thomson, M. (2021). Climate-proofing
+      a malaria eradication strategy. <i>Malaria Journal, 20</i>, 190.
+    </p>
+
+    <p>
+      Poespoprodjo, J. R., Douglas, N. M., Ansong, D., Kho, S., &amp;
+      Anstey, N. M. (2023). Malaria. <i>The Lancet, 402</i>(10419), 2328–2345.
+    </p>
+
+    <p>
+      Suh, P. F., Elanga-Ndille, E., Tchouakui, M., Darus, M. M. S.,
+      Wondji, T. C., &amp; Ndo, Y. C. (2023). Impact of insecticide resistance
+      on malaria vector competence: A literature review.
+      <i>Malaria Journal, 22</i>, 19.
+    </p>
+
+    <p>
+      World Health Organization. (2021). <i>World Malaria Report 2021</i>.
+      Geneva: World Health Organization.
+    </p>
+
+    <p>
+      World Health Organization. (2022). <i>WHO Guidelines for Malaria</i>.
+      Geneva: World Health Organization.
+    </p>
+
+  </section>
+
+
+  <div class="back">
+    <a href="index.html" class="button">
+      ← Back to Writing Portfolio
+    </a>
+  </div>
+
+</main>
+
+<footer>
+  © 2026 Humaida Danjuma Khalid. All rights reserved.
+</footer>
+
+</body>
+</html>
