@@ -4,29 +4,28 @@
    ========================================================= */
 
 
-/* =========================================================
-   1. COLOUR + FONT SYSTEM
-   ========================================================= */
+/* =========================
+   COLOURS & FONTS
+========================= */
 
 :root {
   --ivory: #F7F4ED;
-  --sage-pale: #E4E9DF;
+  --pale-sage: #E4E9DF;
   --sage: #A8B5A0;
   --forest: #26352D;
   --charcoal: #34332F;
   --clay: #C9A995;
-  --white: #FFFFFF;
 
   --serif: "DM Serif Display", Georgia, serif;
   --sans: "DM Sans", Arial, sans-serif;
 
-  --max-width: 1240px;
+  --max-width: 1180px;
 }
 
 
-/* =========================================================
-   2. RESET
-   ========================================================= */
+/* =========================
+   RESET
+========================= */
 
 * {
   margin: 0;
@@ -48,8 +47,8 @@ body {
 }
 
 img {
-  display: block;
   width: 100%;
+  display: block;
 }
 
 a {
@@ -63,15 +62,15 @@ a {
 }
 
 
-/* =========================================================
-   3. NAVIGATION
-   ========================================================= */
+/* =========================
+   NAVIGATION
+========================= */
 
 .navbar {
-  width: min(100% - 60px, var(--max-width));
-  margin: 0 auto;
+  width: min(100% - 70px, var(--max-width));
+  margin: auto;
 
-  min-height: 92px;
+  min-height: 85px;
 
   display: flex;
   align-items: center;
@@ -84,14 +83,11 @@ a {
   font-family: var(--serif);
   font-size: 25px;
   color: var(--forest);
-  line-height: 1.1;
-  max-width: 280px;
 }
 
 .nav-links {
   display: flex;
-  align-items: center;
-  gap: 34px;
+  gap: 32px;
 }
 
 .nav-links a {
@@ -99,7 +95,6 @@ a {
 
   font-size: 13px;
   font-weight: 500;
-  letter-spacing: 0.03em;
 
   color: var(--charcoal);
 }
@@ -109,7 +104,7 @@ a {
 
   position: absolute;
   left: 0;
-  bottom: -7px;
+  bottom: -6px;
 
   width: 0;
   height: 1px;
@@ -124,145 +119,28 @@ a {
 }
 
 
-/* =========================================================
-   4. HERO / MAGAZINE COVER
-   ========================================================= */
+/* =========================
+   HERO
+========================= */
 
-.cover {
-  width: min(100% - 60px, var(--max-width));
-  margin: 0 auto;
+.hero {
+  width: min(100% - 70px, var(--max-width));
+  margin: auto;
 
-  min-height: 760px;
+  padding: 95px 0 110px;
 
-  display: grid;
-  grid-template-columns: 1fr 0.85fr;
-  gap: 80px;
-
-  align-items: center;
-
-  padding: 95px 0 120px;
+  text-align: center;
 }
 
-.cover-text {
-  max-width: 680px;
+.hero-text {
+  max-width: 900px;
+  margin: auto;
 }
 
-.publication-line {
-  margin-bottom: 28px;
+.hero-name {
+  margin-bottom: 25px;
 
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-
-  color: var(--forest);
-}
-
-.cover h1 {
-  font-family: var(--serif);
-  font-weight: 400;
-
-  font-size: clamp(54px, 6.5vw, 86px);
-  line-height: 0.98;
-  letter-spacing: -0.035em;
-
-  color: var(--forest);
-}
-
-.cover h1 em {
-  display: block;
-
-  font-style: italic;
-  color: var(--clay);
-
-  margin-top: 12px;
-}
-
-.cover-intro {
-  max-width: 480px;
-
-  margin-top: 38px;
-
-  font-size: 17px;
-  line-height: 1.8;
-
-  color: var(--charcoal);
-}
-
-.quiet-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-
-  margin-top: 32px;
-
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-
-  color: var(--forest);
-
-  transition:
-    gap 0.3s ease,
-    color 0.3s ease;
-}
-
-.quiet-link span {
-  font-size: 18px;
-  line-height: 1;
-}
-
-.quiet-link:hover {
-  gap: 20px;
-  color: var(--clay);
-}
-
-.cover-image {
-  position: relative;
-
-  width: 100%;
-  max-width: 500px;
-
-  justify-self: end;
-}
-
-.cover-image::before {
-  content: "";
-
-  position: absolute;
-
-  width: 170px;
-  height: 170px;
-
-  top: -32px;
-  right: -32px;
-
-  background: var(--sage-pale);
-
-  border-radius: 50%;
-
-  z-index: 0;
-}
-
-.cover-image img {
-  position: relative;
-  z-index: 1;
-
-  height: 610px;
-
-  object-fit: cover;
-
-  border-radius: 220px 220px 20px 20px;
-}
-
-
-/* =========================================================
-   5. SMALL EDITORIAL LABEL
-   ========================================================= */
-
-.small-heading {
-  margin-bottom: 22px;
-
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -270,350 +148,18 @@ a {
   color: var(--forest);
 }
 
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 400;
 
-/* =========================================================
-   6. ABOUT
-   ========================================================= */
-
-.about-section {
-  background: var(--sage-pale);
-
-  padding: 125px 30px;
-  
-  display: grid;
-  grid-template-columns: minmax(100px, 0.3fr) minmax(0, 1.7fr);
-
-  gap: 50px;
-}
-
-.about-label {
-  display: flex;
-  justify-content: center;
-}
-
-.about-label span {
-  writing-mode: vertical-rl;
-
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  font-size: clamp(55px, 7vw, 88px);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
 
   color: var(--forest);
 }
 
-.about-content {
-  max-width: 880px;
-}
-
-.about-content h2 {
-  max-width: 850px;
-
-  font-family: var(--serif);
-  font-weight: 400;
-
-  font-size: clamp(40px, 5vw, 62px);
-  line-height: 1.08;
-  letter-spacing: -0.025em;
-
-  color: var(--forest);
-}
-
-.about-copy {
-  max-width: 680px;
-
-  margin-top: 48px;
-
-  display: grid;
-  gap: 22px;
-}
-
-.about-copy p {
-  font-size: 17px;
-  line-height: 1.85;
-}
-
-
-/* =========================================================
-   7. JOURNAL
-   ========================================================= */
-
-.journal-section {
-  width: min(100% - 60px, var(--max-width));
-
-  margin: 0 auto;
-
-  padding: 130px 0;
-}
-
-.journal-heading {
-  max-width: 680px;
-
-  margin-bottom: 75px;
-}
-
-.journal-heading h2 {
-  font-family: var(--serif);
-  font-weight: 400;
-
-  font-size: clamp(44px, 5vw, 62px);
-  line-height: 1;
-
-  color: var(--forest);
-}
-
-.journal-heading > p:last-child {
-  max-width: 500px;
-
-  margin-top: 24px;
-
-  font-size: 16px;
-}
-
-
-/* =========================================================
-   8. FEATURED ARTICLE
-   ========================================================= */
-
-.journal-feature {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-
-  min-height: 600px;
-
-  border-top: 1px solid rgba(38, 53, 45, 0.2);
-  border-bottom: 1px solid rgba(38, 53, 45, 0.2);
-}
-
-.journal-image {
-  overflow: hidden;
-}
-
-.journal-image img {
-  height: 100%;
-  min-height: 600px;
-
-  object-fit: cover;
-
-  transition: transform 0.6s ease;
-}
-
-.journal-feature:hover .journal-image img {
-  transform: scale(1.025);
-}
-
-.journal-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  padding: 70px 65px;
-}
-
-.article-category {
-  margin-bottom: 25px;
-
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-
-  color: var(--clay);
-}
-
-.journal-content h3 {
-  font-family: var(--serif);
-  font-weight: 400;
-
-  font-size: clamp(40px, 4.5vw, 58px);
-  line-height: 1.02;
-  letter-spacing: -0.025em;
-
-  color: var(--forest);
-}
-
-.article-subtitle {
-  margin-top: 28px;
-
-  font-family: var(--serif);
-  font-size: 21px;
-  line-height: 1.4;
-
-  color: var(--charcoal);
-}
-
-.article-excerpt {
-  margin-top: 22px;
-
-  font-size: 15px;
-  line-height: 1.8;
-}
-
-
-/* =========================================================
-   9. OTHER JOURNAL PIECES
-   ========================================================= */
-
-.journal-list {
-  margin-top: 85px;
-}
-
-.journal-item {
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 60px;
-
-  padding: 45px 0;
-
-  border-bottom: 1px solid rgba(38, 53, 45, 0.16);
-}
-
-.journal-item:first-child {
-  border-top: 1px solid rgba(38, 53, 45, 0.16);
-}
-
-.journal-item-image {
-  overflow: hidden;
-  aspect-ratio: 4 / 3;
-}
-
-.journal-item-image img {
-  height: 100%;
-  object-fit: cover;
-
-  transition: transform 0.5s ease;
-}
-
-.journal-item:hover .journal-item-image img {
-  transform: scale(1.04);
-}
-
-.journal-item-content {
-  max-width: 700px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.journal-item-content h3 {
-  font-family: var(--serif);
-  font-weight: 400;
-
-  font-size: clamp(32px, 3.5vw, 46px);
-  line-height: 1.05;
-
-  color: var(--forest);
-}
-
-.journal-item-content > p:not(.article-category) {
-  max-width: 600px;
-
-  margin-top: 20px;
-
-  font-size: 15px;
-  line-height: 1.8;
-}
-
-
-/* =========================================================
-   10. WRITING AREAS
-   ========================================================= */
-
-.writing-section {
-  background: var(--sage-pale);
-
-  padding: 125px 30px;
-}
-
-.writing-heading {
-  max-width: 1050px;
-
-  margin: 0 auto 80px;
-}
-
-.writing-heading h2 {
-  font-family: var(--serif);
-  font-weight: 400;
-
-  font-size: clamp(43px, 5vw, 64px);
-  line-height: 1.05;
-
-  color: var(--forest);
-}
-
-.writing-heading h2 em {
-  color: var(--clay);
-  font-style: italic;
-}
-
-.writing-columns {
-  max-width: 1180px;
-
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.writing-column {
-  padding: 20px 35px;
-
-  border-left: 1px solid rgba(38, 53, 45, 0.18);
-}
-
-.writing-column:last-child {
-  border-right: 1px solid rgba(38, 53, 45, 0.18);
-}
-
-.writing-column h3 {
-  font-family: var(--serif);
-  font-weight: 400;
-
-  font-size: 28px;
-
-  color: var(--forest);
-}
-
-.writing-column p {
-  margin-top: 18px;
-
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-
-/* =========================================================
-   11. WRITING PHILOSOPHY
-   ========================================================= */
-
-.statement-section {
-  background: var(--forest);
-
-  padding: 145px 30px;
-}
-
-.statement-inner {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.statement-section .small-heading {
-  color: var(--sage);
-}
-
-.statement-section h2 {
-  font-family: var(--serif);
-  font-weight: 400;
-
-  font-size: clamp(45px, 6vw, 76px);
-  line-height: 1.08;
-  letter-spacing: -0.025em;
-
-  color: var(--ivory);
-}
-
-.statement-section h2 em {
+.hero h1 em {
   display: block;
 
   margin-top: 12px;
@@ -622,50 +168,309 @@ a {
   color: var(--clay);
 }
 
+.hero-intro {
+  max-width: 530px;
 
-/* =========================================================
-   12. CONTACT
-   ========================================================= */
+  margin: 32px auto 0;
 
-.contact-section {
-  text-align: center;
-
-  padding: 135px 30px 150px;
+  font-size: 17px;
+  line-height: 1.8;
 }
 
-.contact-section .small-heading {
+.hero-image {
+  width: min(100%, 650px);
+
+  margin: 70px auto 0;
+
+  position: relative;
+}
+
+.hero-image::before {
+  content: "";
+
+  position: absolute;
+
+  width: 140px;
+  height: 140px;
+
+  top: -28px;
+  right: -30px;
+
+  background: var(--pale-sage);
+
+  border-radius: 50%;
+
+  z-index: 0;
+}
+
+.hero-image img {
+  position: relative;
+  z-index: 1;
+
+  height: 560px;
+
+  object-fit: cover;
+
+  border-radius: 260px 260px 18px 18px;
+}
+
+
+/* =========================
+   SHARED LABEL
+========================= */
+
+.section-label {
   margin-bottom: 20px;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  color: var(--forest);
 }
 
-.contact-section h2 {
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-section {
+  background: var(--pale-sage);
+
+  padding: 105px 35px;
+}
+
+.about-content {
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.about-content > h2 {
+  max-width: 850px;
+
   font-family: var(--serif);
   font-weight: 400;
 
-  font-size: clamp(48px, 6vw, 75px);
+  font-size: clamp(42px, 5vw, 62px);
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+
+  color: var(--forest);
+}
+
+.about-grid {
+  margin-top: 55px;
+
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+
+  gap: 90px;
+
+  align-items: center;
+}
+
+.about-copy {
+  max-width: 590px;
+}
+
+.about-copy p {
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.about-copy p + p {
+  margin-top: 22px;
+}
+
+
+/* =========================
+   WRITING BELIEF
+========================= */
+
+.writing-belief {
+  display: grid;
+  grid-template-columns: 0.75fr 1fr;
+
+  gap: 30px;
+
+  align-items: center;
+}
+
+.belief-image {
+  overflow: hidden;
+}
+
+.belief-image img {
+  height: 300px;
+
+  object-fit: cover;
+
+  border-radius: 150px 150px 15px 15px;
+}
+
+.writing-belief blockquote {
+  font-family: var(--serif);
+  font-size: 28px;
+  line-height: 1.25;
+
+  color: var(--forest);
+}
+
+.writing-belief blockquote em {
+  display: block;
+
+  margin-top: 8px;
+
+  font-style: italic;
+  color: var(--clay);
+}
+
+
+/* =========================
+   WRITING
+========================= */
+
+.writing-section {
+  width: min(100% - 70px, var(--max-width));
+
+  margin: auto;
+
+  padding: 110px 0;
+}
+
+.writing-heading {
+  text-align: center;
+
+  margin-bottom: 55px;
+}
+
+.writing-heading h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+
+  font-size: clamp(43px, 5vw, 60px);
   line-height: 1;
 
   color: var(--forest);
 }
 
-.contact-section > p:not(.small-heading) {
-  max-width: 500px;
 
-  margin: 25px auto 0;
+/* =========================
+   THREE ARTICLE GRID
+========================= */
 
-  font-size: 16px;
+.writing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+}
+
+.writing-piece {
+  border-top: 1px solid rgba(38, 53, 45, 0.2);
+
+  padding-top: 18px;
+}
+
+.piece-image {
+  overflow: hidden;
+
+  aspect-ratio: 4 / 3;
+
+  margin-bottom: 27px;
+}
+
+.piece-image img {
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.writing-piece:hover .piece-image img {
+  transform: scale(1.04);
+}
+
+.piece-content h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+
+  font-size: 31px;
+  line-height: 1.08;
+
+  color: var(--forest);
+}
+
+.piece-content p {
+  margin-top: 15px;
+
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.read-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-top: 20px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: var(--forest);
+
+  transition: gap 0.3s ease;
+}
+
+.read-link i {
+  font-size: 10px;
+}
+
+.writing-piece:hover .read-link {
+  gap: 14px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+  background: var(--pale-sage);
+
+  padding: 100px 30px;
+
+  text-align: center;
+}
+
+.contact-section h2 {
+  max-width: 650px;
+
+  margin: auto;
+
+  font-family: var(--serif);
+  font-weight: 400;
+
+  font-size: clamp(45px, 6vw, 68px);
+  line-height: 1.05;
+
+  color: var(--forest);
 }
 
 .contact-icons {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 14px;
 
-  margin-top: 38px;
+  margin-top: 32px;
 }
 
 .contact-icons a {
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
 
   display: flex;
   align-items: center;
@@ -686,94 +491,57 @@ a {
   background: var(--forest);
   color: var(--ivory);
 
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
 
 
-/* =========================================================
-   13. FOOTER
-   ========================================================= */
-
-footer {
-  background: var(--forest);
-
-  min-height: 100px;
-
-  padding: 25px 40px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  color: var(--ivory);
-
-  font-size: 12px;
-  letter-spacing: 0.04em;
-}
-
-
-/* =========================================================
-   14. TABLET
-   ========================================================= */
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width: 950px) {
 
-  .cover {
-    grid-template-columns: 1fr 0.8fr;
-    gap: 45px;
+  .about-grid {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
   }
 
-  .cover-image img {
-    height: 520px;
+  .writing-belief {
+    max-width: 650px;
   }
 
-  .journal-feature {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .journal-content {
-    padding: 50px 40px;
-  }
-
-  .journal-item {
-    grid-template-columns: 250px 1fr;
-    gap: 40px;
-  }
-
-  .writing-columns {
+  .writing-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .writing-column {
-    padding: 30px;
+  .writing-piece:last-child {
+    grid-column: 1 / -1;
+
+    max-width: calc(50% - 14px);
   }
 
-  .writing-column:nth-child(3) {
-    border-left: none;
-  }
-
-  .writing-column:nth-child(-n + 2) {
-    border-bottom: 1px solid rgba(38, 53, 45, 0.18);
-  }
 }
 
 
-/* =========================================================
-   15. MOBILE
-   ========================================================= */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 700px) {
 
   .navbar {
-    width: min(100% - 36px, var(--max-width));
+    width: min(100% - 40px, var(--max-width));
 
-    min-height: 78px;
-
-    align-items: flex-start;
-    padding: 22px 0;
+    min-height: 75px;
 
     flex-direction: column;
-    gap: 18px;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    gap: 14px;
   }
 
   .wordmark {
@@ -785,7 +553,7 @@ footer {
 
     justify-content: space-between;
 
-    gap: 12px;
+    gap: 10px;
   }
 
   .nav-links a {
@@ -795,243 +563,164 @@ footer {
 
   /* HERO */
 
-  .cover {
-    width: min(100% - 36px, var(--max-width));
+  .hero {
+    width: min(100% - 40px, var(--max-width));
 
-    display: flex;
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    min-height: auto;
-
-    padding: 75px 0 90px;
-
-    gap: 60px;
+    padding: 70px 0 80px;
   }
 
-  .cover h1 {
-    font-size: clamp(49px, 14vw, 66px);
+  .hero-name {
+    font-size: 10px;
+
+    letter-spacing: 0.13em;
+
+    line-height: 1.5;
   }
 
-  .cover-intro {
-    font-size: 16px;
-    margin-top: 30px;
+  .hero h1 {
+    font-size: clamp(48px, 13vw, 65px);
   }
 
-  .cover-image {
-    width: 88%;
+  .hero-intro {
+    font-size: 15px;
 
-    align-self: center;
+    margin-top: 28px;
   }
 
-  .cover-image img {
-    height: 500px;
+  .hero-image {
+    margin-top: 55px;
 
-    border-radius: 180px 180px 16px 16px;
+    width: 92%;
   }
 
-  .cover-image::before {
-    width: 110px;
-    height: 110px;
+  .hero-image img {
+    height: 470px;
 
-    top: -22px;
-    right: -18px;
+    border-radius: 210px 210px 15px 15px;
+  }
+
+  .hero-image::before {
+    width: 90px;
+    height: 90px;
+
+    right: -15px;
+    top: -20px;
   }
 
 
   /* ABOUT */
 
   .about-section {
-    display: block;
-
-    padding: 90px 22px;
+    padding: 80px 22px;
   }
 
-  .about-label {
-    display: block;
-
-    margin-bottom: 45px;
+  .about-content > h2 {
+    font-size: 40px;
   }
 
-  .about-label span {
-    writing-mode: initial;
-  }
+  .about-grid {
+    margin-top: 40px;
 
-  .about-content h2 {
-    font-size: 41px;
-  }
-
-  .about-copy {
-    margin-top: 35px;
+    gap: 50px;
   }
 
   .about-copy p {
-    font-size: 16px;
+    font-size: 15px;
   }
 
-
-  /* JOURNAL */
-
-  .journal-section {
-    width: min(100% - 36px, var(--max-width));
-
-    padding: 90px 0;
-  }
-
-  .journal-heading {
-    margin-bottom: 50px;
-  }
-
-  .journal-heading h2 {
-    font-size: 45px;
-  }
-
-  .journal-feature {
-    display: block;
-
-    min-height: auto;
-  }
-
-  .journal-image img {
-    min-height: 350px;
-    height: 350px;
-  }
-
-  .journal-content {
-    padding: 45px 0 55px;
-  }
-
-  .journal-content h3 {
-    font-size: 43px;
-  }
-
-  .article-subtitle {
-    font-size: 19px;
-  }
-
-
-  /* OTHER ARTICLES */
-
-  .journal-list {
-    margin-top: 30px;
-  }
-
-  .journal-item {
-    display: block;
-
-    padding: 45px 0;
-  }
-
-  .journal-item-image {
-    margin-bottom: 30px;
-  }
-
-  .journal-item-content h3 {
-    font-size: 38px;
-  }
-
-
-  /* WRITING AREAS */
-
-  .writing-section {
-    padding: 90px 22px;
-  }
-
-  .writing-heading {
-    margin-bottom: 55px;
-  }
-
-  .writing-heading h2 {
-    font-size: 44px;
-  }
-
-  .writing-columns {
+  .writing-belief {
     grid-template-columns: 1fr;
+
+    gap: 25px;
   }
 
-  .writing-column {
-    padding: 28px 0;
-
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid rgba(38, 53, 45, 0.18);
+  .belief-image img {
+    height: 280px;
   }
 
-  .writing-column:last-child {
-    border-right: none;
-    border-bottom: none;
-  }
-
-  .writing-column h3 {
+  .writing-belief blockquote {
     font-size: 30px;
   }
 
 
-  /* STATEMENT */
+  /* WRITING */
 
-  .statement-section {
-    padding: 100px 22px;
+  .writing-section {
+    width: min(100% - 40px, var(--max-width));
+
+    padding: 80px 0;
   }
 
-  .statement-section h2 {
-    font-size: 46px;
+  .writing-heading {
+    margin-bottom: 45px;
+  }
+
+  .writing-heading h2 {
+    font-size: 42px;
+  }
+
+  .writing-grid {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .writing-piece:last-child {
+    grid-column: auto;
+
+    max-width: none;
+  }
+
+  .piece-content h3 {
+    font-size: 34px;
   }
 
 
   /* CONTACT */
 
   .contact-section {
-    padding: 100px 22px;
+    padding: 80px 22px;
   }
 
   .contact-section h2 {
-    font-size: 50px;
-  }
-
-
-  /* FOOTER */
-
-  footer {
-    min-height: auto;
-
-    padding: 28px 22px;
-
-    flex-direction: column;
-    gap: 8px;
-
-    text-align: center;
+    font-size: 48px;
   }
 
 }
 
 
-/* =========================================================
-   16. VERY SMALL PHONES
-   ========================================================= */
+/* =========================
+   SMALL PHONES
+========================= */
 
 @media (max-width: 380px) {
 
-  .nav-links a {
-    font-size: 10px;
+  .hero h1 {
+    font-size: 45px;
   }
 
-  .cover h1 {
-    font-size: 46px;
+  .hero-image img {
+    height: 420px;
   }
 
-  .cover-image img {
-    height: 430px;
-  }
-
-  .about-content h2,
-  .journal-content h3,
-  .journal-item-content h3 {
+  .about-content > h2 {
     font-size: 36px;
   }
 
-  .statement-section h2 {
-    font-size: 39px;
+  .writing-heading h2 {
+    font-size: 38px;
+  }
+
+  .piece-content h3 {
+    font-size: 31px;
+  }
+
+  .writing-belief blockquote {
+    font-size: 27px;
+  }
+
+  .contact-section h2 {
+    font-size: 43px;
   }
 
 }
