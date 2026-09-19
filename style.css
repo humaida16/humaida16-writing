@@ -1,0 +1,1037 @@
+/* =========================================================
+   HUMAIDA DANJUMA KHALID
+   WRITING PORTFOLIO
+   ========================================================= */
+
+
+/* =========================================================
+   1. COLOUR + FONT SYSTEM
+   ========================================================= */
+
+:root {
+  --ivory: #F7F4ED;
+  --sage-pale: #E4E9DF;
+  --sage: #A8B5A0;
+  --forest: #26352D;
+  --charcoal: #34332F;
+  --clay: #C9A995;
+  --white: #FFFFFF;
+
+  --serif: "DM Serif Display", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
+
+  --max-width: 1240px;
+}
+
+
+/* =========================================================
+   2. RESET
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ivory);
+  color: var(--charcoal);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--sage);
+  color: var(--forest);
+}
+
+
+/* =========================================================
+   3. NAVIGATION
+   ========================================================= */
+
+.navbar {
+  width: min(100% - 60px, var(--max-width));
+  margin: 0 auto;
+
+  min-height: 92px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(38, 53, 45, 0.12);
+}
+
+.wordmark {
+  font-family: var(--serif);
+  font-size: 25px;
+  color: var(--forest);
+  line-height: 1.1;
+  max-width: 280px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.nav-links a {
+  position: relative;
+
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+
+  color: var(--charcoal);
+}
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+
+  width: 0;
+  height: 1px;
+
+  background: var(--forest);
+
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================================================
+   4. HERO / MAGAZINE COVER
+   ========================================================= */
+
+.cover {
+  width: min(100% - 60px, var(--max-width));
+  margin: 0 auto;
+
+  min-height: 760px;
+
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  gap: 80px;
+
+  align-items: center;
+
+  padding: 95px 0 120px;
+}
+
+.cover-text {
+  max-width: 680px;
+}
+
+.publication-line {
+  margin-bottom: 28px;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+
+  color: var(--forest);
+}
+
+.cover h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+
+  font-size: clamp(54px, 6.5vw, 86px);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+
+  color: var(--forest);
+}
+
+.cover h1 em {
+  display: block;
+
+  font-style: italic;
+  color: var(--clay);
+
+  margin-top: 12px;
+}
+
+.cover-intro {
+  max-width: 480px;
+
+  margin-top: 38px;
+
+  font-size: 17px;
+  line-height: 1.8;
+
+  color: var(--charcoal);
+}
+
+.quiet-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-top: 32px;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+
+  color: var(--forest);
+
+  transition:
+    gap 0.3s ease,
+    color 0.3s ease;
+}
+
+.quiet-link span {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.quiet-link:hover {
+  gap: 20px;
+  color: var(--clay);
+}
+
+.cover-image {
+  position: relative;
+
+  width: 100%;
+  max-width: 500px;
+
+  justify-self: end;
+}
+
+.cover-image::before {
+  content: "";
+
+  position: absolute;
+
+  width: 170px;
+  height: 170px;
+
+  top: -32px;
+  right: -32px;
+
+  background: var(--sage-pale);
+
+  border-radius: 50%;
+
+  z-index: 0;
+}
+
+.cover-image img {
+  position: relative;
+  z-index: 1;
+
+  height: 610px;
+
+  object-fit: cover;
+
+  border-radius: 220px 220px 20px 20px;
+}
+
+
+/* =========================================================
+   5. SMALL EDITORIAL LABEL
+   ========================================================= */
+
+.small-heading {
+  margin-bottom: 22px;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  color: var(--forest);
+}
+
+
+/* =========================================================
+   6. ABOUT
+   ========================================================= */
+
+.about-section {
+  background: var(--sage-pale);
+
+  padding: 125px 30px;
+  
+  display: grid;
+  grid-template-columns: minmax(100px, 0.3fr) minmax(0, 1.7fr);
+
+  gap: 50px;
+}
+
+.about-label {
+  display: flex;
+  justify-content: center;
+}
+
+.about-label span {
+  writing-mode: vertical-rl;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  color: var(--forest);
+}
+
+.about-content {
+  max-width: 880px;
+}
+
+.about-content h2 {
+  max-width: 850px;
+
+  font-family: var(--serif);
+  font-weight: 400;
+
+  font-size: clamp(40px, 5vw, 62px);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+
+  color: var(--forest);
+}
+
+.about-copy {
+  max-width: 680px;
+
+  margin-top: 48px;
+
+  display: grid;
+  gap: 22px;
+}
+
+.about-copy p {
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   7. JOURNAL
+   ========================================================= */
+
+.journal-section {
+  width: min(100% - 60px, var(--max-width));
+
+  margin: 0 auto;
+
+  padding: 130px 0;
+}
+
+.journal-heading {
+  max-width: 680px;
+
+  margin-bottom: 75px;
+}
+
+.journal-heading h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+
+  font-size: clamp(44px, 5vw, 62px);
+  line-height: 1;
+
+  color: var(--forest);
+}
+
+.journal-heading > p:last-child {
+  max-width: 500px;
+
+  margin-top: 24px;
+
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   8. FEATURED ARTICLE
+   ========================================================= */
+
+.journal-feature {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+
+  min-height: 600px;
+
+  border-top: 1px solid rgba(38, 53, 45, 0.2);
+  border-bottom: 1px solid rgba(38, 53, 45, 0.2);
+}
+
+.journal-image {
+  overflow: hidden;
+}
+
+.journal-image img {
+  height: 100%;
+  min-height: 600px;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.journal-feature:hover .journal-image img {
+  transform: scale(1.025);
+}
+
+.journal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 70px 65px;
+}
+
+.article-category {
+  margin-bottom: 25px;
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: var(--clay);
+}
+
+.journal-content h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+
+  font-size: clamp(40px, 4.5vw, 58px);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+
+  color: var(--forest);
+}
+
+.article-subtitle {
+  margin-top: 28px;
+
+  font-family: var(--serif);
+  font-size: 21px;
+  line-height: 1.4;
+
+  color: var(--charcoal);
+}
+
+.article-excerpt {
+  margin-top: 22px;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   9. OTHER JOURNAL PIECES
+   ========================================================= */
+
+.journal-list {
+  margin-top: 85px;
+}
+
+.journal-item {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 60px;
+
+  padding: 45px 0;
+
+  border-bottom: 1px solid rgba(38, 53, 45, 0.16);
+}
+
+.journal-item:first-child {
+  border-top: 1px solid rgba(38, 53, 45, 0.16);
+}
+
+.journal-item-image {
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.journal-item-image img {
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.journal-item:hover .journal-item-image img {
+  transform: scale(1.04);
+}
+
+.journal-item-content {
+  max-width: 700px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.journal-item-content h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+
+  font-size: clamp(32px, 3.5vw, 46px);
+  line-height: 1.05;
+
+  color: var(--forest);
+}
+
+.journal-item-content > p:not(.article-category) {
+  max-width: 600px;
+
+  margin-top: 20px;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   10. WRITING AREAS
+   ========================================================= */
+
+.writing-section {
+  background: var(--sage-pale);
+
+  padding: 125px 30px;
+}
+
+.writing-heading {
+  max-width: 1050px;
+
+  margin: 0 auto 80px;
+}
+
+.writing-heading h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+
+  font-size: clamp(43px, 5vw, 64px);
+  line-height: 1.05;
+
+  color: var(--forest);
+}
+
+.writing-heading h2 em {
+  color: var(--clay);
+  font-style: italic;
+}
+
+.writing-columns {
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.writing-column {
+  padding: 20px 35px;
+
+  border-left: 1px solid rgba(38, 53, 45, 0.18);
+}
+
+.writing-column:last-child {
+  border-right: 1px solid rgba(38, 53, 45, 0.18);
+}
+
+.writing-column h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+
+  font-size: 28px;
+
+  color: var(--forest);
+}
+
+.writing-column p {
+  margin-top: 18px;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   11. WRITING PHILOSOPHY
+   ========================================================= */
+
+.statement-section {
+  background: var(--forest);
+
+  padding: 145px 30px;
+}
+
+.statement-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.statement-section .small-heading {
+  color: var(--sage);
+}
+
+.statement-section h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+
+  font-size: clamp(45px, 6vw, 76px);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+
+  color: var(--ivory);
+}
+
+.statement-section h2 em {
+  display: block;
+
+  margin-top: 12px;
+
+  font-style: italic;
+  color: var(--clay);
+}
+
+
+/* =========================================================
+   12. CONTACT
+   ========================================================= */
+
+.contact-section {
+  text-align: center;
+
+  padding: 135px 30px 150px;
+}
+
+.contact-section .small-heading {
+  margin-bottom: 20px;
+}
+
+.contact-section h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+
+  font-size: clamp(48px, 6vw, 75px);
+  line-height: 1;
+
+  color: var(--forest);
+}
+
+.contact-section > p:not(.small-heading) {
+  max-width: 500px;
+
+  margin: 25px auto 0;
+
+  font-size: 16px;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+
+  margin-top: 38px;
+}
+
+.contact-icons a {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(38, 53, 45, 0.25);
+  border-radius: 50%;
+
+  color: var(--forest);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.contact-icons a:hover {
+  background: var(--forest);
+  color: var(--ivory);
+
+  transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   13. FOOTER
+   ========================================================= */
+
+footer {
+  background: var(--forest);
+
+  min-height: 100px;
+
+  padding: 25px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: var(--ivory);
+
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+
+/* =========================================================
+   14. TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+  .cover {
+    grid-template-columns: 1fr 0.8fr;
+    gap: 45px;
+  }
+
+  .cover-image img {
+    height: 520px;
+  }
+
+  .journal-feature {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .journal-content {
+    padding: 50px 40px;
+  }
+
+  .journal-item {
+    grid-template-columns: 250px 1fr;
+    gap: 40px;
+  }
+
+  .writing-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .writing-column {
+    padding: 30px;
+  }
+
+  .writing-column:nth-child(3) {
+    border-left: none;
+  }
+
+  .writing-column:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(38, 53, 45, 0.18);
+  }
+}
+
+
+/* =========================================================
+   15. MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .navbar {
+    width: min(100% - 36px, var(--max-width));
+
+    min-height: 78px;
+
+    align-items: flex-start;
+    padding: 22px 0;
+
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .wordmark {
+    font-size: 22px;
+  }
+
+  .nav-links {
+    width: 100%;
+
+    justify-content: space-between;
+
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+  }
+
+
+  /* HERO */
+
+  .cover {
+    width: min(100% - 36px, var(--max-width));
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    min-height: auto;
+
+    padding: 75px 0 90px;
+
+    gap: 60px;
+  }
+
+  .cover h1 {
+    font-size: clamp(49px, 14vw, 66px);
+  }
+
+  .cover-intro {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+
+  .cover-image {
+    width: 88%;
+
+    align-self: center;
+  }
+
+  .cover-image img {
+    height: 500px;
+
+    border-radius: 180px 180px 16px 16px;
+  }
+
+  .cover-image::before {
+    width: 110px;
+    height: 110px;
+
+    top: -22px;
+    right: -18px;
+  }
+
+
+  /* ABOUT */
+
+  .about-section {
+    display: block;
+
+    padding: 90px 22px;
+  }
+
+  .about-label {
+    display: block;
+
+    margin-bottom: 45px;
+  }
+
+  .about-label span {
+    writing-mode: initial;
+  }
+
+  .about-content h2 {
+    font-size: 41px;
+  }
+
+  .about-copy {
+    margin-top: 35px;
+  }
+
+  .about-copy p {
+    font-size: 16px;
+  }
+
+
+  /* JOURNAL */
+
+  .journal-section {
+    width: min(100% - 36px, var(--max-width));
+
+    padding: 90px 0;
+  }
+
+  .journal-heading {
+    margin-bottom: 50px;
+  }
+
+  .journal-heading h2 {
+    font-size: 45px;
+  }
+
+  .journal-feature {
+    display: block;
+
+    min-height: auto;
+  }
+
+  .journal-image img {
+    min-height: 350px;
+    height: 350px;
+  }
+
+  .journal-content {
+    padding: 45px 0 55px;
+  }
+
+  .journal-content h3 {
+    font-size: 43px;
+  }
+
+  .article-subtitle {
+    font-size: 19px;
+  }
+
+
+  /* OTHER ARTICLES */
+
+  .journal-list {
+    margin-top: 30px;
+  }
+
+  .journal-item {
+    display: block;
+
+    padding: 45px 0;
+  }
+
+  .journal-item-image {
+    margin-bottom: 30px;
+  }
+
+  .journal-item-content h3 {
+    font-size: 38px;
+  }
+
+
+  /* WRITING AREAS */
+
+  .writing-section {
+    padding: 90px 22px;
+  }
+
+  .writing-heading {
+    margin-bottom: 55px;
+  }
+
+  .writing-heading h2 {
+    font-size: 44px;
+  }
+
+  .writing-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .writing-column {
+    padding: 28px 0;
+
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(38, 53, 45, 0.18);
+  }
+
+  .writing-column:last-child {
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .writing-column h3 {
+    font-size: 30px;
+  }
+
+
+  /* STATEMENT */
+
+  .statement-section {
+    padding: 100px 22px;
+  }
+
+  .statement-section h2 {
+    font-size: 46px;
+  }
+
+
+  /* CONTACT */
+
+  .contact-section {
+    padding: 100px 22px;
+  }
+
+  .contact-section h2 {
+    font-size: 50px;
+  }
+
+
+  /* FOOTER */
+
+  footer {
+    min-height: auto;
+
+    padding: 28px 22px;
+
+    flex-direction: column;
+    gap: 8px;
+
+    text-align: center;
+  }
+
+}
+
+
+/* =========================================================
+   16. VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .nav-links a {
+    font-size: 10px;
+  }
+
+  .cover h1 {
+    font-size: 46px;
+  }
+
+  .cover-image img {
+    height: 430px;
+  }
+
+  .about-content h2,
+  .journal-content h3,
+  .journal-item-content h3 {
+    font-size: 36px;
+  }
+
+  .statement-section h2 {
+    font-size: 39px;
+  }
+
+}
