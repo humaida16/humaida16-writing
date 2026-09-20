@@ -58,16 +58,13 @@ a {
 .page {
   width: min(1120px, calc(100% - 40px));
   margin: 34px auto;
-
   overflow: hidden;
-
   background: var(--forest);
 }
 
 
 /* =========================================================
    FIRST PAGE
-   SAME TWO-SHADE GREEN DESIGN
 ========================================================= */
 
 .first-page {
@@ -83,12 +80,11 @@ a {
 
 
 /* =========================================================
-   HERO
+   HERO / NAV
 ========================================================= */
 
 .hero {
-  min-height: 520px;
-
+  min-height: 145px;
   background: transparent;
 }
 
@@ -104,7 +100,6 @@ a {
 
   display: flex;
   align-items: center;
-
   gap: 6px;
 
   background: rgba(20, 26, 22, 0.38);
@@ -148,10 +143,7 @@ a {
 }
 
 
-/* NAME
-   Existing name only.
-   No duplicate name in the hero.
-*/
+/* NAME */
 
 .brand {
   display: block;
@@ -172,12 +164,12 @@ a {
 }
 
 
-/* SMALL LINE UNDER NAME */
+/* LINE UNDER NAME */
 
 .hero-line {
   max-width: 310px;
 
-  margin-top: 10px;
+  margin-top: 9px;
 
   font-family: var(--sans);
 
@@ -185,7 +177,7 @@ a {
 
   font-weight: 500;
 
-  line-height: 1.55;
+  line-height: 1.5;
 
   color: rgba(248, 245, 238, 0.72);
 }
@@ -195,22 +187,17 @@ a {
 
 .nav-links {
   display: flex;
-
   align-items: center;
-
   gap: 30px;
 }
 
 .nav-links a {
   font-size: 11px;
-
   font-weight: 500;
 
   color: rgba(248, 245, 238, 0.78);
 
-  transition:
-    background 0.25s ease,
-    color 0.25s ease;
+  transition: color 0.25s ease;
 }
 
 .nav-links a:hover {
@@ -218,46 +205,9 @@ a {
 }
 
 
-/* GET IN TOUCH BUTTON
-   Kept as the distinct button in your screenshot.
-*/
-
-.contact-nav {
-  padding: 18px 25px;
-
-  background: rgba(216, 225, 215, 0.38);
-
-  color: var(--cream) !important;
-}
-
-
-/* =========================================================
-   HERO EMPTY SPACE
-========================================================= */
-
-.hero-space {
-  min-height: 355px;
-
-  padding: 230px 58px 50px;
-}
-
-.hero-small-line {
-  font-size: 10px;
-
-  font-weight: 600;
-
-  letter-spacing: 0.13em;
-
-  text-transform: uppercase;
-
-  color: rgba(248, 245, 238, 0.35);
-}
-
-
 /* =========================================================
    ABOUT
-   SAME FIRST-PAGE BACKGROUND
-   SAME PICTURE + TEXT ARRANGEMENT
+   DIRECTLY AFTER NAVIGATION
 ========================================================= */
 
 .about-section {
@@ -267,7 +217,7 @@ a {
 
   gap: 72px;
 
-  padding: 40px 58px 105px;
+  padding: 42px 58px 85px;
 
   background: transparent;
 }
@@ -277,7 +227,6 @@ a {
 
 .about-image-wrap {
   align-self: start;
-
   overflow: hidden;
 }
 
@@ -287,7 +236,6 @@ a {
   aspect-ratio: 0.84;
 
   object-fit: cover;
-
   object-position: center;
 
   background: var(--sage);
@@ -300,12 +248,10 @@ a {
   align-self: center;
 
   max-width: 470px;
-
-  padding-top: 20px;
 }
 
 .section-label {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 
   font-size: 11px;
 
@@ -321,7 +267,7 @@ a {
 .about-content h2 {
   max-width: 450px;
 
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 
   font-family: var(--serif);
 
@@ -337,18 +283,17 @@ a {
 }
 
 .about-content p:not(.section-label) {
-  margin-bottom: 18px;
+  margin-bottom: 17px;
 
   font-size: 14px;
 
-  line-height: 1.8;
+  line-height: 1.75;
 
   color: var(--text-soft);
 }
 
 .about-content strong {
   color: var(--cream);
-
   font-weight: 700;
 }
 
@@ -358,31 +303,25 @@ a {
 ========================================================= */
 
 .writing-section {
-  padding: 105px 58px 115px;
+  padding: 90px 58px 105px;
 
   background: var(--forest-dark);
 }
 
 .writing-heading {
   display: flex;
-
   align-items: flex-end;
-
   justify-content: space-between;
 
-  margin-bottom: 42px;
+  margin-bottom: 40px;
 }
 
 .writing-heading .section-label {
   margin-bottom: 0;
-
-  font-weight: 700;
 }
 
 
-/* A FEW PIECES
-   Cursive + bold + catchy
-*/
+/* CATCHY CURSIVE SENTENCE */
 
 .writing-note {
   max-width: 440px;
@@ -481,7 +420,7 @@ a {
 }
 
 
-/* WRITEUP TITLES */
+/* TITLES */
 
 .writing-content h3 {
   min-height: 58px;
@@ -518,16 +457,13 @@ a {
 ========================================================= */
 
 .skills-section {
-  padding: 100px 58px 110px;
+  padding: 90px 58px 100px;
 
   background: #343C35;
 }
 
-
-/* HEADING */
-
 .skills-heading {
-  margin-bottom: 52px;
+  margin-bottom: 48px;
 }
 
 .skills-heading .section-label {
@@ -551,15 +487,12 @@ a {
 
 
 /* =========================================================
-   SKILL CARD
+   SKILLS
 ========================================================= */
 
 .skill-card {
   min-width: 0;
 }
-
-
-/* IMAGE */
 
 .skill-image-wrap {
   aspect-ratio: 1.15;
@@ -585,9 +518,7 @@ a {
 }
 
 
-/* SKILL TITLES
-   ALL BOLD
-*/
+/* BOLD SKILL TITLES */
 
 .skill-card h3 {
   margin-bottom: 8px;
@@ -601,9 +532,6 @@ a {
   color: var(--white);
 }
 
-
-/* SKILL DESCRIPTION */
-
 .skill-card p {
   font-size: 11px;
 
@@ -615,11 +543,10 @@ a {
 
 /* =========================================================
    GET IN TOUCH
-   FULLY CENTRED
 ========================================================= */
 
 .contact-section {
-  padding: 105px 58px;
+  padding: 85px 58px;
 
   background: #292F2A;
 }
@@ -628,33 +555,25 @@ a {
 /* EVERYTHING CENTRED */
 
 .contact-inner {
-  max-width: 750px;
+  max-width: 720px;
 
   margin: 0 auto;
 
   text-align: center;
 }
 
-
-/* LABEL */
-
 .contact-inner .section-label {
-  margin-bottom: 24px;
-
-  text-align: center;
+  margin-bottom: 22px;
 }
 
-
-/* MAIN HEADING */
-
 .contact-inner h2 {
-  max-width: 680px;
+  max-width: 650px;
 
-  margin: 0 auto 32px;
+  margin: 0 auto 30px;
 
   font-family: var(--serif);
 
-  font-size: clamp(44px, 5vw, 64px);
+  font-size: clamp(44px, 5vw, 62px);
 
   font-weight: 400;
 
@@ -687,7 +606,6 @@ a {
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   border: 1px solid rgba(248, 245, 238, 0.25);
@@ -719,22 +637,13 @@ a {
 
   .page {
     width: min(100% - 24px, 900px);
-
     margin: 18px auto;
   }
-
 
   .nav {
     padding-left: 36px;
     padding-right: 36px;
   }
-
-
-  .hero-space {
-    padding-left: 36px;
-    padding-right: 36px;
-  }
-
 
   .about-section,
   .writing-section,
@@ -744,20 +653,16 @@ a {
     padding-right: 36px;
   }
 
-
   .about-section {
     gap: 45px;
   }
-
 
   .writing-grid {
     gap: 18px;
   }
 
-
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
-
     row-gap: 42px;
   }
 
@@ -774,15 +679,10 @@ a {
     background: var(--forest);
   }
 
-
   .page {
     width: 100%;
-
     margin: 0;
   }
-
-
-  /* FIRST PAGE */
 
   .first-page {
     background:
@@ -803,9 +703,8 @@ a {
 
     flex-direction: column;
 
-    gap: 28px;
+    gap: 24px;
   }
-
 
   .brand {
     font-size: 25px;
@@ -813,13 +712,11 @@ a {
     white-space: normal;
   }
 
-
   .hero-line {
     max-width: 280px;
 
     font-size: 11px;
   }
-
 
   .nav-links {
     width: 100%;
@@ -831,28 +728,15 @@ a {
     flex-wrap: wrap;
   }
 
-
   .nav-links a {
     font-size: 9px;
-  }
-
-
-  .contact-nav {
-    padding: 12px 15px;
   }
 
 
   /* HERO */
 
   .hero {
-    min-height: 430px;
-  }
-
-
-  .hero-space {
-    min-height: 270px;
-
-    padding: 190px 22px 40px;
+    min-height: 150px;
   }
 
 
@@ -863,26 +747,18 @@ a {
 
     flex-direction: column;
 
-    gap: 44px;
+    gap: 40px;
 
-    padding: 40px 22px 80px;
+    padding: 32px 22px 70px;
   }
-
 
   .about-image {
     aspect-ratio: 0.9;
   }
 
-
-  .about-content {
-    padding-top: 0;
-  }
-
-
   .about-content h2 {
     font-size: 38px;
   }
-
 
   .about-content p:not(.section-label) {
     font-size: 13px;
@@ -892,16 +768,14 @@ a {
   /* WRITING */
 
   .writing-section {
-    padding: 72px 22px 80px;
+    padding: 70px 22px 80px;
   }
-
 
   .writing-heading {
     display: block;
 
-    margin-bottom: 40px;
+    margin-bottom: 35px;
   }
-
 
   .writing-note {
     max-width: 350px;
@@ -911,28 +785,23 @@ a {
     font-size: 15px;
   }
 
-
   .writing-grid {
     grid-template-columns: 1fr;
 
     gap: 20px;
   }
 
-
   .writing-image-wrap {
     aspect-ratio: 1.2;
   }
-
 
   .writing-content {
     padding: 22px 20px 25px;
   }
 
-
   .writing-content h3 {
     min-height: auto;
   }
-
 
   .writing-content > p:last-child {
     min-height: auto;
@@ -942,14 +811,12 @@ a {
   /* SKILLS */
 
   .skills-section {
-    padding: 72px 22px 80px;
+    padding: 70px 22px 80px;
   }
-
 
   .skills-heading {
     margin-bottom: 40px;
   }
-
 
   .skills-grid {
     grid-template-columns: 1fr 1fr;
@@ -957,16 +824,13 @@ a {
     gap: 35px 16px;
   }
 
-
   .skill-image-wrap {
     margin-bottom: 14px;
   }
 
-
   .skill-card h3 {
     font-size: 14px;
   }
-
 
   .skill-card p {
     font-size: 10px;
@@ -976,21 +840,18 @@ a {
   /* CONTACT */
 
   .contact-section {
-    padding: 85px 22px;
+    padding: 80px 22px;
   }
-
 
   .contact-inner {
     text-align: center;
   }
-
 
   .contact-inner h2 {
     font-size: 45px;
 
     text-align: center;
   }
-
 
   .contact-icons {
     justify-content: center;
@@ -1007,37 +868,28 @@ a {
 
   .nav {
     padding-left: 18px;
-
     padding-right: 18px;
-
-    gap: 18px;
   }
-
 
   .brand {
     font-size: 23px;
   }
 
-
   .nav-links {
     gap: 8px;
   }
-
 
   .nav-links a {
     font-size: 8px;
   }
 
-
   .hero-line {
     font-size: 10px;
   }
 
-
   .about-content h2 {
     font-size: 34px;
   }
-
 
   .skills-grid {
     grid-template-columns: 1fr;
