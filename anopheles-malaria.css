@@ -1,6 +1,6 @@
 /* =========================================================
-   ANOPHELES — RESEARCH EDITORIAL
-   ORIGINAL COLOURS + LAYOUT PRESERVED
+   ANOPHELES MALARIA
+   RESEARCH EDITORIAL STYLE
 ========================================================= */
 
 :root {
@@ -44,8 +44,8 @@ body {
   background: var(--off-white);
   color: var(--ink);
   font-family: var(--sans);
-  line-height: 1.7;
-  font-size: 16px;
+  line-height: 1.75;
+  overflow-x: hidden;
 }
 
 img {
@@ -58,376 +58,280 @@ a {
   text-decoration: none;
 }
 
-em {
-  font-family: var(--serif);
-}
-
 
 /* =========================================================
-   NAVIGATION
-   KEEP THE BAR / OUTLINE, REMOVE TEXT
+   TOP NAV
+   INTENTIONALLY EMPTY
 ========================================================= */
 
 .top-nav {
+  width: 100%;
   height: 78px;
-  padding: 0 7%;
+  background: var(--ink);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
-  background: var(--ink);
-  color: var(--off-white);
+  justify-content: center;
 }
 
 
 /* =========================================================
    HERO
-   UNCHANGED VISUAL DIRECTION
 ========================================================= */
 
-.hero {
-  background:
-    radial-gradient(
-      circle at 85% 15%,
-      rgba(201, 194, 216, 0.55),
-      transparent 28%
-    ),
-    linear-gradient(
-      135deg,
-      var(--off-white) 0%,
-      var(--blue-light) 48%,
-      var(--lavender-light) 100%
-    );
-
-  min-height: 690px;
-
-  display: flex;
-  align-items: center;
-
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  width: 420px;
-  height: 420px;
-  border-radius: 50%;
-
-  right: -170px;
-  bottom: -180px;
-
-  border: 1px solid rgba(102, 91, 112, 0.18);
+.article-hero {
+  background: var(--lavender);
+  padding: 105px 7vw 0;
 }
 
 .hero-inner {
-  width: min(1120px, 86%);
-  margin: auto;
-  padding: 100px 0;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .hero-meta {
-  display: flex;
-  gap: 12px;
-
-  color: var(--plum);
-
-  font-size: 11px;
+  font-family: var(--sans);
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.2em;
-
+  letter-spacing: 0.22em;
+  color: var(--plum);
   margin-bottom: 28px;
 }
 
-.hero h1 {
-  max-width: 950px;
+.hero-meta span {
+  margin: 0 8px;
+  opacity: 0.6;
+}
+
+.article-hero h1 {
+  max-width: 1000px;
 
   font-family: var(--serif);
-  font-size: clamp(55px, 7vw, 94px);
-  line-height: 0.98;
+  font-size: clamp(58px, 8vw, 112px);
   font-weight: 400;
+  line-height: 0.98;
   letter-spacing: -0.035em;
 
   color: var(--ink);
 }
 
-.hero h1 em {
+.article-hero h1 em {
   color: var(--plum);
 }
 
-.hero-subtitle {
-  max-width: 620px;
+.hero-deck {
+  max-width: 650px;
 
-  margin-top: 38px;
+  margin-top: 34px;
 
-  font-size: 20px;
+  font-family: var(--sans);
+  font-size: clamp(17px, 2vw, 22px);
   line-height: 1.6;
+
   color: var(--ink-soft);
 }
 
-.hero-line {
-  width: 100%;
-  height: 1px;
+.hero-footer {
+  margin-top: 95px;
+  padding: 20px 0;
 
-  background: var(--line);
-
-  margin: 70px 0 20px;
-}
-
-.hero-bottom {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 30px;
+
+  border-top: 1px solid rgba(37, 38, 51, 0.2);
 
   font-size: 12px;
-  color: var(--plum);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 
-  letter-spacing: 0.04em;
-}
-
-
-/* =========================================================
-   INTRO
-   TIGHTER SPACING
-========================================================= */
-
-.intro-section {
-  width: min(1120px, 86%);
-  margin: auto;
-
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 70px;
-
-  padding: 90px 0;
-}
-
-.section-number {
-  display: none;
-}
-
-.intro-content {
-  max-width: 800px;
-}
-
-.intro-content .lead {
-  font-family: var(--serif);
-  font-size: clamp(30px, 4vw, 46px);
-  line-height: 1.2;
-
-  margin-bottom: 28px;
-}
-
-.intro-content p:not(.lead) {
   color: var(--ink-soft);
-  margin-bottom: 18px;
 }
 
 
 /* =========================================================
-   ABSTRACT
+   ARTICLE BASE
 ========================================================= */
 
-.abstract-section {
-  background: var(--ink);
-  color: var(--off-white);
-
-  padding: 90px 7%;
-
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 80px;
+.article {
+  width: 100%;
 }
 
-.abstract-label {
-  color: var(--lavender);
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  font-weight: 700;
-}
-
-.abstract-text {
-  max-width: 850px;
-}
-
-.abstract-text p {
-  color: rgba(248, 246, 242, 0.82);
-  margin-bottom: 18px;
-}
-
-.keywords {
-  margin-top: 32px;
-  padding-top: 20px;
-
-  border-top: 1px solid rgba(255,255,255,0.15);
-
-  color: var(--lavender);
-  font-size: 13px;
+.article-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 105px 7vw;
 }
 
 
 /* =========================================================
-   STANDARD ARTICLE SECTIONS
+   SECTION HEADING
 ========================================================= */
-
-.article-section,
-.results-section,
-.discussion-section,
-.references-section {
-  width: min(1120px, 86%);
-  margin: auto;
-
-  padding: 90px 0;
-}
 
 .section-heading {
   display: grid;
-  grid-template-columns: 100px 1fr;
-  align-items: baseline;
+  grid-template-columns: 75px minmax(0, 1fr);
+  align-items: start;
 
-  margin-bottom: 45px;
+  margin-bottom: 55px;
 }
 
 .section-heading > span {
-  display: none;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--plum);
+
+  /* Section numbers visually removed */
+  visibility: hidden;
 }
 
 .section-heading h2 {
+  max-width: 850px;
+
   font-family: var(--serif);
-  font-size: clamp(42px, 5vw, 65px);
-  line-height: 1;
+  font-size: clamp(44px, 5.5vw, 76px);
   font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+
+  color: var(--ink);
 }
+
+.section-heading h2 em {
+  color: var(--plum);
+}
+
+
+/* =========================================================
+   ARTICLE BODY
+========================================================= */
 
 .article-body {
-  max-width: 800px;
-  margin-left: 100px;
+  max-width: 820px;
+  margin-left: 75px;
 }
 
-.article-body p,
-.result-content p,
-.discussion-content p {
+.article-body p {
+  margin-bottom: 25px;
+
+  font-size: 17px;
+  line-height: 1.85;
   color: var(--ink-soft);
-  margin-bottom: 19px;
 }
 
-.article-body h3,
-.result-content h3 {
+.article-body p:last-child {
+  margin-bottom: 0;
+}
+
+.article-body strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PULL QUOTE
+========================================================= */
+
+.article-body blockquote {
+  margin: 50px 0;
+
+  padding: 30px 0 30px 34px;
+
+  border-left: 3px solid var(--plum);
+
   font-family: var(--serif);
-  font-size: 30px;
-  font-weight: 400;
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.2;
 
-  margin: 42px 0 16px;
-}
-
-.pull-quote {
-  margin: 42px 0;
-  padding: 28px 0 28px 35px;
-
-  border-left: 4px solid var(--lavender);
-
-  font-family: var(--serif);
-  font-size: 32px;
-  line-height: 1.25;
-}
-
-.pull-quote span {
   color: var(--plum);
-  font-size: 50px;
-  vertical-align: -15px;
-  margin-right: 8px;
 }
 
 
 /* =========================================================
    OBJECTIVES
-   OBJECTIVE NUMBERS ARE KEPT
 ========================================================= */
 
 .objectives-section {
-  background: var(--lavender-light);
-  padding: 90px 7%;
+  background: var(--blue-light);
+  max-width: none;
 }
 
-.objectives-section .section-heading {
-  max-width: 1120px;
-  margin: 0 auto 45px;
+.objectives-section .section-heading,
+.objectives-section .objectives-grid {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.objective-grid {
-  width: min(1120px, 100%);
-  margin: auto;
-
+.objectives-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 24px;
 }
 
 .objective-card {
   background: var(--white);
-  padding: 32px;
 
-  min-height: 220px;
+  padding: 34px;
 
-  border-top: 4px solid var(--plum);
+  min-height: 210px;
 
-  box-shadow: 0 15px 45px rgba(37, 38, 51, 0.06);
+  border-top: 3px solid var(--plum);
 }
 
-.objective-card span {
+.objective-number {
+  display: block;
+
+  margin-bottom: 25px;
+
   font-size: 12px;
-  color: var(--plum);
   font-weight: 700;
+  letter-spacing: 0.16em;
+
+  color: var(--plum);
 }
 
 .objective-card p {
-  margin-top: 35px;
+  font-size: 16px;
+  line-height: 1.75;
   color: var(--ink-soft);
 }
 
 
 /* =========================================================
-   METHOD
-========================================================= */
-
-.method-section {
-  background: var(--off-white);
-}
-
-
-/* =========================================================
-   PERSON / PLACE / TIME FRAMEWORK
-   SAME COLOURS + LAYOUT, MORE COMPACT
+   PERSON / PLACE / TIME
+   COMPACT EDITORIAL HEADER
 ========================================================= */
 
 .framework-section {
-  background: var(--blue-light);
-  padding: 90px 7%;
+  background: var(--lavender-light);
+
+  padding: 95px 7vw 100px;
 }
 
 .framework-intro {
-  width: min(1120px, 100%);
-  margin: auto;
+  max-width: 1140px;
+  margin: 0 auto 52px;
 
   display: grid;
-  grid-template-columns: 100px 1fr 1fr;
-  gap: 50px;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 60px;
 
   align-items: end;
-
-  margin-bottom: 45px;
-}
-
-.framework-intro > span {
-  display: none;
 }
 
 .framework-intro h2 {
   font-family: var(--serif);
-  font-size: clamp(55px, 7vw, 90px);
-  line-height: 0.88;
+  font-size: clamp(48px, 6vw, 82px);
   font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+
+  color: var(--ink);
 }
 
 .framework-intro h2 em {
@@ -435,13 +339,18 @@ em {
 }
 
 .framework-intro p {
-  max-width: 300px;
+  max-width: 260px;
+
+  padding-bottom: 8px;
+
+  font-size: 14px;
+  line-height: 1.7;
   color: var(--ink-soft);
 }
 
 .framework-grid {
-  width: min(1120px, 100%);
-  margin: auto;
+  max-width: 1140px;
+  margin: 0 auto;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -451,43 +360,45 @@ em {
 .framework-card {
   background: var(--white);
 
-  min-height: 320px;
-  padding: 32px;
+  padding: 32px 30px 34px;
 
-  position: relative;
-
-  box-shadow: 0 20px 55px rgba(37, 38, 51, 0.07);
+  border-top: 3px solid var(--plum);
 }
 
-.framework-card.person {
-  border-top: 5px solid var(--lavender);
+.framework-card:nth-child(1) {
+  border-top-color: var(--blue);
 }
 
-.framework-card.place {
-  border-top: 5px solid var(--blue);
+.framework-card:nth-child(2) {
+  border-top-color: var(--plum);
 }
 
-.framework-card.time {
-  border-top: 5px solid var(--plum);
-}
-
-
-/* Remove PERSON / PLACE / TIME card headings + numbering */
-.card-top {
-  display: none;
+.framework-card:nth-child(3) {
+  border-top-color: var(--lavender);
 }
 
 .framework-card h3 {
-  font-family: var(--serif);
-  font-size: 30px;
-  line-height: 1.15;
-  font-weight: 400;
+  margin-bottom: 18px;
 
-  margin: 10px 0 20px;
+  font-family: var(--serif);
+  font-size: 29px;
+  font-weight: 400;
+  line-height: 1.15;
+
+  color: var(--ink);
 }
 
 .framework-card p {
+  margin-bottom: 18px;
+
+  font-size: 15px;
+  line-height: 1.75;
+
   color: var(--ink-soft);
+}
+
+.framework-card p:last-child {
+  margin-bottom: 0;
 }
 
 
@@ -496,348 +407,193 @@ em {
 ========================================================= */
 
 .results-section {
-  padding-bottom: 70px;
+  background: var(--off-white);
 }
 
-.result-group {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-
-  gap: 70px;
-
-  padding: 55px 0;
-
-  border-top: 1px solid var(--line);
+.results-group {
+  max-width: 1140px;
+  margin: 0 auto 72px;
 }
 
-.result-label {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.results-group:last-child {
+  margin-bottom: 0;
+}
+
+.results-label {
+  margin-bottom: 20px;
 
   font-size: 11px;
-  letter-spacing: 0.12em;
-}
-
-.result-label span {
-  display: none;
-}
-
-.result-label strong {
   font-weight: 700;
-}
+  letter-spacing: 0.2em;
 
-.result-content {
-  max-width: 790px;
-}
-
-.result-content h3 {
-  margin-top: 45px;
-}
-
-.result-content h3:first-child {
-  margin-top: 0;
-}
-
-.stat-callout {
-  margin: 40px 0;
-
-  display: flex;
-  align-items: center;
-  gap: 30px;
-
-  padding: 30px;
-
-  background: var(--lavender-light);
-}
-
-.stat-callout strong {
-  font-family: var(--serif);
-  font-size: 65px;
-  font-weight: 400;
   color: var(--plum);
 }
 
-.stat-callout span {
-  max-width: 430px;
-  color: var(--ink-soft);
+.results-group .article-body {
+  margin-left: 0;
+  max-width: 850px;
 }
 
 
 /* =========================================================
    INTERSECTION
+   COMPACT, WIDE EDITORIAL SECTION
 ========================================================= */
 
 .intersection-section {
   background: var(--ink);
-  color: var(--off-white);
+  color: var(--white);
 
-  padding: 100px 7%;
+  padding: 85px 7vw 90px;
 }
 
 .intersection-header {
-  width: min(1120px, 100%);
-  margin: auto;
-
-  display: grid;
-  grid-template-columns: 100px 1fr 1fr;
-  gap: 50px;
-
-  align-items: end;
-}
-
-.intersection-header > span {
-  display: none;
+  max-width: 1140px;
+  margin: 0 auto 48px;
 }
 
 .intersection-header h2 {
+  max-width: 850px;
+
   font-family: var(--serif);
-  font-size: clamp(48px, 6vw, 78px);
-  line-height: 0.95;
+  font-size: clamp(46px, 6vw, 78px);
   font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+
+  color: var(--white);
 }
 
 .intersection-header h2 em {
   color: var(--blue);
 }
 
-.intersection-grid {
-  width: min(1120px, 100%);
-  margin: 60px auto 0;
+.intersection-body {
+  max-width: 820px;
+  margin: 0 auto;
 
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 
-  gap: 1px;
-
-  background: rgba(255,255,255,0.12);
+  padding-top: 38px;
 }
 
-.intersection-grid article {
-  padding: 38px;
+.intersection-body p {
+  margin-bottom: 24px;
 
-  background: var(--ink);
+  font-size: 16px;
+  line-height: 1.85;
 
-  min-height: 250px;
+  color: rgba(255, 255, 255, 0.78);
 }
 
-.intersection-grid article > span {
-  color: var(--lavender);
-  font-size: 11px;
-  font-weight: 700;
-}
-
-.intersection-grid h3 {
-  font-family: var(--serif);
-  font-size: 30px;
-  font-weight: 400;
-
-  margin: 38px 0 15px;
-}
-
-.intersection-grid p {
-  color: rgba(248, 246, 242, 0.68);
+.intersection-body p:last-child {
+  margin-bottom: 0;
 }
 
 
 /* =========================================================
-   DISCUSSION
+   DISCUSSION / IMPLICATIONS / RESEARCH GAPS
 ========================================================= */
 
-.discussion-section {
-  padding-top: 90px;
-}
-
-.discussion-block {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 70px;
-
-  padding: 55px 0;
-
+.article-section + .article-section {
   border-top: 1px solid var(--line);
 }
 
-.discussion-title span {
-  display: none;
-}
-
-.discussion-title h3 {
-  font-family: var(--serif);
-  font-size: 32px;
-  font-weight: 400;
-
-  margin-top: 0;
-}
-
-.discussion-content {
-  max-width: 800px;
-}
-
-.surveillance-list {
-  margin: 35px 0;
-}
-
-.surveillance-list > div,
-.research-gaps > div {
-  display: grid;
-  grid-template-columns: 50px 1fr;
-
-  gap: 20px;
-
-  padding: 18px 0;
-
-  border-top: 1px solid var(--line);
-}
-
-.surveillance-list span,
-.research-gaps span {
-  color: var(--plum);
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.surveillance-list p,
-.research-gaps p {
-  margin: 0;
-}
-
-.strategy-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: 18px;
-
-  margin: 35px 0;
-}
-
-.strategy-grid article {
-  padding: 28px;
-
+.research-gaps-section {
   background: var(--blue-light);
-
-  min-height: 230px;
+  max-width: none;
 }
 
-.strategy-grid span {
-  color: var(--plum);
-  font-size: 11px;
-  font-weight: 700;
-}
-
-.strategy-grid h4 {
-  font-family: var(--serif);
-  font-size: 25px;
-  font-weight: 400;
-
-  margin: 28px 0 13px;
-}
-
-.strategy-grid p {
-  font-size: 14px;
-}
-
-.research-gaps {
-  margin-top: 10px;
+.research-gaps-section .section-heading,
+.research-gaps-section .article-body {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
 /* =========================================================
    CONCLUSION
+   SAME STRUCTURE AS NORMAL ARTICLE SECTIONS
 ========================================================= */
 
 .conclusion-section {
   background:
     linear-gradient(
       135deg,
-      var(--lavender-light),
-      var(--blue-light)
+      var(--lavender-light) 0%,
+      var(--off-white) 72%
     );
 
-  padding: 110px 7%;
-
-  display: grid;
-  grid-template-columns: 100px 1fr;
-
-  gap: 50px;
+  padding-bottom: 115px;
 }
 
-.conclusion-number {
-  display: none;
+.conclusion-section .section-heading {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.conclusion-content {
-  max-width: 850px;
+.conclusion-section .article-body {
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.eyebrow {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  color: var(--plum);
-}
-
-.conclusion-content h2 {
-  font-family: var(--serif);
-  font-size: clamp(48px, 6vw, 78px);
-  line-height: 1;
-  font-weight: 400;
-
-  margin: 28px 0 42px;
-}
-
-.conclusion-content h2 em {
-  color: var(--plum);
-}
-
-.conclusion-content p {
-  color: var(--ink-soft);
-  margin-bottom: 20px;
+.conclusion-section .section-heading h2 {
+  max-width: 900px;
 }
 
 .final-statement {
-  margin-top: 45px;
+  margin-top: 55px;
 
-  padding: 28px 0 0;
+  padding: 38px 0;
 
-  border-top: 2px solid var(--plum);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 
   font-family: var(--serif);
-  font-size: 28px;
-  line-height: 1.35;
+  font-size: clamp(27px, 3vw, 42px);
+  line-height: 1.3;
+
+  color: var(--plum);
 }
 
 
 /* =========================================================
    REFERENCES
-   APA-STYLE HANGING INDENT
 ========================================================= */
 
 .references-section {
-  padding-bottom: 100px;
+  background: var(--white);
 }
 
-.references-section .section-heading {
-  margin-bottom: 45px;
+.references-list {
+  max-width: 900px;
+  margin-left: 75px;
 }
 
-.references {
-  max-width: 850px;
-  margin-left: 100px;
-}
+.reference {
+  margin-bottom: 22px;
 
-.references p {
-  color: var(--ink-soft);
+  padding-left: 38px;
+
+  text-indent: -38px;
+
+  text-align: justify;
 
   font-size: 14px;
   line-height: 1.75;
 
-  margin-bottom: 18px;
+  color: var(--ink-soft);
+}
 
-  padding: 0 0 0 2em;
-  text-indent: -2em;
+.reference:last-child {
+  margin-bottom: 0;
+}
 
-  border-bottom: none;
+.reference em {
+  font-style: italic;
 }
 
 
@@ -845,276 +601,351 @@ em {
    FOOTER
 ========================================================= */
 
-.site-footer {
+.article-footer {
   background: var(--ink);
-  color: var(--off-white);
 
-  padding: 45px 7%;
+  padding: 70px 7vw;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
 
-  gap: 30px;
+  color: var(--white);
 }
 
-.site-footer div {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.site-footer strong {
+.article-footer p {
   font-family: var(--serif);
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.3;
 }
 
-.site-footer span {
+.article-footer span {
+  display: block;
+
+  margin-top: 18px;
+
+  font-family: var(--sans);
   font-size: 11px;
-  color: var(--lavender);
-}
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 
-.site-footer a {
-  font-size: 12px;
-  color: var(--lavender);
-
-  transition: opacity 0.25s ease;
-}
-
-.site-footer a:hover {
-  opacity: 0.65;
+  color: rgba(255, 255, 255, 0.55);
 }
 
 
 /* =========================================================
-   RESPONSIVE
+   ET AL.
 ========================================================= */
 
-@media (max-width: 850px) {
+em {
+  font-style: italic;
+}
 
-  .top-nav {
-    padding: 0 6%;
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .article-hero {
+    padding: 85px 6vw 0;
   }
 
-  .hero {
-    min-height: 600px;
+  .hero-footer {
+    margin-top: 70px;
   }
 
-  .hero-inner {
-    width: 88%;
-  }
-
-  .hero h1 {
-    font-size: clamp(48px, 13vw, 70px);
-  }
-
-  .hero-bottom {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .intro-section,
-  .abstract-section,
-  .result-group,
-  .discussion-block,
-  .conclusion-section {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .intro-section,
-  .article-section,
-  .results-section,
-  .discussion-section,
-  .references-section {
-    width: 88%;
-    padding: 75px 0;
-  }
-
-  .article-body,
-  .references {
-    margin-left: 0;
-  }
-
-  .abstract-section {
-    padding: 75px 6%;
+  .article-section {
+    padding: 85px 6vw;
   }
 
   .section-heading {
-    grid-template-columns: 1fr;
-    margin-bottom: 35px;
+    grid-template-columns: 45px minmax(0, 1fr);
   }
 
-  .objective-grid,
-  .framework-grid,
-  .strategy-grid {
-    grid-template-columns: 1fr;
+  .article-body {
+    margin-left: 45px;
   }
 
-  .objectives-section,
-  .framework-section,
-  .intersection-section,
-  .conclusion-section {
-    padding-left: 6%;
-    padding-right: 6%;
-  }
-
-  .framework-intro,
-  .intersection-header {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .framework-intro h2 {
-    font-size: 65px;
-  }
-
-  .framework-card {
-    min-height: 280px;
-  }
-
-  .framework-card h3 {
-    margin-top: 10px;
-  }
-
-  .intersection-grid {
+  .objectives-grid,
+  .framework-grid {
     grid-template-columns: 1fr;
   }
 
-  .intersection-grid article {
-    min-height: auto;
+  .framework-intro {
+    grid-template-columns: 1fr 240px;
+    gap: 35px;
   }
 
-  .discussion-block {
-    padding: 50px 0;
+  .framework-section {
+    padding: 80px 6vw 85px;
   }
 
-  .conclusion-section {
-    padding-top: 80px;
-    padding-bottom: 80px;
+  .intersection-section {
+    padding: 75px 6vw 80px;
   }
 
-  .site-footer {
-    padding: 40px 6%;
-    flex-direction: column;
-    align-items: flex-start;
+  .references-list {
+    margin-left: 45px;
   }
 }
 
 
-@media (max-width: 520px) {
+/* =========================================================
+   MOBILE
+========================================================= */
 
-  body {
-    font-size: 15px;
-  }
+@media (max-width: 650px) {
 
   .top-nav {
-    height: 68px;
+    height: 62px;
   }
 
-  .hero-inner {
-    padding: 80px 0;
+
+  /* HERO */
+
+  .article-hero {
+    padding: 65px 6vw 0;
   }
 
   .hero-meta {
-    font-size: 9px;
+    font-size: 10px;
+    letter-spacing: 0.17em;
+    margin-bottom: 22px;
   }
 
-  .hero h1 {
-    font-size: 47px;
+  .article-hero h1 {
+    font-size: clamp(48px, 15vw, 70px);
+    line-height: 0.99;
   }
 
-  .hero-subtitle {
-    font-size: 17px;
-    margin-top: 28px;
+  .hero-deck {
+    margin-top: 26px;
+
+    font-size: 16px;
+    line-height: 1.65;
   }
 
-  .hero-line {
+  .hero-footer {
     margin-top: 55px;
+
+    flex-direction: column;
+    gap: 8px;
+
+    padding: 17px 0;
+
+    font-size: 9px;
+    line-height: 1.5;
   }
 
-  .intro-section {
-    padding: 65px 0;
+
+  /* NORMAL SECTIONS */
+
+  .article-section {
+    padding: 68px 6vw;
   }
 
-  .intro-content .lead {
-    font-size: 30px;
+  .section-heading {
+    display: block;
+
+    margin-bottom: 34px;
   }
 
-  .abstract-section {
-    padding: 65px 6%;
-  }
-
-  .article-section,
-  .results-section,
-  .discussion-section,
-  .references-section {
-    padding: 65px 0;
+  .section-heading > span {
+    display: none;
   }
 
   .section-heading h2 {
-    font-size: 45px;
+    font-size: clamp(42px, 12vw, 58px);
+    line-height: 1.02;
+  }
+
+  .article-body {
+    margin-left: 0;
+  }
+
+  .article-body p {
+    font-size: 15.5px;
+    line-height: 1.8;
+    margin-bottom: 21px;
+  }
+
+  .article-body blockquote {
+    margin: 38px 0;
+    padding: 25px 0 25px 22px;
+
+    font-size: 29px;
+  }
+
+
+  /* OBJECTIVES */
+
+  .objectives-grid {
+    gap: 16px;
   }
 
   .objective-card {
-    padding: 30px;
-    min-height: 200px;
+    min-height: auto;
+    padding: 27px;
   }
 
+  .objective-number {
+    margin-bottom: 17px;
+  }
+
+
+  /* FRAMEWORK */
+
   .framework-section {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding: 68px 6vw 72px;
+  }
+
+  .framework-intro {
+    display: block;
+
+    margin-bottom: 38px;
   }
 
   .framework-intro h2 {
-    font-size: 55px;
+    font-size: clamp(48px, 14vw, 66px);
+    line-height: 0.96;
+  }
+
+  .framework-intro p {
+    max-width: 230px;
+
+    margin-top: 25px;
+    padding: 0;
+
+    font-size: 13px;
+  }
+
+  .framework-grid {
+    gap: 14px;
   }
 
   .framework-card {
-    padding: 30px;
+    padding: 27px 24px 29px;
   }
 
-  .result-group {
-    padding: 45px 0;
+  .framework-card h3 {
+    font-size: 27px;
+    margin-bottom: 15px;
   }
 
-  .stat-callout {
-    padding: 25px;
-    gap: 18px;
+  .framework-card p {
+    font-size: 14.5px;
+    line-height: 1.75;
   }
 
-  .stat-callout strong {
-    font-size: 52px;
+
+  /* RESULTS */
+
+  .results-group {
+    margin-bottom: 52px;
   }
+
+  .results-label {
+    margin-bottom: 15px;
+    font-size: 10px;
+  }
+
+
+  /* INTERSECTION */
 
   .intersection-section {
-    padding-top: 75px;
-    padding-bottom: 75px;
+    padding: 65px 6vw 70px;
+  }
+
+  .intersection-header {
+    margin-bottom: 35px;
   }
 
   .intersection-header h2 {
-    font-size: 48px;
+    font-size: clamp(43px, 12vw, 62px);
+    line-height: 1;
   }
 
-  .intersection-grid article {
-    padding: 30px;
+  .intersection-body {
+    padding-top: 28px;
   }
+
+  .intersection-body p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+
+  /* CONCLUSION */
 
   .conclusion-section {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-bottom: 80px;
   }
 
-  .conclusion-content h2 {
-    font-size: 48px;
+  .conclusion-section .article-body {
+    margin-left: 0;
   }
 
   .final-statement {
+    margin-top: 40px;
+    padding: 30px 0;
+
+    font-size: 27px;
+  }
+
+
+  /* REFERENCES */
+
+  .references-list {
+    margin-left: 0;
+  }
+
+  .reference {
+    padding-left: 24px;
+    text-indent: -24px;
+
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+
+  /* FOOTER */
+
+  .article-footer {
+    padding: 55px 6vw;
+  }
+
+  .article-footer p {
     font-size: 24px;
   }
 
-  .references p {
-    font-size: 13px;
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .article-hero {
+    padding-top: 55px;
   }
+
+  .article-hero h1 {
+    font-size: 46px;
+  }
+
+  .section-heading h2 {
+    font-size: 40px;
+  }
+
+  .framework-intro h2 {
+    font-size: 46px;
+  }
+
+  .intersection-header h2 {
+    font-size: 40px;
+  }
+
 }
