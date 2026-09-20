@@ -135,7 +135,8 @@ h2 {
   max-width: 1280px;
   margin: 0 auto;
 
-  padding: 55px 6vw 75px;
+  /* Slightly reduced top space so the hero sits higher */
+  padding: 25px 6vw 75px;
 
   display: grid;
   grid-template-columns: 1fr 0.85fr;
@@ -218,7 +219,7 @@ h2 {
 }
 
 .about-image {
-  height: 500px;
+  height: 450px;
   overflow: hidden;
 }
 
@@ -318,7 +319,9 @@ h2 {
 .writing-thought {
   width: 100%;
   margin-top: 10px;
-  padding: 72px 6vw;
+
+  /* Slightly more compact */
+  padding: 55px 6vw;
 
   background: var(--sage-light);
 }
@@ -329,7 +332,7 @@ h2 {
 }
 
 .thought-inner .section-label {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 blockquote {
@@ -347,7 +350,8 @@ blockquote {
 ========================================================= */
 
 .writing-areas {
-  padding-top: 80px;
+  /* Brought this section slightly higher */
+  padding-top: 60px;
   padding-bottom: 90px;
 }
 
