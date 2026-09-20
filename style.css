@@ -1,32 +1,24 @@
-/* =====================================================
-   HUMAIDA DANJUMA KHALID
-   WRITING PORTFOLIO
-   ===================================================== */
-
-
-/* =====================================================
-   COLOUR PALETTE
-   ===================================================== */
+/* =========================================================
+   ROOT
+========================================================= */
 
 :root {
-
   --ivory: #F7F4ED;
-  --soft-sage: #E4E9DF;
+  --sage-light: #E4E9DF;
   --sage: #A8B5A0;
-
   --forest: #26352D;
   --charcoal: #34332F;
-
   --clay: #C9A995;
-
   --white: #FFFFFF;
 
+  --serif: "DM Serif Display", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
 }
 
 
-/* =====================================================
+/* =========================================================
    RESET
-   ===================================================== */
+========================================================= */
 
 * {
   margin: 0;
@@ -34,30 +26,22 @@
   box-sizing: border-box;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
 
-
 body {
   background: var(--ivory);
   color: var(--charcoal);
-
-  font-family: "DM Sans", sans-serif;
-
+  font-family: var(--sans);
   font-size: 16px;
   line-height: 1.7;
-
-  -webkit-font-smoothing: antialiased;
 }
-
 
 img {
-  display: block;
   width: 100%;
+  display: block;
 }
-
 
 a {
   color: inherit;
@@ -65,1204 +49,827 @@ a {
 }
 
 
-button,
-a {
-  -webkit-tap-highlight-color: transparent;
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+  width: 100%;
+  padding: 26px 6vw;
+  background: var(--ivory);
 }
 
-
-/* =====================================================
-   NAVIGATION
-   ===================================================== */
-
-.navbar {
-
-  width: 100%;
-
-  padding: 28px 6vw;
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  border-bottom: 1px solid rgba(38, 53, 45, 0.15);
-
 }
-
 
 .site-name {
-
-  font-family: "DM Serif Display", serif;
-
-  font-size: 20px;
-
   color: var(--forest);
-
-  white-space: nowrap;
-
+  font-family: var(--serif);
+  font-size: 25px;
+  line-height: 1.2;
 }
-
 
 .nav-links {
-
   display: flex;
-
   align-items: center;
-
   gap: 34px;
-
 }
-
 
 .nav-links a {
-
-  font-size: 13px;
-
   color: var(--charcoal);
-
-  transition:
-    color 0.25s ease,
-    opacity 0.25s ease;
-
+  font-size: 13px;
+  transition: opacity 0.25s ease;
 }
-
 
 .nav-links a:hover {
-
-  color: var(--forest);
-
-  opacity: 0.65;
-
+  opacity: 0.55;
 }
 
 
-/* =====================================================
+/* =========================================================
+   GENERAL
+========================================================= */
+
+.section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 90px 6vw;
+}
+
+.section-label {
+  margin-bottom: 18px;
+
+  color: #687568;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--forest);
+  font-family: var(--serif);
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 1.08;
+}
+
+
+/* =========================================================
    HERO
-   ===================================================== */
+========================================================= */
 
 .hero {
-
   max-width: 1280px;
-
   margin: 0 auto;
 
-  padding: 105px 6vw 110px;
+  padding: 55px 6vw 75px;
 
   display: grid;
-
-  grid-template-columns:
-    minmax(0, 1fr)
-    minmax(320px, 470px);
+  grid-template-columns: 1fr 0.85fr;
+  gap: 80px;
 
   align-items: center;
-
-  gap: 9vw;
-
 }
 
-
-.hero-copy {
-
-  max-width: 570px;
-
+.hero-content {
+  max-width: 650px;
 }
-
-
-.hello {
-
-  font-family: "DM Serif Display", serif;
-
-  font-size: clamp(42px, 5vw, 68px);
-
-  line-height: 0.95;
-
-  font-style: italic;
-
-  color: var(--forest);
-
-  margin-bottom: 7px;
-
-}
-
-
-.hero h1 {
-
-  font-family: "DM Serif Display", serif;
-
-  font-weight: 400;
-
-  font-size: clamp(52px, 7vw, 88px);
-
-  line-height: 0.95;
-
-  letter-spacing: -2px;
-
-  color: var(--forest);
-
-}
-
-
-.hero h1 span {
-
-  display: block;
-
-}
-
-
-.hero-description {
-
-  max-width: 420px;
-
-  margin-top: 34px;
-
-  font-size: 15px;
-
-  line-height: 1.8;
-
-  color: var(--charcoal);
-
-}
-
-
-.hero-photo {
-
-  width: 100%;
-
-  max-width: 470px;
-
-  justify-self: end;
-
-}
-
-
-.hero-photo img {
-
-  width: 100%;
-
-  aspect-ratio: 0.82;
-
-  object-fit: cover;
-
-  filter: grayscale(100%);
-
-}
-
-
-/* =====================================================
-   WRITING STRIP
-   ===================================================== */
-
-.writing-strip {
-
-  width: 100%;
-
-  background: var(--forest);
-
-  color: var(--ivory);
-
-  overflow: hidden;
-
-}
-
-
-.strip-content {
-
-  min-height: 70px;
-
-  padding: 18px 6vw;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  flex-wrap: wrap;
-
-  gap: 15px;
-
-  text-align: center;
-
-  font-family: "DM Serif Display", serif;
-
-  font-size: 19px;
-
-}
-
-
-.strip-dot {
-
-  color: var(--sage);
-
-}
-
-
-/* =====================================================
-   GENERAL SECTION SETTINGS
-   ===================================================== */
-
-.work-section,
-.about-section,
-.areas-section,
-.contact-section {
-
-  width: 100%;
-
-}
-
-
-.work-section {
-
-  padding: 115px 6vw 125px;
-
-  background: var(--white);
-
-}
-
-
-.section-heading {
-
-  max-width: 1280px;
-
-  margin: 0 auto 50px;
-
-}
-
 
 .eyebrow {
+  margin-bottom: 20px;
 
-  font-family: "DM Serif Display", serif;
-
-  font-size: 16px;
-
-  font-style: italic;
-
-  color: var(--forest);
-
-  margin-bottom: 9px;
-
+  color: #687568;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.17em;
 }
 
+.hero h1 {
+  font-size: clamp(64px, 7vw, 90px);
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+}
+
+.hero h1 span {
+  font-style: italic;
+}
+
+.hero-intro {
+  max-width: 470px;
+  margin-top: 30px;
+
+  color: #55544F;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.hero-image {
+  height: 560px;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 0.82fr;
+  gap: 90px;
+
+  align-items: center;
+}
+
+.about-content {
+  max-width: 620px;
+}
+
+.about-content h2 {
+  max-width: 570px;
+  margin-bottom: 28px;
+}
+
+.about-content p:not(.section-label) {
+  max-width: 570px;
+  margin-bottom: 18px;
+
+  color: #55544F;
+  font-size: 16px;
+}
+
+.about-image {
+  height: 500px;
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   SELECTED READING
+========================================================= */
+
+.selected-reading {
+  padding-top: 80px;
+}
+
+.section-heading {
+  margin-bottom: 45px;
+}
 
 .section-heading h2 {
-
-  font-family: "DM Serif Display", serif;
-
-  font-size: clamp(40px, 5vw, 60px);
-
-  font-weight: 400;
-
-  line-height: 1;
-
-  color: var(--forest);
-
+  max-width: 720px;
+  font-size: 43px;
 }
 
 
-/* =====================================================
-   WORK GRID
-   ===================================================== */
+/* =========================================================
+   WRITING CARDS
+========================================================= */
 
-.work-grid {
-
-  max-width: 1280px;
-
-  margin: 0 auto;
-
+.writing-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
-
-  gap: 30px;
-
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 }
 
-
-.work-card {
-
+.writing-card {
   display: block;
-
-  cursor: pointer;
-
 }
 
-
-.work-image {
-
+.writing-image {
   width: 100%;
-
+  height: 330px;
   overflow: hidden;
 
-  background: var(--soft-sage);
-
+  background: var(--sage-light);
 }
 
-
-.work-image img {
-
+.writing-image img {
   width: 100%;
-
-  aspect-ratio: 1 / 1.08;
-
+  height: 100%;
   object-fit: cover;
 
-  transition:
-    transform 0.5s ease,
-    opacity 0.5s ease;
+  transition: transform 0.45s ease;
+}
 
+.writing-card:hover .writing-image img {
+  transform: scale(1.035);
+}
+
+.writing-card-content {
+  padding-top: 22px;
+}
+
+.card-category {
+  margin-bottom: 10px;
+
+  color: #778376;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.writing-card h3 {
+  max-width: 420px;
+  margin-bottom: 9px;
+
+  font-size: 28px;
+  line-height: 1.12;
+}
+
+.writing-card-content > p:last-child {
+  max-width: 390px;
+
+  color: #66645F;
+  font-size: 14px;
+  line-height: 1.65;
 }
 
 
-.work-card:hover .work-image img {
+/* =========================================================
+   THOUGHT ABOUT WRITING
+========================================================= */
 
-  transform: scale(1.025);
+.writing-thought {
+  width: 100%;
+  margin-top: 10px;
+  padding: 72px 6vw;
 
-  opacity: 0.88;
+  background: var(--sage-light);
+}
 
+.thought-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.thought-inner .section-label {
+  margin-bottom: 24px;
+}
+
+blockquote {
+  max-width: 930px;
+
+  color: var(--forest);
+  font-family: var(--serif);
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.12;
 }
 
 
-.work-info {
+/* =========================================================
+   WHAT I WRITE ABOUT
+========================================================= */
 
-  padding-top: 20px;
+.writing-areas {
+  padding-top: 80px;
+  padding-bottom: 90px;
+}
 
+.writing-areas-heading {
+  margin-bottom: 52px;
+}
+
+.writing-areas-heading h2 {
+  font-size: 43px;
 }
 
 
-.work-info h3 {
+/* Four columns in one row */
 
-  font-family: "DM Serif Display", serif;
+.writing-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.writing-column {
+  min-height: 175px;
+  padding: 0 32px;
+
+  border-left: 1px solid #D3D8CF;
+}
+
+.writing-column:first-child {
+  padding-left: 0;
+  border-left: none;
+}
+
+.writing-column h3 {
+  margin-bottom: 15px;
 
   font-size: 27px;
-
-  font-weight: 400;
-
-  line-height: 1.05;
-
-  color: var(--forest);
-
+  line-height: 1.1;
 }
 
+.writing-column p {
+  max-width: 245px;
 
-.work-info p {
-
-  margin-top: 10px;
-
-  max-width: 340px;
-
+  color: #66645F;
   font-size: 14px;
-
   line-height: 1.65;
-
-  color: #5B5954;
-
 }
 
 
-/* =====================================================
-   ABOUT
-   ===================================================== */
+/* =========================================================
+   CONTACT
+========================================================= */
 
-.about-section {
+.contact {
+  max-width: 1280px;
+  padding-top: 95px;
+  padding-bottom: 100px;
 
-  background: var(--ivory);
-
-  padding: 125px 6vw;
-
+  border-top: 1px solid #DDD9D0;
 }
 
-
-.about-inner {
-
-  max-width: 1080px;
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns:
-    minmax(0, 1fr)
-    minmax(0, 1fr);
-
-  gap: 100px;
-
-  align-items: start;
-
+.contact-content {
+  max-width: 650px;
 }
 
-
-.about-title h2 {
-
-  max-width: 520px;
-
-  font-family: "DM Serif Display", serif;
-
-  font-size: clamp(40px, 5vw, 59px);
-
-  font-weight: 400;
-
-  line-height: 1.02;
-
-  color: var(--forest);
-
-}
-
-
-.about-text {
-
-  padding-top: 28px;
-
-  max-width: 500px;
-
-}
-
-
-.about-text p {
-
-  font-size: 16px;
-
-  line-height: 1.85;
-
-  margin-bottom: 25px;
-
-  color: var(--charcoal);
-
-}
-
-
-/* =====================================================
-   WRITING PHILOSOPHY
-   ===================================================== */
-
-.quote-section {
-
-  background: var(--soft-sage);
-
-  padding: 125px 6vw;
-
-}
-
-
-.quote-inner {
-
-  max-width: 950px;
-
-  margin: 0 auto;
-
-  text-align: center;
-
-}
-
-
-.quote-inner .eyebrow {
-
-  margin-bottom: 28px;
-
-}
-
-
-.quote-inner h2 {
-
-  font-family: "DM Serif Display", serif;
-
-  font-size: clamp(42px, 6vw, 72px);
-
-  font-weight: 400;
-
-  line-height: 1.05;
-
-  letter-spacing: -1px;
-
-  color: var(--forest);
-
-}
-
-
-.quote-inner h2 em {
-
-  display: inline;
-
-  font-weight: 400;
-
-}
-
-
-/* =====================================================
-   WRITING AREAS
-   ===================================================== */
-
-.areas-section {
-
-  background: var(--white);
-
-  padding: 120px 6vw;
-
-}
-
-
-.areas-heading {
-
-  max-width: 1050px;
-
-  margin: 0 auto 65px;
-
-}
-
-
-.areas-heading h2 {
-
-  max-width: 760px;
-
-  font-family: "DM Serif Display", serif;
-
-  font-size: clamp(40px, 5vw, 60px);
-
-  font-weight: 400;
-
-  line-height: 1.02;
-
-  color: var(--forest);
-
-}
-
-
-.areas-heading h2 em {
-
-  font-weight: 400;
-
-}
-
-
-.areas-grid {
-
-  max-width: 1050px;
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
-  border-top: 1px solid rgba(38, 53, 45, 0.25);
-
-}
-
-
-.area {
-
-  min-height: 230px;
-
-  padding: 30px 35px 35px 0;
-
-  border-bottom: 1px solid rgba(38, 53, 45, 0.25);
-
-}
-
-
-.area:nth-child(odd) {
-
-  padding-right: 60px;
-
-  border-right: 1px solid rgba(38, 53, 45, 0.25);
-
-}
-
-
-.area:nth-child(even) {
-
-  padding-left: 60px;
-
-}
-
-
-.area-number {
-
-  display: block;
-
-  margin-bottom: 25px;
-
-  font-size: 11px;
-
-  letter-spacing: 1px;
-
-  color: #77736C;
-
-}
-
-
-.area h3 {
-
-  font-family: "DM Serif Display", serif;
-
-  font-size: 32px;
-
-  font-weight: 400;
-
+.contact h2 {
+  max-width: 570px;
+  margin-bottom: 12px;
+
+  font-size: 58px;
   line-height: 1;
-
-  color: var(--forest);
-
 }
 
-
-.area p {
-
-  max-width: 360px;
-
-  margin-top: 15px;
-
-  font-size: 14px;
-
-  line-height: 1.75;
-
-  color: #5B5954;
-
-}
-
-
-/* =====================================================
-   GET IN TOUCH
-   ===================================================== */
-
-.contact-section {
-
-  background: var(--forest);
-
-  color: var(--ivory);
-
-  padding: 125px 6vw;
-
-  text-align: center;
-
-}
-
-
-.contact-inner {
-
-  max-width: 850px;
-
-  margin: 0 auto;
-
-}
-
-
-.contact-section .eyebrow {
-
-  color: var(--sage);
-
-}
-
-
-.contact-section h2 {
-
-  font-family: "DM Serif Display", serif;
-
-  font-size: clamp(45px, 6vw, 76px);
-
-  font-weight: 400;
-
-  line-height: 1;
-
-  color: var(--ivory);
-
-}
-
-
-.contact-subtitle {
-
-  margin-top: 18px;
-
-  font-family: "DM Serif Display", serif;
-
-  font-size: 25px;
-
-  font-style: italic;
-
-  color: var(--sage);
-
-}
-
-
-.contact-icons {
-
-  margin-top: 42px;
-
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  gap: 18px;
-
-}
-
-
-.contact-icons a {
-
-  width: 48px;
-
-  height: 48px;
-
-  border: 1px solid rgba(247, 244, 237, 0.5);
-
-  border-radius: 50%;
-
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  color: var(--ivory);
-
+.contact-content > p:not(.section-label) {
+  color: #66645F;
   font-size: 17px;
+}
+
+.contact-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-top: 30px;
+}
+
+.contact-icon {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #C9CEC5;
+  border-radius: 50%;
 
   transition:
     background 0.25s ease,
-    color 0.25s ease;
+    border-color 0.25s ease;
+}
 
+.contact-icon:hover {
+  background: var(--sage-light);
+  border-color: var(--sage);
+}
+
+.contact-icon svg {
+  width: 18px;
+  height: 18px;
+
+  fill: none;
+  stroke: var(--forest);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 
-.contact-icons a:hover {
+/* =========================================================
+   FOOTER
+========================================================= */
 
+.site-footer {
+  padding: 28px 6vw;
+
+  border-top: 1px solid #DDD9D0;
+
+  text-align: center;
+}
+
+.site-footer p {
+  color: #7A7973;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   ARTICLE PAGE
+========================================================= */
+
+.article-page {
   background: var(--ivory);
+}
+
+.article-header {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 90px 6vw 55px;
+}
+
+.article-category {
+  margin-bottom: 22px;
+
+  color: #687568;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+}
+
+.article-header h1 {
+  font-size: clamp(48px, 6vw, 76px);
+  line-height: 1.02;
+}
+
+.article-subtitle {
+  max-width: 700px;
+  margin-top: 25px;
+
+  color: #65635D;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.article-hero {
+  width: min(1100px, 88vw);
+  height: 560px;
+  margin: 0 auto 75px;
+
+  overflow: hidden;
+}
+
+.article-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-content {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 6vw 90px;
+}
+
+.article-content p {
+  margin-bottom: 25px;
+
+  color: #45443F;
+  font-size: 18px;
+  line-height: 1.85;
+}
+
+.article-content h2 {
+  margin-top: 60px;
+  margin-bottom: 20px;
+
+  font-size: 38px;
+}
+
+.article-content h3 {
+  margin-top: 42px;
+  margin-bottom: 14px;
+
+  font-size: 27px;
+}
+
+.article-content ul,
+.article-content ol {
+  margin: 0 0 30px 22px;
+}
+
+.article-content li {
+  margin-bottom: 12px;
+  padding-left: 5px;
+
+  color: #45443F;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.article-quote {
+  margin: 55px 0;
+  padding: 35px 0 35px 30px;
+
+  border-left: 2px solid var(--sage);
+}
+
+.article-quote p {
+  margin: 0;
 
   color: var(--forest);
+  font-family: var(--serif);
+  font-size: 32px;
+  line-height: 1.2;
+}
 
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+
+  margin: 40px 0;
+}
+
+.data-card {
+  padding: 25px;
+
+  background: var(--sage-light);
+}
+
+.data-card strong {
+  display: block;
+  margin-bottom: 7px;
+
+  color: var(--forest);
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.data-card span {
+  color: #66645F;
+  font-size: 13px;
+}
+
+.article-back {
+  display: inline-block;
+  margin-top: 30px;
+
+  color: var(--forest);
+  font-size: 14px;
+  border-bottom: 1px solid var(--forest);
 }
 
 
-/* =====================================================
-   FOOTER
-   ===================================================== */
-
-footer {
-
-  background: var(--forest);
-
-  border-top: 1px solid rgba(247, 244, 237, 0.15);
-
-  padding: 25px 6vw;
-
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  color: rgba(247, 244, 237, 0.65);
-
-  font-size: 11px;
-
-  letter-spacing: 0.4px;
-
-}
-
-
-/* =====================================================
+/* =========================================================
    TABLET
-   ===================================================== */
+========================================================= */
 
 @media (max-width: 900px) {
 
   .hero {
-
-    grid-template-columns:
-      1fr
-      0.8fr;
-
+    grid-template-columns: 1fr;
     gap: 45px;
-
-    padding-top: 80px;
-
   }
 
-
-  .hero-photo {
-
-    max-width: 360px;
-
+  .hero-image {
+    height: 500px;
   }
 
-
-  .work-grid {
-
-    gap: 22px;
-
+  .about {
+    grid-template-columns: 1fr;
+    gap: 50px;
   }
 
-
-  .work-info h3 {
-
-    font-size: 23px;
-
+  .about-image {
+    height: 450px;
   }
 
-
-  .about-inner {
-
-    gap: 60px;
-
+  .writing-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 55px;
   }
 
+  .writing-columns {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 45px;
+  }
+
+  .writing-column:nth-child(3) {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .writing-column:nth-child(2),
+  .writing-column:nth-child(4) {
+    padding-right: 0;
+  }
+
+  .writing-column:nth-child(3),
+  .writing-column:nth-child(4) {
+    padding-top: 35px;
+  }
 }
 
 
-/* =====================================================
+/* =========================================================
    MOBILE
-   ===================================================== */
+========================================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
 
-
-  /* Navigation */
-
-  .navbar {
-
+  .site-header {
     padding: 22px 6vw;
-
   }
 
+  .nav-container {
+    align-items: flex-start;
+    gap: 20px;
+  }
 
   .site-name {
-
-    font-size: 17px;
-
+    font-size: 20px;
   }
-
 
   .nav-links {
-
     gap: 15px;
-
   }
-
 
   .nav-links a {
-
     font-size: 11px;
-
   }
-
-
-  /* Hero */
 
   .hero {
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    padding: 70px 6vw 75px;
-
-    gap: 45px;
-
+    padding: 35px 6vw 60px;
+    gap: 38px;
   }
-
-
-  .hero-copy {
-
-    width: 100%;
-
-  }
-
-
-  .hello {
-
-    font-size: 48px;
-
-  }
-
 
   .hero h1 {
-
-    font-size: clamp(55px, 15vw, 75px);
-
-    letter-spacing: -1.5px;
-
+    font-size: 60px;
   }
 
-
-  .hero-description {
-
-    max-width: 100%;
-
-    font-size: 14px;
-
-    margin-top: 27px;
-
-  }
-
-
-  .hero-photo {
-
-    width: 78%;
-
-    max-width: none;
-
-    align-self: center;
-
-  }
-
-
-  /* Strip */
-
-  .strip-content {
-
+  .hero-intro {
     font-size: 16px;
-
-    gap: 9px;
-
-    line-height: 1.4;
-
+    margin-top: 24px;
   }
 
-
-  /* Work */
-
-  .work-section {
-
-    padding: 80px 6vw;
-
+  .hero-image {
+    height: 420px;
   }
 
+  .section {
+    padding: 70px 6vw;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+
+  .about-image {
+    height: 380px;
+  }
 
   .section-heading {
-
     margin-bottom: 35px;
-
   }
 
+  .section-heading h2 {
+    font-size: 36px;
+  }
 
-  .work-grid {
-
+  .writing-grid {
     grid-template-columns: 1fr;
-
-    gap: 55px;
-
+    gap: 50px;
   }
 
+  .writing-image {
+    height: 330px;
+  }
 
-  .work-info h3 {
-
+  .writing-card h3 {
     font-size: 27px;
-
   }
 
-
-  .work-info p {
-
-    font-size: 14px;
-
+  .writing-thought {
+    padding: 60px 6vw;
   }
 
-
-  /* About */
-
-  .about-section {
-
-    padding: 85px 6vw;
-
+  blockquote {
+    font-size: 34px;
   }
 
+  .writing-areas-heading {
+    margin-bottom: 40px;
+  }
 
-  .about-inner {
+  .writing-areas-heading h2 {
+    font-size: 36px;
+  }
 
+  .writing-columns {
     grid-template-columns: 1fr;
-
-    gap: 25px;
-
+    gap: 0;
   }
 
-
-  .about-title h2 {
-
-    font-size: 43px;
-
-  }
-
-
-  .about-text {
-
-    padding-top: 0;
-
-  }
-
-
-  .about-text p {
-
-    font-size: 15px;
-
-  }
-
-
-  /* Quote */
-
-  .quote-section {
-
-    padding: 90px 6vw;
-
-  }
-
-
-  .quote-inner h2 {
-
-    font-size: 43px;
-
-  }
-
-
-  /* Areas */
-
-  .areas-section {
-
-    padding: 85px 6vw;
-
-  }
-
-
-  .areas-heading {
-
-    margin-bottom: 45px;
-
-  }
-
-
-  .areas-heading h2 {
-
-    font-size: 43px;
-
-  }
-
-
-  .areas-grid {
-
-    grid-template-columns: 1fr;
-
-  }
-
-
-  .area {
-
+  .writing-column,
+  .writing-column:nth-child(2),
+  .writing-column:nth-child(3),
+  .writing-column:nth-child(4) {
     min-height: auto;
-
-    padding: 30px 0 !important;
-
-    border-right: none !important;
-
+    padding: 28px 0;
+    border-left: none;
+    border-top: 1px solid #D3D8CF;
   }
 
-
-  .area h3 {
-
-    font-size: 30px;
-
+  .writing-column:first-child {
+    padding-top: 0;
+    border-top: none;
   }
 
-
-  /* Contact */
-
-  .contact-section {
-
-    padding: 90px 6vw;
-
+  .writing-column h3 {
+    font-size: 27px;
   }
 
-
-  .contact-section h2 {
-
+  .contact h2 {
     font-size: 47px;
-
   }
 
-
-  .contact-subtitle {
-
-    font-size: 22px;
-
+  .article-header {
+    padding: 60px 6vw 40px;
   }
 
+  .article-header h1 {
+    font-size: 48px;
+  }
 
+  .article-hero {
+    width: 88vw;
+    height: 400px;
+    margin-bottom: 55px;
+  }
+
+  .article-content {
+    padding-bottom: 65px;
+  }
+
+  .article-content p {
+    font-size: 17px;
+  }
+
+  .article-content h2 {
+    font-size: 34px;
+  }
+
+  .data-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 
-/* =====================================================
-   SMALL PHONES
-   ===================================================== */
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
 
 @media (max-width: 420px) {
 
-
-  .navbar {
-
-    align-items: flex-start;
-
-    gap: 15px;
-
+  .nav-container {
+    flex-direction: column;
   }
-
-
-  .site-name {
-
-    font-size: 16px;
-
-  }
-
 
   .nav-links {
-
-    gap: 10px;
-
+    width: 100%;
+    justify-content: space-between;
   }
-
-
-  .nav-links a {
-
-    font-size: 10px;
-
-  }
-
 
   .hero h1 {
-
-    font-size: 55px;
-
+    font-size: 52px;
   }
 
-
-  .hero-photo {
-
-    width: 88%;
-
+  .hero-image {
+    height: 350px;
   }
 
-
-  .work-info h3 {
-
-    font-size: 25px;
-
+  .about-image {
+    height: 330px;
   }
 
-
-  .about-title h2,
-  .areas-heading h2,
-  .quote-inner h2 {
-
-    font-size: 39px;
-
+  .writing-image {
+    height: 280px;
   }
 
-
-  .contact-section h2 {
-
+  .contact h2 {
     font-size: 42px;
-
   }
-
 }
