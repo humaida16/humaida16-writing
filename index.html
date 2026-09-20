@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Humaida Danjuma Khalid | Writer & Researcher</title>
+  <title>Humaida Danjuma Khalid | Writing & Research</title>
 
-  <!-- Google Fonts -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -15,15 +15,22 @@
     rel="stylesheet"
   >
 
-  <!-- Main stylesheet -->
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-  <!-- =========================
+  <!-- ==============================
        NAVIGATION
-  ========================== -->
+  =============================== -->
 
   <nav class="navbar">
 
@@ -32,25 +39,31 @@
     </a>
 
     <div class="nav-links">
+
       <a href="#about">About</a>
-      <a href="#work">Selected Work</a>
+
+      <a href="#journal">Journal</a>
+
       <a href="#writing">Writing</a>
+
       <a href="#contact">Contact</a>
+
     </div>
 
   </nav>
 
 
-  <!-- =========================
-       HERO
-  ========================== -->
 
-  <header class="hero" id="top">
+  <!-- ==============================
+       MAGAZINE COVER / HERO
+  =============================== -->
 
-    <div class="hero-content">
+  <header class="cover" id="top">
 
-      <p class="eyebrow">
-        Writer · Researcher · Storyteller
+    <div class="cover-text">
+
+      <p class="publication-line">
+        WRITING · RESEARCH · STORIES
       </p>
 
       <h1>
@@ -58,20 +71,23 @@
         <em>that make us pause.</em>
       </h1>
 
-      <p class="hero-intro">
-        Thoughtful writing shaped by research, curiosity and a deep
-        appreciation for the human side of every story.
+      <p class="cover-intro">
+        A collection of writing shaped by curiosity,
+        research and an interest in the stories
+        behind the facts.
       </p>
 
-      <a href="#work" class="text-link">
-        Explore my work
+      <a href="#journal" class="quiet-link">
+        Begin reading
         <span>↓</span>
       </a>
 
     </div>
 
 
-    <div class="hero-image">
+    <div class="cover-image">
+
+      <!-- Replace with your chosen portrait -->
 
       <img
         src="assets/writing-hero.jpg"
@@ -83,19 +99,21 @@
   </header>
 
 
-  <!-- =========================
-       ABOUT / INTRODUCTION
-  ========================== -->
 
-  <section class="intro-section" id="about">
+  <!-- ==============================
+       INTRODUCTION
+  =============================== -->
 
-    <div class="section-number">
-      01
+  <section class="about-section" id="about">
+
+    <div class="about-label">
+      <span>About</span>
     </div>
 
-    <div class="intro-content">
 
-      <p class="eyebrow">
+    <div class="about-content">
+
+      <p class="small-heading">
         A little about me
       </p>
 
@@ -104,7 +122,7 @@
         in the stories behind the facts.
       </h2>
 
-      <div class="intro-text">
+      <div class="about-copy">
 
         <p>
           Hi, I'm Humaida. I'm a writer and researcher with a background
@@ -132,279 +150,296 @@
   </section>
 
 
-  <!-- =========================
-       SELECTED WORK
-  ========================== -->
 
-  <section class="work-section" id="work">
+  <!-- ==============================
+       JOURNAL / SELECTED READING
+  =============================== -->
 
-    <div class="section-heading">
+  <section class="journal-section" id="journal">
 
-      <div>
+    <div class="journal-heading">
 
-        <p class="eyebrow">
-          02 · Selected work
-        </p>
-
-        <h2>
-          Words I've written
-        </h2>
-
-      </div>
-
-      <p>
-        A small collection of research, health and
-        long-form pieces.
-      </p>
-
-    </div>
-
-
-    <!-- =========================
-         ANOPHELES ARTICLE
-    ========================== -->
-
-    <article class="featured-piece">
-
-      <div class="piece-image">
-
-        <img
-          src="assets/anopheles-cover.jpg"
-          alt="Anopheles mosquito and malaria research"
-        >
-
-      </div>
-
-      <div class="piece-content">
-
-        <p class="piece-category">
-          Research · Public Health
-        </p>
-
-        <h3>
-          The changing dynamics of
-          Anopheles species
-        </h3>
-
-        <p class="piece-description">
-          Exploring how person, place and time shape the epidemiology
-          of malaria transmission across Africa.
-        </p>
-
-        <a
-          href="anopheles-malaria.html"
-          class="text-link"
-        >
-          Read the piece
-          <span>↗</span>
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <!-- =========================
-         FITNESS ARTICLE
-    ========================== -->
-
-    <article class="featured-piece reverse">
-
-      <div class="piece-image">
-
-        <img
-          src="assets/fitness-cover.jpg"
-          alt="Fitness and holistic wellbeing"
-        >
-
-      </div>
-
-      <div class="piece-content">
-
-        <p class="piece-category">
-          Health · Lifestyle
-        </p>
-
-        <h3>
-          Unlock your potential:
-          a holistic approach to fitness
-        </h3>
-
-        <p class="piece-description">
-          Looking beyond appearance to explore sustainable habits,
-          wellbeing, mindset and the different dimensions of fitness.
-        </p>
-
-        <a
-          href="fitness.html"
-          class="text-link"
-        >
-          Read the piece
-          <span>↗</span>
-        </a>
-
-      </div>
-
-    </article>
-
-  </section>
-
-
-  <!-- =========================
-       WRITING AREAS
-  ========================== -->
-
-  <section class="writing-section" id="writing">
-
-    <div class="section-number">
-      03
-    </div>
-
-    <div class="writing-inner">
-
-      <p class="eyebrow">
-        What I write
+      <p class="small-heading">
+        From the journal
       </p>
 
       <h2>
-        Different subjects.
-        <br>
-        One thoughtful approach.
+        Selected reading
       </h2>
 
+      <p>
+        A few pieces I've written, researched
+        and enjoyed thinking through.
+      </p>
 
-      <div class="writing-list">
-
-        <!-- HEALTH -->
-
-        <div class="writing-item">
-
-          <span class="writing-number">
-            01
-          </span>
-
-          <div>
-
-            <h3>
-              Health
-            </h3>
-
-            <p>
-              Writing that makes health information easier
-              to understand and connect with.
-            </p>
-
-          </div>
-
-        </div>
+    </div>
 
 
-        <!-- RESEARCH -->
 
-        <div class="writing-item">
+    <!-- ==============================
+         FEATURED ARTICLE
+    =============================== -->
 
-          <span class="writing-number">
-            02
-          </span>
+    <article class="journal-feature">
 
-          <div>
+      <div class="journal-image">
 
-            <h3>
-              Research
-            </h3>
-
-            <p>
-              Evidence-informed writing that turns research
-              into something people can actually engage with.
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <!-- ARTICLES -->
-
-        <div class="writing-item">
-
-          <span class="writing-number">
-            03
-          </span>
-
-          <div>
-
-            <h3>
-              Articles & Essays
-            </h3>
-
-            <p>
-              Long-form pieces built around ideas, experiences
-              and stories worth exploring.
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <!-- GHOSTWRITING -->
-
-        <div class="writing-item">
-
-          <span class="writing-number">
-            04
-          </span>
-
-          <div>
-
-            <h3>
-              Ghostwriting
-            </h3>
-
-            <p>
-              Thoughtful behind-the-scenes writing that
-              keeps your voice at the centre.
-            </p>
-
-          </div>
-
-        </div>
+        <img
+          src="assets/abuja-healthcare.jpg"
+          alt="Healthcare and family finances in Abuja"
+        >
 
       </div>
+
+
+      <div class="journal-content">
+
+        <p class="article-category">
+          Health · Research · Long-form
+        </p>
+
+        <h3>
+          The Price of Getting Sick in Abuja
+        </h3>
+
+        <p class="article-subtitle">
+          What happens when healthcare costs more
+          than a family can bear.
+        </p>
+
+        <p class="article-excerpt">
+          A closer look at how primary healthcare is financed
+          across Abuja, what families pay out of pocket, and
+          the difficult choices that can follow when care becomes
+          too expensive.
+        </p>
+
+        <a
+          href="healthcare-costs-abuja.html"
+          class="quiet-link"
+        >
+          Read the story
+          <span>↗</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- ==============================
+         OTHER ARTICLES
+    =============================== -->
+
+    <div class="journal-list">
+
+
+      <!-- ANOPHELES -->
+
+      <article class="journal-item">
+
+        <div class="journal-item-image">
+
+          <img
+            src="assets/anopheles-cover.jpg"
+            alt="Anopheles mosquito and malaria research"
+          >
+
+        </div>
+
+
+        <div class="journal-item-content">
+
+          <p class="article-category">
+            Research · Public Health
+          </p>
+
+          <h3>
+            The Changing Dynamics
+            of Anopheles Species
+          </h3>
+
+          <p>
+            Exploring how person, place and time influence
+            the epidemiology of malaria transmission across Africa.
+          </p>
+
+          <a
+            href="anopheles-malaria.html"
+            class="quiet-link"
+          >
+            Read the piece
+            <span>↗</span>
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- FITNESS -->
+
+      <article class="journal-item">
+
+        <div class="journal-item-image">
+
+          <img
+            src="assets/fitness-cover.jpg"
+            alt="Fitness and holistic wellbeing"
+          >
+
+        </div>
+
+
+        <div class="journal-item-content">
+
+          <p class="article-category">
+            Health · Lifestyle
+          </p>
+
+          <h3>
+            Unlock Your Potential:
+            A Holistic Approach to Fitness
+          </h3>
+
+          <p>
+            Looking beyond physical appearance to explore
+            sustainable habits, wellbeing and a healthier relationship
+            with fitness.
+          </p>
+
+          <a
+            href="fitness.html"
+            class="quiet-link"
+          >
+            Read the piece
+            <span>↗</span>
+          </a>
+
+        </div>
+
+      </article>
+
 
     </div>
 
   </section>
 
 
-  <!-- =========================
-       WRITING PHILOSOPHY
-  ========================== -->
 
-  <section class="statement-section">
+  <!-- ==============================
+       WRITING
+  =============================== -->
 
-    <p class="eyebrow">
-      My approach
-    </p>
+  <section class="writing-section" id="writing">
 
-    <h2>
-      Good writing doesn't simply
-      give information.
-      <em>It gives the reader
-      a way to see it.</em>
-    </h2>
+    <div class="writing-heading">
+
+      <p class="small-heading">
+        The things I write about
+      </p>
+
+      <h2>
+        Different subjects,
+        <em>one thoughtful approach.</em>
+      </h2>
+
+    </div>
+
+
+    <div class="writing-columns">
+
+
+      <div class="writing-column">
+
+        <h3>Health</h3>
+
+        <p>
+          Clear, thoughtful writing about health,
+          wellbeing and the things that shape how
+          people live.
+        </p>
+
+      </div>
+
+
+      <div class="writing-column">
+
+        <h3>Research</h3>
+
+        <p>
+          Research-based writing that makes evidence
+          easier to understand without losing its meaning.
+        </p>
+
+      </div>
+
+
+      <div class="writing-column">
+
+        <h3>Essays & Articles</h3>
+
+        <p>
+          Long-form writing built around ideas,
+          experiences, questions and stories.
+        </p>
+
+      </div>
+
+
+      <div class="writing-column">
+
+        <h3>Ghostwriting</h3>
+
+        <p>
+          Behind-the-scenes writing that helps
+          another person's ideas sound like their own.
+        </p>
+
+      </div>
+
+
+    </div>
 
   </section>
 
 
-  <!-- =========================
+
+  <!-- ==============================
+       WRITING PHILOSOPHY
+  =============================== -->
+
+  <section class="statement-section">
+
+    <div class="statement-inner">
+
+      <p class="small-heading">
+        A thought about writing
+      </p>
+
+      <h2>
+        Good writing doesn't simply
+        give information.
+        <em>It gives the reader
+        a way to see it.</em>
+      </h2>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==============================
        CONTACT
-  ========================== -->
+  =============================== -->
 
   <section class="contact-section" id="contact">
 
-    <p class="eyebrow">
-      04 · Say hello
+    <p class="small-heading">
+      Say hello
     </p>
 
     <h2>
@@ -413,27 +448,30 @@
     </h2>
 
     <p>
-      Whether it's an article, a research piece,
-      a story or something that needs to be written
-      behind the scenes, I'd love to hear about it.
+      For writing, research, ghostwriting
+      or simply to say hello.
     </p>
 
-    <div class="contact-links">
+
+    <div class="contact-icons">
 
       <a
         href="mailto:danjumahumaida@gmail.com"
-        class="contact-link"
+        aria-label="Email Humaida"
+        title="Email"
       >
-        danjumahumaida@gmail.com
+        <i class="fa-solid fa-envelope"></i>
       </a>
+
 
       <a
         href="https://www.linkedin.com/in/humaida-danjuma-66057224b"
         target="_blank"
         rel="noopener noreferrer"
-        class="contact-link secondary-link"
+        aria-label="LinkedIn"
+        title="LinkedIn"
       >
-        LinkedIn ↗
+        <i class="fa-brands fa-linkedin-in"></i>
       </a>
 
     </div>
@@ -441,9 +479,10 @@
   </section>
 
 
-  <!-- =========================
+
+  <!-- ==============================
        FOOTER
-  ========================== -->
+  =============================== -->
 
   <footer>
 
@@ -452,7 +491,7 @@
     </span>
 
     <span>
-      Writing · Research · Storytelling
+      Writing · Research · Stories
     </span>
 
   </footer>
