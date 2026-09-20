@@ -1,7 +1,6 @@
 /* =====================================================
    HUMAIDA DANJUMA KHALID
    WRITING PORTFOLIO
-   COMPLETE STYLE SHEET
    ===================================================== */
 
 
@@ -10,13 +9,18 @@
    ===================================================== */
 
 :root {
+
   --ivory: #F7F4ED;
   --soft-sage: #E4E9DF;
   --sage: #A8B5A0;
+
   --forest: #26352D;
   --charcoal: #34332F;
+
   --clay: #C9A995;
+
   --white: #FFFFFF;
+
 }
 
 
@@ -30,31 +34,39 @@
   box-sizing: border-box;
 }
 
+
 html {
   scroll-behavior: smooth;
 }
 
+
 body {
   background: var(--ivory);
   color: var(--charcoal);
+
   font-family: "DM Sans", sans-serif;
+
   font-size: 16px;
   line-height: 1.7;
+
   -webkit-font-smoothing: antialiased;
 }
+
 
 img {
   display: block;
   width: 100%;
 }
 
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-a,
-button {
+
+button,
+a {
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -64,38 +76,63 @@ button {
    ===================================================== */
 
 .navbar {
+
   width: 100%;
+
   padding: 28px 6vw;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   border-bottom: 1px solid rgba(38, 53, 45, 0.15);
+
 }
+
 
 .site-name {
+
   font-family: "DM Serif Display", serif;
+
   font-size: 20px;
+
   color: var(--forest);
+
   white-space: nowrap;
+
 }
+
 
 .nav-links {
+
   display: flex;
+
   align-items: center;
+
   gap: 34px;
+
 }
 
+
 .nav-links a {
+
   font-size: 13px;
+
   color: var(--charcoal);
+
   transition:
     color 0.25s ease,
     opacity 0.25s ease;
+
 }
 
+
 .nav-links a:hover {
+
   color: var(--forest);
+
   opacity: 0.65;
+
 }
 
 
@@ -104,64 +141,158 @@ button {
    ===================================================== */
 
 .hero {
+
   max-width: 1280px;
+
   margin: 0 auto;
-  padding: 105px 6vw 110px;
+
+  padding: 60px 6vw 75px;
 
   display: grid;
+
   grid-template-columns:
     minmax(0, 1fr)
     minmax(320px, 470px);
 
-  align-items: center;
+  align-items: start;
+
   gap: 9vw;
+
 }
+
 
 .hero-copy {
+
   max-width: 570px;
+
 }
+
 
 .hello {
+
   font-family: "DM Serif Display", serif;
+
   font-size: clamp(42px, 5vw, 68px);
+
   line-height: 0.95;
+
   font-style: italic;
+
   color: var(--forest);
+
   margin-bottom: 7px;
+
 }
+
 
 .hero h1 {
+
   font-family: "DM Serif Display", serif;
+
   font-weight: 400;
+
   font-size: clamp(52px, 7vw, 88px);
+
   line-height: 0.95;
+
   letter-spacing: -2px;
+
   color: var(--forest);
+
 }
+
 
 .hero h1 span {
+
   display: block;
+
 }
+
 
 .hero-description {
+
   max-width: 420px;
+
   margin-top: 34px;
+
   font-size: 15px;
+
   line-height: 1.8;
+
   color: var(--charcoal);
+
 }
+
+
+.hero-about {
+
+  margin-top: 58px;
+
+  max-width: 520px;
+
+}
+
+
+.hero-about .eyebrow {
+
+  margin-bottom: 12px;
+
+}
+
+
+.hero-about h2 {
+
+  max-width: 520px;
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: clamp(34px, 4vw, 49px);
+
+  font-weight: 400;
+
+  line-height: 1.02;
+
+  color: var(--forest);
+
+  margin-bottom: 25px;
+
+}
+
+
+.hero-about p:not(.eyebrow) {
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  margin-bottom: 18px;
+
+  color: var(--charcoal);
+
+}
+
 
 .hero-photo {
+
   width: 100%;
+
   max-width: 470px;
+
   justify-self: end;
+
 }
 
+
 .hero-photo img {
+
   width: 100%;
+
   aspect-ratio: 0.82;
+
   object-fit: cover;
+
   filter: grayscale(100%);
+
 }
 
 
@@ -170,19 +301,30 @@ button {
    ===================================================== */
 
 .writing-strip {
+
   width: 100%;
+
   background: var(--forest);
+
   color: var(--ivory);
+
   overflow: hidden;
+
 }
 
+
 .strip-content {
+
   min-height: 70px;
+
   padding: 18px 6vw;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   flex-wrap: wrap;
 
   gap: 15px;
@@ -190,11 +332,16 @@ button {
   text-align: center;
 
   font-family: "DM Serif Display", serif;
+
   font-size: 19px;
+
 }
 
+
 .strip-dot {
+
   color: var(--sage);
+
 }
 
 
@@ -203,258 +350,340 @@ button {
    ===================================================== */
 
 .work-section,
-.about-section,
 .areas-section,
 .contact-section {
+
   width: 100%;
+
 }
 
+
+.work-section {
+
+  padding: 95px 6vw 105px;
+
+  background: var(--white);
+
+}
+
+
+.section-heading {
+
+  max-width: 1280px;
+
+  margin: 0 auto 45px;
+
+}
+
+
 .eyebrow {
+
   font-family: "DM Serif Display", serif;
+
   font-size: 16px;
+
   font-style: italic;
+
   color: var(--forest);
+
   margin-bottom: 9px;
+
+}
+
+
+.section-heading h2 {
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: clamp(40px, 5vw, 60px);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  color: var(--forest);
+
 }
 
 
 /* =====================================================
-   SELECTED WRITING
+   WORK GRID
    ===================================================== */
 
-.work-section {
-  padding: 115px 6vw 125px;
-  background: var(--white);
-}
-
-.section-heading {
-  max-width: 1280px;
-  margin: 0 auto 50px;
-}
-
-.section-heading h2 {
-  font-family: "DM Serif Display", serif;
-  font-size: clamp(40px, 5vw, 60px);
-  font-weight: 400;
-  line-height: 1;
-  color: var(--forest);
-}
-
 .work-grid {
+
   max-width: 1280px;
+
   margin: 0 auto;
 
   display: grid;
+
   grid-template-columns:
     repeat(3, minmax(0, 1fr));
 
   gap: 30px;
+
 }
+
 
 .work-card {
+
   display: block;
+
   cursor: pointer;
+
 }
+
 
 .work-image {
+
   width: 100%;
+
   overflow: hidden;
+
   background: var(--soft-sage);
+
 }
 
+
 .work-image img {
+
   width: 100%;
+
   aspect-ratio: 1 / 1.08;
+
   object-fit: cover;
 
   transition:
     transform 0.5s ease,
     opacity 0.5s ease;
+
 }
+
 
 .work-card:hover .work-image img {
+
   transform: scale(1.025);
+
   opacity: 0.88;
+
 }
+
 
 .work-info {
+
   padding-top: 20px;
+
 }
+
 
 .work-info h3 {
+
   font-family: "DM Serif Display", serif;
+
   font-size: 27px;
+
   font-weight: 400;
+
   line-height: 1.05;
+
   color: var(--forest);
+
 }
+
 
 .work-info p {
+
   margin-top: 10px;
+
   max-width: 340px;
+
   font-size: 14px;
+
   line-height: 1.65;
+
   color: #5B5954;
+
 }
 
 
 /* =====================================================
-   ABOUT
+   THOUGHT + WRITING AREAS
    ===================================================== */
 
-.about-section {
-  background: var(--ivory);
-  padding: 125px 6vw;
+.thought-areas-section {
+
+  width: 100%;
+
 }
 
-.about-inner {
-  max-width: 1080px;
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns:
-    minmax(0, 1fr)
-    minmax(0, 1fr);
-
-  gap: 100px;
-  align-items: start;
-}
-
-.about-title h2 {
-  max-width: 520px;
-
-  font-family: "DM Serif Display", serif;
-  font-size: clamp(40px, 5vw, 59px);
-  font-weight: 400;
-  line-height: 1.02;
-  color: var(--forest);
-}
-
-.about-text {
-  padding-top: 28px;
-  max-width: 500px;
-}
-
-.about-text p {
-  font-size: 16px;
-  line-height: 1.85;
-  margin-bottom: 25px;
-  color: var(--charcoal);
-}
-
-
-/* =====================================================
-   WRITING PHILOSOPHY
-   ===================================================== */
 
 .quote-section {
+
   background: var(--soft-sage);
-  padding: 125px 6vw;
+
+  padding: 75px 6vw 70px;
+
 }
+
 
 .quote-inner {
-  max-width: 950px;
+
+  max-width: 1050px;
+
   margin: 0 auto;
+
   text-align: center;
+
 }
+
 
 .quote-inner .eyebrow {
-  margin-bottom: 28px;
+
+  margin-bottom: 20px;
+
 }
+
 
 .quote-inner h2 {
+
   font-family: "DM Serif Display", serif;
-  font-size: clamp(42px, 6vw, 72px);
+
+  font-size: clamp(40px, 5.5vw, 68px);
+
   font-weight: 400;
+
   line-height: 1.05;
+
   letter-spacing: -1px;
+
   color: var(--forest);
+
 }
 
+
 .quote-inner h2 em {
+
+  display: inline;
+
   font-weight: 400;
+
 }
 
 
 /* =====================================================
-   WHAT I WRITE ABOUT
+   WRITING AREAS
    ===================================================== */
 
 .areas-section {
+
   background: var(--white);
-  padding: 120px 6vw;
+
+  padding: 75px 6vw 90px;
+
 }
+
 
 .areas-heading {
-  max-width: 1050px;
-  margin: 0 auto 65px;
+
+  max-width: 1280px;
+
+  margin: 0 auto 45px;
+
 }
 
+
 .areas-heading h2 {
+
   max-width: 760px;
 
   font-family: "DM Serif Display", serif;
+
   font-size: clamp(40px, 5vw, 60px);
+
   font-weight: 400;
+
   line-height: 1.02;
+
   color: var(--forest);
+
 }
+
 
 .areas-heading h2 em {
+
   font-weight: 400;
+
 }
 
-.areas-grid {
-  max-width: 1050px;
+
+/* =====================================================
+   WRITING COLUMNS
+   ===================================================== */
+
+.writing-columns {
+
+  max-width: 1280px;
+
   margin: 0 auto;
 
   display: grid;
+
   grid-template-columns:
-    repeat(2, minmax(0, 1fr));
+    repeat(4, minmax(0, 1fr));
 
   border-top: 1px solid rgba(38, 53, 45, 0.25);
-}
-
-.area {
-  min-height: 230px;
-  padding: 30px 35px 35px 0;
 
   border-bottom: 1px solid rgba(38, 53, 45, 0.25);
+
 }
 
-.area:nth-child(odd) {
-  padding-right: 60px;
+
+.writing-column {
+
+  min-height: 210px;
+
+  padding: 30px 35px 30px 0;
+
+}
+
+
+.writing-column:not(:last-child) {
+
   border-right: 1px solid rgba(38, 53, 45, 0.25);
+
+  margin-right: 35px;
+
 }
 
-.area:nth-child(even) {
-  padding-left: 60px;
-}
 
-.area-number {
-  display: block;
-  margin-bottom: 25px;
+.writing-column h3 {
 
-  font-size: 11px;
-  letter-spacing: 1px;
-  color: #77736C;
-}
-
-.area h3 {
   font-family: "DM Serif Display", serif;
+
   font-size: 32px;
+
   font-weight: 400;
+
   line-height: 1;
+
   color: var(--forest);
+
 }
 
-.area p {
-  max-width: 360px;
+
+.writing-column p {
+
+  max-width: 300px;
+
   margin-top: 15px;
 
   font-size: 14px;
+
   line-height: 1.75;
+
   color: #5B5954;
+
 }
 
 
@@ -463,69 +692,112 @@ button {
    ===================================================== */
 
 .contact-section {
+
   background: var(--forest);
+
   color: var(--ivory);
+
   padding: 125px 6vw;
+
   text-align: center;
+
 }
+
 
 .contact-inner {
+
   max-width: 850px;
+
   margin: 0 auto;
+
 }
+
 
 .contact-section .eyebrow {
+
   color: var(--sage);
+
 }
+
 
 .contact-section h2 {
+
   font-family: "DM Serif Display", serif;
+
   font-size: clamp(45px, 6vw, 76px);
+
   font-weight: 400;
+
   line-height: 1;
+
   color: var(--ivory);
+
 }
 
+
 .contact-subtitle {
+
   margin-top: 18px;
 
   font-family: "DM Serif Display", serif;
+
   font-size: 25px;
+
   font-style: italic;
+
   color: var(--sage);
+
 }
 
+
 .contact-icons {
+
   margin-top: 42px;
 
   display: flex;
+
   justify-content: center;
+
   align-items: center;
+
   gap: 18px;
+
 }
 
+
 .contact-icons a {
+
   width: 48px;
+
   height: 48px;
 
   border: 1px solid rgba(247, 244, 237, 0.5);
+
   border-radius: 50%;
 
   display: flex;
+
   justify-content: center;
+
   align-items: center;
 
   color: var(--ivory);
+
   font-size: 17px;
 
   transition:
     background 0.25s ease,
     color 0.25s ease;
+
 }
 
+
 .contact-icons a:hover {
+
   background: var(--ivory);
+
   color: var(--forest);
+
 }
 
 
@@ -534,6 +806,7 @@ button {
    ===================================================== */
 
 footer {
+
   background: var(--forest);
 
   border-top: 1px solid rgba(247, 244, 237, 0.15);
@@ -541,295 +814,17 @@ footer {
   padding: 25px 6vw;
 
   display: flex;
+
   justify-content: center;
+
   align-items: center;
 
   color: rgba(247, 244, 237, 0.65);
 
   font-size: 11px;
+
   letter-spacing: 0.4px;
-}
 
-
-/* =====================================================
-   ARTICLE PAGE
-   ===================================================== */
-
-.article-page {
-  background: var(--ivory);
-}
-
-
-/* ARTICLE HERO */
-
-.article-hero {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 95px 6vw 100px;
-}
-
-.article-header-content {
-  max-width: 850px;
-  margin-bottom: 55px;
-}
-
-.article-header-content h1 {
-  font-family: "DM Serif Display", serif;
-  font-size: clamp(55px, 8vw, 100px);
-  font-weight: 400;
-  line-height: 0.95;
-  letter-spacing: -2px;
-  color: var(--forest);
-}
-
-.article-deck {
-  max-width: 650px;
-  margin-top: 28px;
-
-  font-family: "DM Serif Display", serif;
-  font-size: 25px;
-  line-height: 1.35;
-  color: #65625C;
-}
-
-.article-cover {
-  width: 100%;
-}
-
-.article-cover img {
-  width: 100%;
-  max-height: 650px;
-  object-fit: cover;
-}
-
-
-/* ARTICLE BODY */
-
-.article-body {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 20px 6vw 100px;
-}
-
-.article-body > p,
-.article-section > p,
-.article-ending > p {
-  font-size: 17px;
-  line-height: 1.9;
-  margin-bottom: 25px;
-}
-
-.article-lead {
-  font-family: "DM Serif Display", serif;
-  font-size: 27px !important;
-  line-height: 1.5 !important;
-  color: var(--forest);
-}
-
-.article-section {
-  margin-top: 100px;
-}
-
-.article-label {
-  font-family: "DM Serif Display", serif;
-  font-size: 16px !important;
-  font-style: italic;
-  color: var(--forest);
-  margin-bottom: 15px !important;
-}
-
-.article-section h2,
-.data-section h2,
-.coping-section h2,
-.article-ending h2 {
-  font-family: "DM Serif Display", serif;
-  font-size: clamp(38px, 5vw, 57px);
-  font-weight: 400;
-  line-height: 1.03;
-  color: var(--forest);
-  margin-bottom: 30px;
-}
-
-
-/* =====================================================
-   ARTICLE DATA SECTION
-   ===================================================== */
-
-.data-section {
-  margin-top: 100px;
-  padding: 60px 0;
-
-  border-top: 1px solid rgba(38, 53, 45, 0.2);
-  border-bottom: 1px solid rgba(38, 53, 45, 0.2);
-}
-
-.data-intro {
-  margin-bottom: 50px;
-}
-
-.data-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0;
-}
-
-.data-item {
-  padding: 35px 30px 35px 0;
-  border-top: 1px solid rgba(38, 53, 45, 0.2);
-}
-
-.data-item:nth-child(even) {
-  padding-left: 30px;
-  border-left: 1px solid rgba(38, 53, 45, 0.2);
-}
-
-.data-item strong {
-  display: block;
-
-  font-family: "DM Serif Display", serif;
-  font-size: 48px;
-  font-weight: 400;
-  line-height: 1;
-
-  color: var(--forest);
-
-  margin-bottom: 12px;
-}
-
-.data-item span {
-  display: block;
-
-  font-size: 14px;
-  line-height: 1.6;
-
-  color: #65625C;
-}
-
-
-/* =====================================================
-   PULL QUOTE
-   ===================================================== */
-
-.pull-quote {
-  margin: 55px 0 !important;
-  padding: 35px 0 35px 35px;
-
-  border-left: 3px solid var(--sage);
-
-  font-family: "DM Serif Display", serif;
-  font-size: 31px !important;
-  line-height: 1.35 !important;
-
-  color: var(--forest);
-}
-
-
-/* =====================================================
-   HOW FAMILIES COPE
-   ===================================================== */
-
-.coping-section {
-  margin-top: 100px;
-  padding: 70px 0;
-  background: var(--soft-sage);
-}
-
-.coping-section .article-label,
-.coping-section h2 {
-  margin-left: 35px;
-  margin-right: 35px;
-}
-
-.coping-list {
-  margin-top: 45px;
-}
-
-.coping-row {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  align-items: center;
-
-  padding: 22px 35px;
-
-  border-top: 1px solid rgba(38, 53, 45, 0.2);
-}
-
-.coping-row:last-child {
-  border-bottom: 1px solid rgba(38, 53, 45, 0.2);
-}
-
-.coping-row strong {
-  font-family: "DM Serif Display", serif;
-  font-size: 38px;
-  font-weight: 400;
-  color: var(--forest);
-}
-
-.coping-row span {
-  font-size: 15px;
-}
-
-
-/* =====================================================
-   WHAT NEEDS TO CHANGE
-   ===================================================== */
-
-.changes-section ol {
-  margin: 35px 0 0 25px;
-}
-
-.changes-section li {
-  padding: 20px 0 20px 15px;
-
-  font-size: 16px;
-  line-height: 1.8;
-
-  border-top: 1px solid rgba(38, 53, 45, 0.15);
-}
-
-.changes-section li:last-child {
-  border-bottom: 1px solid rgba(38, 53, 45, 0.15);
-}
-
-.changes-section li strong {
-  color: var(--forest);
-}
-
-
-/* =====================================================
-   ARTICLE END
-   ===================================================== */
-
-.article-ending {
-  margin-top: 110px;
-  padding-top: 70px;
-
-  border-top: 1px solid rgba(38, 53, 45, 0.25);
-}
-
-.article-ending h2 {
-  margin-bottom: 35px;
-}
-
-
-/* =====================================================
-   BACK TO WRITING
-   ===================================================== */
-
-.article-back {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 0 6vw 100px;
-}
-
-.article-back a {
-  font-family: "DM Serif Display", serif;
-  font-size: 19px;
-  color: var(--forest);
-}
-
-.article-back a:hover {
-  opacity: 0.6;
 }
 
 
@@ -840,28 +835,76 @@ footer {
 @media (max-width: 900px) {
 
   .hero {
+
     grid-template-columns:
       1fr
       0.8fr;
 
     gap: 45px;
-    padding-top: 80px;
+
+    padding-top: 55px;
+
   }
+
 
   .hero-photo {
+
     max-width: 360px;
+
   }
+
 
   .work-grid {
+
     gap: 22px;
+
   }
+
 
   .work-info h3 {
+
     font-size: 23px;
+
   }
 
-  .about-inner {
-    gap: 60px;
+
+  .writing-columns {
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+  }
+
+
+  .writing-column {
+
+    border-bottom: 1px solid rgba(38, 53, 45, 0.25);
+
+  }
+
+
+  .writing-column:nth-child(2) {
+
+    border-right: none;
+
+    margin-right: 0;
+
+    padding-left: 35px;
+
+  }
+
+
+  .writing-column:nth-child(3) {
+
+    padding-top: 30px;
+
+  }
+
+
+  .writing-column:nth-child(4) {
+
+    padding-left: 35px;
+
   }
 
 }
@@ -873,274 +916,269 @@ footer {
 
 @media (max-width: 700px) {
 
-  /* NAVIGATION */
+
+  /* Navigation */
 
   .navbar {
+
     padding: 22px 6vw;
+
   }
+
 
   .site-name {
+
     font-size: 17px;
+
   }
+
 
   .nav-links {
+
     gap: 15px;
+
   }
+
 
   .nav-links a {
+
     font-size: 11px;
+
   }
 
 
-  /* HERO */
+  /* Hero */
 
   .hero {
+
     display: flex;
+
     flex-direction: column;
+
     align-items: flex-start;
 
-    padding: 70px 6vw 75px;
+    padding: 55px 6vw 65px;
+
     gap: 45px;
+
   }
+
 
   .hero-copy {
+
     width: 100%;
+
   }
+
 
   .hello {
+
     font-size: 48px;
+
   }
+
 
   .hero h1 {
+
     font-size: clamp(55px, 15vw, 75px);
+
     letter-spacing: -1.5px;
+
   }
+
 
   .hero-description {
+
     max-width: 100%;
+
     font-size: 14px;
+
     margin-top: 27px;
+
   }
+
+
+  .hero-about {
+
+    margin-top: 48px;
+
+  }
+
+
+  .hero-about h2 {
+
+    font-size: 43px;
+
+  }
+
+
+  .hero-about p:not(.eyebrow) {
+
+    font-size: 15px;
+
+  }
+
 
   .hero-photo {
+
     width: 78%;
+
     max-width: none;
+
     align-self: center;
+
   }
 
 
-  /* STRIP */
+  /* Strip */
 
   .strip-content {
+
     font-size: 16px;
+
     gap: 9px;
+
     line-height: 1.4;
+
   }
 
 
-  /* WORK */
+  /* Work */
 
   .work-section {
+
     padding: 80px 6vw;
+
   }
+
 
   .section-heading {
+
     margin-bottom: 35px;
+
   }
+
 
   .work-grid {
+
     grid-template-columns: 1fr;
+
     gap: 55px;
+
   }
+
 
   .work-info h3 {
+
     font-size: 27px;
+
   }
+
 
   .work-info p {
+
     font-size: 14px;
+
   }
 
 
-  /* ABOUT */
-
-  .about-section {
-    padding: 85px 6vw;
-  }
-
-  .about-inner {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
-  .about-title h2 {
-    font-size: 43px;
-  }
-
-  .about-text {
-    padding-top: 0;
-  }
-
-  .about-text p {
-    font-size: 15px;
-  }
-
-
-  /* QUOTE */
+  /* Thought */
 
   .quote-section {
-    padding: 90px 6vw;
+
+    padding: 75px 6vw;
+
   }
+
 
   .quote-inner h2 {
+
     font-size: 43px;
+
   }
 
 
-  /* AREAS */
+  /* Areas */
 
   .areas-section {
-    padding: 85px 6vw;
+
+    padding: 70px 6vw 80px;
+
   }
+
 
   .areas-heading {
-    margin-bottom: 45px;
+
+    margin-bottom: 40px;
+
   }
+
 
   .areas-heading h2 {
+
     font-size: 43px;
+
   }
 
-  .areas-grid {
+
+  .writing-columns {
+
     grid-template-columns: 1fr;
+
   }
 
-  .area {
+
+  .writing-column {
+
     min-height: auto;
 
     padding: 30px 0 !important;
 
     border-right: none !important;
+
+    border-bottom: 1px solid rgba(38, 53, 45, 0.25);
+
+    margin-right: 0 !important;
+
   }
 
-  .area h3 {
+
+  .writing-column:last-child {
+
+    border-bottom: none;
+
+  }
+
+
+  .writing-column h3 {
+
     font-size: 30px;
+
   }
 
 
-  /* CONTACT */
+  /* Contact */
 
   .contact-section {
+
     padding: 90px 6vw;
+
   }
+
 
   .contact-section h2 {
+
     font-size: 47px;
+
   }
+
 
   .contact-subtitle {
+
     font-size: 22px;
+
   }
 
-
-  /* ARTICLE */
-
-  .article-hero {
-    padding: 70px 6vw 65px;
-  }
-
-  .article-header-content {
-    margin-bottom: 35px;
-  }
-
-  .article-header-content h1 {
-    font-size: 55px;
-    letter-spacing: -1px;
-  }
-
-  .article-deck {
-    font-size: 21px;
-  }
-
-  .article-body {
-    padding-bottom: 70px;
-  }
-
-  .article-body > p,
-  .article-section > p,
-  .article-ending > p {
-    font-size: 16px;
-    line-height: 1.8;
-  }
-
-  .article-lead {
-    font-size: 24px !important;
-  }
-
-  .article-section,
-  .data-section,
-  .coping-section {
-    margin-top: 75px;
-  }
-
-  .article-section h2,
-  .data-section h2,
-  .coping-section h2,
-  .article-ending h2 {
-    font-size: 40px;
-  }
-
-
-  /* ARTICLE DATA */
-
-  .data-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .data-item,
-  .data-item:nth-child(even) {
-    padding: 28px 0;
-    border-left: none;
-  }
-
-  .data-item strong {
-    font-size: 43px;
-  }
-
-
-  /* ARTICLE PULL QUOTE */
-
-  .pull-quote {
-    font-size: 27px !important;
-    padding-left: 25px;
-  }
-
-
-  /* ARTICLE COPING */
-
-  .coping-section {
-    margin-left: -6vw;
-    margin-right: -6vw;
-  }
-
-  .coping-section .article-label,
-  .coping-section h2 {
-    margin-left: 6vw;
-    margin-right: 6vw;
-  }
-
-  .coping-row {
-    grid-template-columns: 100px 1fr;
-    padding: 20px 6vw;
-  }
-
-  .coping-row strong {
-    font-size: 32px;
-  }
-
-  .coping-row span {
-    font-size: 14px;
-  }
 
 }
 
@@ -1151,54 +1189,71 @@ footer {
 
 @media (max-width: 420px) {
 
+
   .navbar {
+
     align-items: flex-start;
+
     gap: 15px;
+
   }
+
 
   .site-name {
+
     font-size: 16px;
+
   }
+
 
   .nav-links {
+
     gap: 10px;
+
   }
+
 
   .nav-links a {
+
     font-size: 10px;
+
   }
+
 
   .hero h1 {
+
     font-size: 55px;
+
   }
+
 
   .hero-photo {
+
     width: 88%;
+
   }
+
 
   .work-info h3 {
+
     font-size: 25px;
+
   }
 
-  .about-title h2,
+
+  .hero-about h2,
   .areas-heading h2,
   .quote-inner h2 {
+
     font-size: 39px;
+
   }
+
 
   .contact-section h2 {
+
     font-size: 42px;
-  }
 
-  .article-header-content h1 {
-    font-size: 48px;
-  }
-
-  .article-section h2,
-  .data-section h2,
-  .coping-section h2,
-  .article-ending h2 {
-    font-size: 37px;
   }
 
 }
