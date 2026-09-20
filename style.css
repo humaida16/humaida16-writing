@@ -1,31 +1,32 @@
-/* =========================================================
+/* =====================================================
    HUMAIDA DANJUMA KHALID
    WRITING PORTFOLIO
-   ========================================================= */
+   ===================================================== */
 
 
-/* =========================
-   COLOURS & FONTS
-========================= */
+/* =====================================================
+   COLOUR PALETTE
+   ===================================================== */
 
 :root {
+
   --ivory: #F7F4ED;
-  --pale-sage: #E4E9DF;
+  --soft-sage: #E4E9DF;
   --sage: #A8B5A0;
+
   --forest: #26352D;
   --charcoal: #34332F;
+
   --clay: #C9A995;
 
-  --serif: "DM Serif Display", Georgia, serif;
-  --sans: "DM Sans", Arial, sans-serif;
+  --white: #FFFFFF;
 
-  --max-width: 1180px;
 }
 
 
-/* =========================
+/* =====================================================
    RESET
-========================= */
+   ===================================================== */
 
 * {
   margin: 0;
@@ -33,694 +34,1235 @@
   box-sizing: border-box;
 }
 
+
 html {
   scroll-behavior: smooth;
 }
 
+
 body {
   background: var(--ivory);
   color: var(--charcoal);
-  font-family: var(--sans);
+
+  font-family: "DM Sans", sans-serif;
+
   font-size: 16px;
   line-height: 1.7;
-  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
 }
 
+
 img {
-  width: 100%;
   display: block;
+  width: 100%;
 }
+
 
 a {
   color: inherit;
   text-decoration: none;
 }
 
-::selection {
-  background: var(--sage);
-  color: var(--forest);
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 
-/* =========================
+/* =====================================================
    NAVIGATION
-========================= */
+   ===================================================== */
 
 .navbar {
-  width: min(100% - 70px, var(--max-width));
-  margin: auto;
 
-  min-height: 85px;
+  width: 100%;
+
+  padding: 28px 6vw;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  border-bottom: 1px solid rgba(38, 53, 45, 0.12);
+  border-bottom: 1px solid rgba(38, 53, 45, 0.15);
+
 }
 
-.wordmark {
-  font-family: var(--serif);
-  font-size: 25px;
+
+.site-name {
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: 20px;
+
   color: var(--forest);
+
+  white-space: nowrap;
+
 }
+
 
 .nav-links {
+
   display: flex;
-  gap: 32px;
+
+  align-items: center;
+
+  gap: 34px;
+
 }
+
 
 .nav-links a {
-  position: relative;
 
   font-size: 13px;
-  font-weight: 500;
 
   color: var(--charcoal);
+
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease;
+
 }
 
-.nav-links a::after {
-  content: "";
 
-  position: absolute;
-  left: 0;
-  bottom: -6px;
+.nav-links a:hover {
 
-  width: 0;
-  height: 1px;
+  color: var(--forest);
+
+  opacity: 0.65;
+
+}
+
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+.hero {
+
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  padding: 105px 6vw 110px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 470px);
+
+  align-items: center;
+
+  gap: 9vw;
+
+}
+
+
+.hero-copy {
+
+  max-width: 570px;
+
+}
+
+
+.hello {
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: clamp(42px, 5vw, 68px);
+
+  line-height: 0.95;
+
+  font-style: italic;
+
+  color: var(--forest);
+
+  margin-bottom: 7px;
+
+}
+
+
+.hero h1 {
+
+  font-family: "DM Serif Display", serif;
+
+  font-weight: 400;
+
+  font-size: clamp(52px, 7vw, 88px);
+
+  line-height: 0.95;
+
+  letter-spacing: -2px;
+
+  color: var(--forest);
+
+}
+
+
+.hero h1 span {
+
+  display: block;
+
+}
+
+
+.hero-description {
+
+  max-width: 420px;
+
+  margin-top: 34px;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  color: var(--charcoal);
+
+}
+
+
+.hero-photo {
+
+  width: 100%;
+
+  max-width: 470px;
+
+  justify-self: end;
+
+}
+
+
+.hero-photo img {
+
+  width: 100%;
+
+  aspect-ratio: 0.82;
+
+  object-fit: cover;
+
+  filter: grayscale(100%);
+
+}
+
+
+/* =====================================================
+   WRITING STRIP
+   ===================================================== */
+
+.writing-strip {
+
+  width: 100%;
 
   background: var(--forest);
 
-  transition: width 0.3s ease;
-}
+  color: var(--ivory);
 
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-  width: min(100% - 70px, var(--max-width));
-  margin: auto;
-
-  padding: 95px 0 110px;
-
-  text-align: center;
-}
-
-.hero-text {
-  max-width: 900px;
-  margin: auto;
-}
-
-.hero-name {
-  margin-bottom: 25px;
-
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-
-  color: var(--forest);
-}
-
-.hero h1 {
-  font-family: var(--serif);
-  font-weight: 400;
-
-  font-size: clamp(55px, 7vw, 88px);
-  line-height: 0.98;
-  letter-spacing: -0.035em;
-
-  color: var(--forest);
-}
-
-.hero h1 em {
-  display: block;
-
-  margin-top: 12px;
-
-  font-style: italic;
-  color: var(--clay);
-}
-
-.hero-intro {
-  max-width: 530px;
-
-  margin: 32px auto 0;
-
-  font-size: 17px;
-  line-height: 1.8;
-}
-
-.hero-image {
-  width: min(100%, 650px);
-
-  margin: 70px auto 0;
-
-  position: relative;
-}
-
-.hero-image::before {
-  content: "";
-
-  position: absolute;
-
-  width: 140px;
-  height: 140px;
-
-  top: -28px;
-  right: -30px;
-
-  background: var(--pale-sage);
-
-  border-radius: 50%;
-
-  z-index: 0;
-}
-
-.hero-image img {
-  position: relative;
-  z-index: 1;
-
-  height: 560px;
-
-  object-fit: cover;
-
-  border-radius: 260px 260px 18px 18px;
-}
-
-
-/* =========================
-   SHARED LABEL
-========================= */
-
-.section-label {
-  margin-bottom: 20px;
-
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-
-  color: var(--forest);
-}
-
-
-/* =========================
-   ABOUT
-========================= */
-
-.about-section {
-  background: var(--pale-sage);
-
-  padding: 105px 35px;
-}
-
-.about-content {
-  max-width: var(--max-width);
-  margin: auto;
-}
-
-.about-content > h2 {
-  max-width: 850px;
-
-  font-family: var(--serif);
-  font-weight: 400;
-
-  font-size: clamp(42px, 5vw, 62px);
-  line-height: 1.06;
-  letter-spacing: -0.025em;
-
-  color: var(--forest);
-}
-
-.about-grid {
-  margin-top: 55px;
-
-  display: grid;
-  grid-template-columns: 1fr 0.9fr;
-
-  gap: 90px;
-
-  align-items: center;
-}
-
-.about-copy {
-  max-width: 590px;
-}
-
-.about-copy p {
-  font-size: 16px;
-  line-height: 1.85;
-}
-
-.about-copy p + p {
-  margin-top: 22px;
-}
-
-
-/* =========================
-   WRITING BELIEF
-========================= */
-
-.writing-belief {
-  display: grid;
-  grid-template-columns: 0.75fr 1fr;
-
-  gap: 30px;
-
-  align-items: center;
-}
-
-.belief-image {
   overflow: hidden;
-}
 
-.belief-image img {
-  height: 300px;
-
-  object-fit: cover;
-
-  border-radius: 150px 150px 15px 15px;
-}
-
-.writing-belief blockquote {
-  font-family: var(--serif);
-  font-size: 28px;
-  line-height: 1.25;
-
-  color: var(--forest);
-}
-
-.writing-belief blockquote em {
-  display: block;
-
-  margin-top: 8px;
-
-  font-style: italic;
-  color: var(--clay);
 }
 
 
-/* =========================
-   WRITING
-========================= */
+.strip-content {
 
-.writing-section {
-  width: min(100% - 70px, var(--max-width));
+  min-height: 70px;
 
-  margin: auto;
+  padding: 18px 6vw;
 
-  padding: 110px 0;
-}
+  display: flex;
 
-.writing-heading {
+  align-items: center;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+
   text-align: center;
 
-  margin-bottom: 55px;
+  font-family: "DM Serif Display", serif;
+
+  font-size: 19px;
+
 }
 
-.writing-heading h2 {
-  font-family: var(--serif);
+
+.strip-dot {
+
+  color: var(--sage);
+
+}
+
+
+/* =====================================================
+   GENERAL SECTION SETTINGS
+   ===================================================== */
+
+.work-section,
+.about-section,
+.areas-section,
+.contact-section {
+
+  width: 100%;
+
+}
+
+
+.work-section {
+
+  padding: 115px 6vw 125px;
+
+  background: var(--white);
+
+}
+
+
+.section-heading {
+
+  max-width: 1280px;
+
+  margin: 0 auto 50px;
+
+}
+
+
+.eyebrow {
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: 16px;
+
+  font-style: italic;
+
+  color: var(--forest);
+
+  margin-bottom: 9px;
+
+}
+
+
+.section-heading h2 {
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: clamp(40px, 5vw, 60px);
+
   font-weight: 400;
 
-  font-size: clamp(43px, 5vw, 60px);
   line-height: 1;
 
   color: var(--forest);
+
 }
 
 
-/* =========================
-   THREE ARTICLE GRID
-========================= */
+/* =====================================================
+   WORK GRID
+   ===================================================== */
 
-.writing-grid {
+.work-grid {
+
+  max-width: 1280px;
+
+  margin: 0 auto;
+
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
 
-  gap: 28px;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 30px;
+
 }
 
-.writing-piece {
-  border-top: 1px solid rgba(38, 53, 45, 0.2);
 
-  padding-top: 18px;
+.work-card {
+
+  display: block;
+
+  cursor: pointer;
+
 }
 
-.piece-image {
+
+.work-image {
+
+  width: 100%;
+
   overflow: hidden;
 
-  aspect-ratio: 4 / 3;
+  background: var(--soft-sage);
 
-  margin-bottom: 27px;
 }
 
-.piece-image img {
-  height: 100%;
+
+.work-image img {
+
+  width: 100%;
+
+  aspect-ratio: 1 / 1.08;
 
   object-fit: cover;
 
-  transition: transform 0.5s ease;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+
 }
 
-.writing-piece:hover .piece-image img {
-  transform: scale(1.04);
+
+.work-card:hover .work-image img {
+
+  transform: scale(1.025);
+
+  opacity: 0.88;
+
 }
 
-.piece-content h3 {
-  font-family: var(--serif);
+
+.work-info {
+
+  padding-top: 20px;
+
+}
+
+
+.work-info h3 {
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: 27px;
+
   font-weight: 400;
 
-  font-size: 31px;
-  line-height: 1.08;
-
-  color: var(--forest);
-}
-
-.piece-content p {
-  margin-top: 15px;
-
-  font-size: 14px;
-  line-height: 1.75;
-}
-
-.read-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-
-  margin-top: 20px;
-
-  font-size: 12px;
-  font-weight: 600;
-
-  color: var(--forest);
-
-  transition: gap 0.3s ease;
-}
-
-.read-link i {
-  font-size: 10px;
-}
-
-.writing-piece:hover .read-link {
-  gap: 14px;
-}
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact-section {
-  background: var(--pale-sage);
-
-  padding: 100px 30px;
-
-  text-align: center;
-}
-
-.contact-section h2 {
-  max-width: 650px;
-
-  margin: auto;
-
-  font-family: var(--serif);
-  font-weight: 400;
-
-  font-size: clamp(45px, 6vw, 68px);
   line-height: 1.05;
 
   color: var(--forest);
+
 }
 
-.contact-icons {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
 
-  margin-top: 32px;
+.work-info p {
+
+  margin-top: 10px;
+
+  max-width: 340px;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+
+  color: #5B5954;
+
 }
 
-.contact-icons a {
-  width: 48px;
-  height: 48px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* =====================================================
+   ABOUT
+   ===================================================== */
 
-  border: 1px solid rgba(38, 53, 45, 0.25);
-  border-radius: 50%;
+.about-section {
+
+  background: var(--ivory);
+
+  padding: 125px 6vw;
+
+}
+
+
+.about-inner {
+
+  max-width: 1080px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  gap: 100px;
+
+  align-items: start;
+
+}
+
+
+.about-title h2 {
+
+  max-width: 520px;
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: clamp(40px, 5vw, 59px);
+
+  font-weight: 400;
+
+  line-height: 1.02;
 
   color: var(--forest);
 
-  transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
 }
 
-.contact-icons a:hover {
+
+.about-text {
+
+  padding-top: 28px;
+
+  max-width: 500px;
+
+}
+
+
+.about-text p {
+
+  font-size: 16px;
+
+  line-height: 1.85;
+
+  margin-bottom: 25px;
+
+  color: var(--charcoal);
+
+}
+
+
+/* =====================================================
+   WRITING PHILOSOPHY
+   ===================================================== */
+
+.quote-section {
+
+  background: var(--soft-sage);
+
+  padding: 125px 6vw;
+
+}
+
+
+.quote-inner {
+
+  max-width: 950px;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+}
+
+
+.quote-inner .eyebrow {
+
+  margin-bottom: 28px;
+
+}
+
+
+.quote-inner h2 {
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: clamp(42px, 6vw, 72px);
+
+  font-weight: 400;
+
+  line-height: 1.05;
+
+  letter-spacing: -1px;
+
+  color: var(--forest);
+
+}
+
+
+.quote-inner h2 em {
+
+  display: inline;
+
+  font-weight: 400;
+
+}
+
+
+/* =====================================================
+   WRITING AREAS
+   ===================================================== */
+
+.areas-section {
+
+  background: var(--white);
+
+  padding: 120px 6vw;
+
+}
+
+
+.areas-heading {
+
+  max-width: 1050px;
+
+  margin: 0 auto 65px;
+
+}
+
+
+.areas-heading h2 {
+
+  max-width: 760px;
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: clamp(40px, 5vw, 60px);
+
+  font-weight: 400;
+
+  line-height: 1.02;
+
+  color: var(--forest);
+
+}
+
+
+.areas-heading h2 em {
+
+  font-weight: 400;
+
+}
+
+
+.areas-grid {
+
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  border-top: 1px solid rgba(38, 53, 45, 0.25);
+
+}
+
+
+.area {
+
+  min-height: 230px;
+
+  padding: 30px 35px 35px 0;
+
+  border-bottom: 1px solid rgba(38, 53, 45, 0.25);
+
+}
+
+
+.area:nth-child(odd) {
+
+  padding-right: 60px;
+
+  border-right: 1px solid rgba(38, 53, 45, 0.25);
+
+}
+
+
+.area:nth-child(even) {
+
+  padding-left: 60px;
+
+}
+
+
+.area-number {
+
+  display: block;
+
+  margin-bottom: 25px;
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+
+  color: #77736C;
+
+}
+
+
+.area h3 {
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: 32px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  color: var(--forest);
+
+}
+
+
+.area p {
+
+  max-width: 360px;
+
+  margin-top: 15px;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+
+  color: #5B5954;
+
+}
+
+
+/* =====================================================
+   GET IN TOUCH
+   ===================================================== */
+
+.contact-section {
+
   background: var(--forest);
+
   color: var(--ivory);
 
-  transform: translateY(-3px);
+  padding: 125px 6vw;
+
+  text-align: center;
+
 }
 
 
-/* =========================
+.contact-inner {
+
+  max-width: 850px;
+
+  margin: 0 auto;
+
+}
+
+
+.contact-section .eyebrow {
+
+  color: var(--sage);
+
+}
+
+
+.contact-section h2 {
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: clamp(45px, 6vw, 76px);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  color: var(--ivory);
+
+}
+
+
+.contact-subtitle {
+
+  margin-top: 18px;
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: 25px;
+
+  font-style: italic;
+
+  color: var(--sage);
+
+}
+
+
+.contact-icons {
+
+  margin-top: 42px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 18px;
+
+}
+
+
+.contact-icons a {
+
+  width: 48px;
+
+  height: 48px;
+
+  border: 1px solid rgba(247, 244, 237, 0.5);
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  color: var(--ivory);
+
+  font-size: 17px;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+
+}
+
+
+.contact-icons a:hover {
+
+  background: var(--ivory);
+
+  color: var(--forest);
+
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+
+  background: var(--forest);
+
+  border-top: 1px solid rgba(247, 244, 237, 0.15);
+
+  padding: 25px 6vw;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  color: rgba(247, 244, 237, 0.65);
+
+  font-size: 11px;
+
+  letter-spacing: 0.4px;
+
+}
+
+
+/* =====================================================
    TABLET
-========================= */
+   ===================================================== */
 
-@media (max-width: 950px) {
+@media (max-width: 900px) {
 
-  .about-grid {
-    grid-template-columns: 1fr;
+  .hero {
+
+    grid-template-columns:
+      1fr
+      0.8fr;
+
+    gap: 45px;
+
+    padding-top: 80px;
+
+  }
+
+
+  .hero-photo {
+
+    max-width: 360px;
+
+  }
+
+
+  .work-grid {
+
+    gap: 22px;
+
+  }
+
+
+  .work-info h3 {
+
+    font-size: 23px;
+
+  }
+
+
+  .about-inner {
 
     gap: 60px;
-  }
 
-  .writing-belief {
-    max-width: 650px;
-  }
-
-  .writing-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .writing-piece:last-child {
-    grid-column: 1 / -1;
-
-    max-width: calc(50% - 14px);
   }
 
 }
 
 
-/* =========================
+/* =====================================================
    MOBILE
-========================= */
+   ===================================================== */
 
 @media (max-width: 700px) {
 
-  .navbar {
-    width: min(100% - 40px, var(--max-width));
 
-    min-height: 75px;
+  /* Navigation */
+
+  .navbar {
+
+    padding: 22px 6vw;
+
+  }
+
+
+  .site-name {
+
+    font-size: 17px;
+
+  }
+
+
+  .nav-links {
+
+    gap: 15px;
+
+  }
+
+
+  .nav-links a {
+
+    font-size: 11px;
+
+  }
+
+
+  /* Hero */
+
+  .hero {
+
+    display: flex;
 
     flex-direction: column;
 
     align-items: flex-start;
 
-    justify-content: center;
+    padding: 70px 6vw 75px;
 
-    gap: 14px;
+    gap: 45px;
+
   }
 
-  .wordmark {
-    font-size: 22px;
-  }
 
-  .nav-links {
+  .hero-copy {
+
     width: 100%;
 
-    justify-content: space-between;
-
-    gap: 10px;
-  }
-
-  .nav-links a {
-    font-size: 11px;
   }
 
 
-  /* HERO */
+  .hello {
 
-  .hero {
-    width: min(100% - 40px, var(--max-width));
+    font-size: 48px;
 
-    padding: 70px 0 80px;
   }
 
-  .hero-name {
-    font-size: 10px;
-
-    letter-spacing: 0.13em;
-
-    line-height: 1.5;
-  }
 
   .hero h1 {
-    font-size: clamp(48px, 13vw, 65px);
-  }
 
-  .hero-intro {
-    font-size: 15px;
+    font-size: clamp(55px, 15vw, 75px);
 
-    margin-top: 28px;
-  }
+    letter-spacing: -1.5px;
 
-  .hero-image {
-    margin-top: 55px;
-
-    width: 92%;
-  }
-
-  .hero-image img {
-    height: 470px;
-
-    border-radius: 210px 210px 15px 15px;
-  }
-
-  .hero-image::before {
-    width: 90px;
-    height: 90px;
-
-    right: -15px;
-    top: -20px;
   }
 
 
-  /* ABOUT */
+  .hero-description {
 
-  .about-section {
-    padding: 80px 22px;
-  }
+    max-width: 100%;
 
-  .about-content > h2 {
-    font-size: 40px;
-  }
+    font-size: 14px;
 
-  .about-grid {
-    margin-top: 40px;
+    margin-top: 27px;
 
-    gap: 50px;
-  }
-
-  .about-copy p {
-    font-size: 15px;
-  }
-
-  .writing-belief {
-    grid-template-columns: 1fr;
-
-    gap: 25px;
-  }
-
-  .belief-image img {
-    height: 280px;
-  }
-
-  .writing-belief blockquote {
-    font-size: 30px;
   }
 
 
-  /* WRITING */
+  .hero-photo {
 
-  .writing-section {
-    width: min(100% - 40px, var(--max-width));
+    width: 78%;
 
-    padding: 80px 0;
+    max-width: none;
+
+    align-self: center;
+
   }
 
-  .writing-heading {
-    margin-bottom: 45px;
+
+  /* Strip */
+
+  .strip-content {
+
+    font-size: 16px;
+
+    gap: 9px;
+
+    line-height: 1.4;
+
   }
 
-  .writing-heading h2 {
-    font-size: 42px;
+
+  /* Work */
+
+  .work-section {
+
+    padding: 80px 6vw;
+
   }
 
-  .writing-grid {
+
+  .section-heading {
+
+    margin-bottom: 35px;
+
+  }
+
+
+  .work-grid {
+
     grid-template-columns: 1fr;
 
     gap: 55px;
-  }
 
-  .writing-piece:last-child {
-    grid-column: auto;
-
-    max-width: none;
-  }
-
-  .piece-content h3 {
-    font-size: 34px;
   }
 
 
-  /* CONTACT */
+  .work-info h3 {
+
+    font-size: 27px;
+
+  }
+
+
+  .work-info p {
+
+    font-size: 14px;
+
+  }
+
+
+  /* About */
+
+  .about-section {
+
+    padding: 85px 6vw;
+
+  }
+
+
+  .about-inner {
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+  }
+
+
+  .about-title h2 {
+
+    font-size: 43px;
+
+  }
+
+
+  .about-text {
+
+    padding-top: 0;
+
+  }
+
+
+  .about-text p {
+
+    font-size: 15px;
+
+  }
+
+
+  /* Quote */
+
+  .quote-section {
+
+    padding: 90px 6vw;
+
+  }
+
+
+  .quote-inner h2 {
+
+    font-size: 43px;
+
+  }
+
+
+  /* Areas */
+
+  .areas-section {
+
+    padding: 85px 6vw;
+
+  }
+
+
+  .areas-heading {
+
+    margin-bottom: 45px;
+
+  }
+
+
+  .areas-heading h2 {
+
+    font-size: 43px;
+
+  }
+
+
+  .areas-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .area {
+
+    min-height: auto;
+
+    padding: 30px 0 !important;
+
+    border-right: none !important;
+
+  }
+
+
+  .area h3 {
+
+    font-size: 30px;
+
+  }
+
+
+  /* Contact */
 
   .contact-section {
-    padding: 80px 22px;
+
+    padding: 90px 6vw;
+
   }
 
+
   .contact-section h2 {
-    font-size: 48px;
+
+    font-size: 47px;
+
   }
+
+
+  .contact-subtitle {
+
+    font-size: 22px;
+
+  }
+
 
 }
 
 
-/* =========================
+/* =====================================================
    SMALL PHONES
-========================= */
+   ===================================================== */
 
-@media (max-width: 380px) {
+@media (max-width: 420px) {
+
+
+  .navbar {
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+  }
+
+
+  .site-name {
+
+    font-size: 16px;
+
+  }
+
+
+  .nav-links {
+
+    gap: 10px;
+
+  }
+
+
+  .nav-links a {
+
+    font-size: 10px;
+
+  }
+
 
   .hero h1 {
-    font-size: 45px;
+
+    font-size: 55px;
+
   }
 
-  .hero-image img {
-    height: 420px;
+
+  .hero-photo {
+
+    width: 88%;
+
   }
 
-  .about-content > h2 {
-    font-size: 36px;
+
+  .work-info h3 {
+
+    font-size: 25px;
+
   }
 
-  .writing-heading h2 {
-    font-size: 38px;
+
+  .about-title h2,
+  .areas-heading h2,
+  .quote-inner h2 {
+
+    font-size: 39px;
+
   }
 
-  .piece-content h3 {
-    font-size: 31px;
-  }
-
-  .writing-belief blockquote {
-    font-size: 27px;
-  }
 
   .contact-section h2 {
-    font-size: 43px;
+
+    font-size: 42px;
+
   }
 
 }
