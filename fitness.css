@@ -1,16 +1,18 @@
 :root {
-  --cream: #F5F1E8;
-  --cream-soft: #FAF8F2;
-  --cream-deep: #EAE4D7;
+  --apricot: #E9A66A;
+  --coral: #D98276;
+  --powder-blue: #AFC9D6;
+  --butter-yellow: #E8D98B;
+  --warm-white: #FAF7F0;
+  --cream: #F5EFE4;
 
-  --forest: #26352D;
-  --forest-light: #303A32;
-  --forest-dark: #202821;
+  --plum: #35313A;
+  --plum-soft: #514A53;
 
-  --sage: #7F927F;
+  --text: #38343A;
+  --text-soft: #68626A;
 
-  --ink: #263029;
-  --ink-soft: #5F665F;
+  --white: #FFFFFF;
 
   --serif: "DM Serif Display", Georgia, serif;
   --sans: "DM Sans", Arial, sans-serif;
@@ -31,8 +33,8 @@ html {
 
 
 body {
-  background: var(--cream-deep);
-  color: var(--ink);
+  background: var(--cream);
+  color: var(--text);
   font-family: var(--sans);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -49,7 +51,7 @@ a {
   width: min(1120px, calc(100% - 40px));
   margin: 34px auto;
   overflow: hidden;
-  background: var(--cream-soft);
+  background: var(--warm-white);
 }
 
 
@@ -65,7 +67,7 @@ a {
   align-items: center;
   gap: 6px;
 
-  background: rgba(32, 40, 33, 0.95);
+  background: var(--plum);
 }
 
 
@@ -75,7 +77,7 @@ a {
 
   border-radius: 50%;
 
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.42);
 }
 
 
@@ -87,7 +89,7 @@ a {
 
   border-radius: 10px;
 
-  background: rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 
@@ -104,8 +106,9 @@ a {
   align-items: flex-start;
   justify-content: space-between;
 
-  background: var(--forest);
-  color: var(--cream);
+  background: var(--plum);
+
+  color: var(--warm-white);
 }
 
 
@@ -127,14 +130,15 @@ a {
 .fitness-nav-links a {
   font-size: 11px;
   font-weight: 500;
-  color: rgba(245, 241, 232, 0.76);
+
+  color: rgba(250, 247, 240, 0.78);
 
   transition: color 0.25s ease;
 }
 
 
 .fitness-nav-links a:hover {
-  color: var(--cream);
+  color: var(--apricot);
 }
 
 
@@ -145,7 +149,14 @@ a {
 .fitness-header {
   padding: 105px 105px 75px;
 
-  background: var(--cream-soft);
+  background:
+    linear-gradient(
+      135deg,
+      var(--warm-white) 0%,
+      var(--warm-white) 65%,
+      #F2DDD3 65%,
+      #F2DDD3 100%
+    );
 
   text-align: center;
 }
@@ -160,7 +171,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.16em;
 
-  color: var(--sage);
+  color: var(--coral);
 }
 
 
@@ -175,13 +186,13 @@ a {
   line-height: 1.02;
   letter-spacing: -0.04em;
 
-  color: var(--ink);
+  color: var(--plum);
 }
 
 
 .fitness-header h1 em {
   font-style: normal;
-  color: var(--forest);
+  color: var(--coral);
 }
 
 
@@ -193,17 +204,17 @@ a {
   font-size: 16px;
   line-height: 1.8;
 
-  color: var(--ink-soft);
+  color: var(--text-soft);
 }
 
 
 .header-rule {
   width: 70px;
-  height: 1px;
+  height: 3px;
 
   margin: 55px auto 0;
 
-  background: var(--sage);
+  background: var(--apricot);
 }
 
 
@@ -212,14 +223,14 @@ a {
 ===================================================== */
 
 .fitness-article {
-  background: var(--cream-soft);
+  background: var(--warm-white);
 }
 
 
 .fitness-article p {
   font-size: 15px;
   line-height: 1.9;
-  color: var(--ink-soft);
+  color: var(--text-soft);
 }
 
 
@@ -227,12 +238,12 @@ a {
   font-family: var(--serif) !important;
   font-size: 25px !important;
   line-height: 1.5 !important;
-  color: var(--ink) !important;
+  color: var(--plum) !important;
 }
 
 
 /* =====================================================
-   INTRO
+   INTRODUCTION
 ===================================================== */
 
 .intro-section {
@@ -261,8 +272,9 @@ a {
 .components-section {
   padding: 100px 85px 110px;
 
-  background: var(--forest);
-  color: var(--cream);
+  background: var(--powder-blue);
+
+  color: var(--plum);
 }
 
 
@@ -282,7 +294,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.14em;
 
-  color: var(--sage);
+  color: var(--coral);
 }
 
 
@@ -295,6 +307,8 @@ a {
   font-weight: 400;
   line-height: 1.08;
   letter-spacing: -0.03em;
+
+  color: var(--plum);
 }
 
 
@@ -305,15 +319,19 @@ a {
   font-size: 14px;
   line-height: 1.8;
 
-  color: rgba(245, 241, 232, 0.72);
+  color: var(--text-soft);
 }
 
 
 .component-list {
   display: grid;
-  gap: 0;
+  gap: 18px;
 }
 
+
+/* =====================================================
+   INDIVIDUAL FITNESS COMPONENT CARDS
+===================================================== */
 
 .component {
   display: grid;
@@ -321,14 +339,33 @@ a {
 
   gap: 35px;
 
-  padding: 42px 0;
+  padding: 38px 40px;
 
-  border-top: 1px solid rgba(245, 241, 232, 0.14);
+  background: var(--warm-white);
+
+  border-left: 7px solid var(--apricot);
+
+  border-radius: 2px;
 }
 
 
-.component:last-child {
-  border-bottom: 1px solid rgba(245, 241, 232, 0.14);
+.component:nth-child(2) {
+  border-left-color: var(--coral);
+}
+
+
+.component:nth-child(3) {
+  border-left-color: var(--butter-yellow);
+}
+
+
+.component:nth-child(4) {
+  border-left-color: var(--powder-blue);
+}
+
+
+.component:nth-child(5) {
+  border-left-color: var(--coral);
 }
 
 
@@ -336,11 +373,11 @@ a {
   padding-top: 5px;
 
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 800;
 
   letter-spacing: 0.1em;
 
-  color: var(--sage);
+  color: var(--plum-soft);
 }
 
 
@@ -352,7 +389,7 @@ a {
   font-weight: 400;
   line-height: 1.2;
 
-  color: var(--cream);
+  color: var(--plum);
 }
 
 
@@ -364,7 +401,7 @@ a {
   font-size: 13px;
   line-height: 1.85;
 
-  color: rgba(245, 241, 232, 0.72);
+  color: var(--text-soft);
 }
 
 
@@ -380,7 +417,7 @@ a {
 .transition-section {
   padding: 105px 85px;
 
-  background: var(--cream);
+  background: var(--warm-white);
 }
 
 
@@ -391,7 +428,7 @@ a {
   font-size: 18px;
   font-weight: 700;
 
-  color: var(--forest);
+  color: var(--coral);
 }
 
 
@@ -406,7 +443,7 @@ a {
   line-height: 1.06;
   letter-spacing: -0.03em;
 
-  color: var(--ink);
+  color: var(--plum);
 }
 
 
@@ -418,13 +455,13 @@ a {
 
 
 /* =====================================================
-   HOLISTIC
+   HOLISTIC APPROACH
 ===================================================== */
 
 .holistic-section {
   padding: 105px 85px 115px;
 
-  background: #E5E9DF;
+  background: var(--butter-yellow);
 }
 
 
@@ -436,48 +473,70 @@ a {
 
 
 .holistic-heading h2 {
-  color: var(--ink);
+  color: var(--plum);
 }
 
 
 .holistic-heading > p:last-child {
-  color: var(--ink-soft);
+  color: var(--text-soft);
 }
 
 
 .pillars {
   display: grid;
-  gap: 0;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
 }
 
+
+/* =====================================================
+   HOLISTIC PILLAR CARDS
+===================================================== */
 
 .pillar {
   display: grid;
-  grid-template-columns: 180px 1fr;
+  grid-template-columns: 100px 1fr;
 
-  gap: 45px;
+  gap: 25px;
 
-  padding: 45px 0;
+  padding: 38px 32px;
 
-  border-top: 1px solid rgba(38, 48, 41, 0.16);
+  background: var(--warm-white);
+
+  border-radius: 2px;
 }
 
 
-.pillar:last-child {
-  border-bottom: 1px solid rgba(38, 48, 41, 0.16);
+.pillar:nth-child(1) {
+  border-top: 7px solid var(--apricot);
+}
+
+
+.pillar:nth-child(2) {
+  border-top: 7px solid var(--powder-blue);
+}
+
+
+.pillar:nth-child(3) {
+  border-top: 7px solid var(--coral);
+}
+
+
+.pillar:nth-child(4) {
+  border-top: 7px solid var(--plum);
 }
 
 
 .pillar-word {
   padding-top: 4px;
 
-  font-family: var(--sans);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
 
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
 
-  color: var(--forest);
+  color: var(--plum);
 }
 
 
@@ -489,7 +548,7 @@ a {
   font-weight: 400;
   line-height: 1.2;
 
-  color: var(--ink);
+  color: var(--plum);
 }
 
 
@@ -519,7 +578,7 @@ a {
 
   padding: 115px 45px 110px;
 
-  background: var(--cream-soft);
+  background: var(--warm-white);
 }
 
 
@@ -532,7 +591,7 @@ a {
   line-height: 1.06;
   letter-spacing: -0.03em;
 
-  color: var(--ink);
+  color: var(--plum);
 }
 
 
@@ -548,14 +607,21 @@ a {
 .fitness-ending {
   padding: 105px 85px 110px;
 
-  background: var(--forest-dark);
+  background:
+    linear-gradient(
+      135deg,
+      var(--coral) 0%,
+      var(--coral) 52%,
+      var(--apricot) 52%,
+      var(--apricot) 100%
+    );
 
   text-align: center;
 }
 
 
 .fitness-ending .script-note {
-  color: var(--sage);
+  color: var(--warm-white);
 }
 
 
@@ -567,7 +633,7 @@ a {
   font-weight: 400;
   line-height: 1;
 
-  color: var(--cream);
+  color: var(--warm-white);
 }
 
 
@@ -579,7 +645,7 @@ a {
   font-size: 14px;
   line-height: 1.8;
 
-  color: rgba(245, 241, 232, 0.72);
+  color: rgba(250, 247, 240, 0.9);
 }
 
 
@@ -591,7 +657,7 @@ a {
 
   letter-spacing: 0.16em;
 
-  color: var(--cream);
+  color: var(--plum);
 }
 
 
@@ -602,7 +668,7 @@ a {
 .fitness-back {
   padding: 30px 58px;
 
-  background: var(--forest);
+  background: var(--plum);
 
   text-align: center;
 }
@@ -615,12 +681,12 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 
-  color: var(--cream);
+  color: var(--warm-white);
 }
 
 
 .fitness-back a:hover {
-  color: var(--sage);
+  color: var(--apricot);
 }
 
 
@@ -663,9 +729,8 @@ a {
   }
 
 
-  .pillar {
-    grid-template-columns: 130px 1fr;
-    gap: 30px;
+  .pillars {
+    grid-template-columns: 1fr;
   }
 
 }
@@ -769,7 +834,7 @@ a {
 
     gap: 12px;
 
-    padding: 35px 0;
+    padding: 30px 25px;
   }
 
 
@@ -808,7 +873,7 @@ a {
 
     gap: 12px;
 
-    padding: 35px 0;
+    padding: 30px 25px;
   }
 
 
